@@ -12,7 +12,7 @@ You are Cosmo, and a chair in the Dungeon has your name on it.
 
 The Warp Zone is the three-page cheat sheet for the night before an interview. Story Mode is ten pages, enough to run a full case with a partner. New Game+ is the completion run. Read it front to back before your first live case, then treat it as a reference.
 
-One coach framed the whole exercise as a selection test that runs both ways: the case compresses the job into thirty minutes, so if you enjoy this kind of problem solving you will tend to enjoy the work. Dread the half hour, and you have learned something about the next two years before you sign anything.
+One coach framed the whole exercise as a selection test that runs both ways: the case compresses the job into thirty minutes, so if you enjoy this kind of problem solving you will enjoy the work. Dread the half hour, and you have learned something about the next two years before you sign anything.
 
 ### HP, MP, XP
 
@@ -758,6 +758,8 @@ A skill tree is a Quest Map you built before the Boss Fight started. Tier 1 is t
 
 Draw Market, Product, Customer, Company when the prompt hands you no obvious tree. Market holds size, growth, and the competitor set. Product holds the lines, their features, and their economics. Customer holds the segments, what they want, and what they pay. Company holds cost, capacity, and channels. The coaches praised a student who opened an unfamiliar prompt with these four, because the regions cover most business problems and hold no overlap. Reach for it on a broad prompt with no clear root, and drop it the moment a named tree fits: a falling-profit prompt wants the profit tree, and a buy-or-pass prompt wants the M&A tree.
 
+[IMAGE: Cosmo_SkillTree_Profitability_01]
+
 ### Profitability
 
 **Tier 1.** Profit equals revenue minus cost, and you draw four regions around it. Region one splits revenue by line, channel, and geography, separating unit volume from price inside the line that leaks. Region two is variable cost per unit. Region three is fixed cost. The fourth region is the market, meaning growth and competitor moves, so that you can tell a company problem from an industry problem.
@@ -765,6 +767,8 @@ Draw Market, Product, Customer, Company when the prompt hands you no obvious tre
 **Tier 2.** Pull revenue by line for three years, so that you find the line that is leaking. Split units from price inside that line to learn whether volume fell or price gave way. Compare variable cost per unit with last year and the closest rival, because a supplier or freight problem shows up there.
 
 **Tier 3.** You name one line and one lever. In the Wasatch Wheels exhibit, recreation came in at -10% while cargo posted +50%. If recreation lost units at a held price, you suspect a rival's price cut or a demand shift, and each calls for a different fix.
+
+[IMAGE: Cosmo_SkillTree_MarketEntry_01]
 
 ### Market Entry
 
@@ -821,6 +825,8 @@ Draw Market, Product, Customer, Company when the prompt hands you no obvious tre
 **Tier 2.** Track the outcome metric and its trend, such as officers hired each year against officers leaving, so that you know the gap. Compute cost per outcome by program to rank programs by impact per dollar. Break funding out by source and trend, because the line at risk shows up there.
 
 **Tier 3.** You rank the options on impact per dollar and feasibility. For a philanthropy chasing younger donors, you size donors under 40 as a share of gifts and test the channel with the lowest cost per new donor.
+
+[IMAGE: Cosmo_SkillTree_Blending_01]
 
 ### Blending Trees
 
@@ -1345,7 +1351,7 @@ Write the feedback down before you speak. Ask for the moment it happened if the 
 
 ### Scout the Firm
 
-Before a round, learn two things about the firm across the table: the pace it likes and the shape its cases take, interviewer-led or candidate-led. Candidate forums carry the pace, the firm's own prep materials carry the format and its sample cases, and a second-year who interviewed there last fall carries the rest. You are calibrating the timing benchmarks in Level 2, the 2:30 head down and the 2:15 to 3:00 walkthrough, to the firm in front of you. Walk in knowing which end of that range your Player 2 expects.
+Before a round, learn two things about the firm across the table: the pace it likes and the shape its cases take, interviewer-led or candidate-led. Candidate forums carry the pace, the firm's own prep materials carry the shape and its sample cases, and a second-year who interviewed there last fall carries both. You are calibrating the timing benchmarks in Level 2, the 2:30 head down and the 2:15 to 3:00 walkthrough, to the firm in front of you. Walk in knowing which end of that range your Player 2 expects.
 
 ## Trophy Room
 

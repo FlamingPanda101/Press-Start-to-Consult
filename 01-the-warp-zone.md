@@ -187,7 +187,7 @@ Build the four regions from this prompt, quantify each quest, and attach a "so t
 
 **Boss Fight II: The Idea Hydra**
 
-1. Recap the narrower question in 30 seconds, then ask for 30 to 60 seconds of prep. Player 2 expects the ask.
+1. Recap the narrower question in 30 seconds, then ask for 30 to 60 seconds of prep.
 2. Name three necks that do not overlap (about 1 minute).
 3. Hang two to four heads on each neck.
 4. Say where you would start and what else (30 seconds).

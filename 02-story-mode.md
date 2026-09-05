@@ -116,9 +116,12 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. About 8M Americans
 | Utah households | 1.2M |
 | Utah average household size | 3.0 |
 | Wasatch Front population | 2.7M |
+| Salt Lake County | 1.2M |
+| Utah County | 720K |
 | Provo-Orem metro | 700K |
+| BYU total enrollment | 34K |
 
-**Eight metros**
+**Twelve metros**
 
 | Metro | Population |
 |---|---|
@@ -126,12 +129,16 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. About 8M Americans
 | Los Angeles metro | 13M |
 | Chicago metro | 9.5M |
 | Dallas-Fort Worth metro | 8M |
+| Houston metro | 7.5M |
 | San Francisco Bay Area | 7.5M |
+| Washington DC metro | 6.3M |
 | Atlanta metro | 6.3M |
+| Miami metro | 6.2M |
+| Philadelphia metro | 6.2M |
 | Phoenix metro | 5M |
 | Denver metro | 3M |
 
-**Ten countries**
+**Twelve countries**
 
 | Country | Population |
 |---|---|
@@ -144,7 +151,9 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. About 8M Americans
 | Japan | 124M |
 | Germany | 84M |
 | United Kingdom | 68M |
+| France | 68M |
 | Canada | 40M |
+| Australia | 28M |
 
 **Regions**
 
@@ -155,6 +164,8 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. About 8M Americans
 | Europe | 745M |
 | European Union | 450M |
 | North America (US, Canada, Mexico) | 510M |
+
+[IMAGE: Cosmo_Sector_Codex_01]
 
 ### Sector Codex
 
@@ -272,7 +283,7 @@ Use the two minutes on paper, in this order:
 1. One line at the top: the objective and the metric (revenue growth for Wasatch Wheels, and the client set no target).
 2. Four region names across the page, the first four that come, in shorthand.
 3. Three quests under each region, as fragments with a number in them: "TAM + growth by country, by line."
-4. Ten seconds to renumber the regions by priority and mark where you would start. Your Compass points at region one.
+4. Ten seconds to renumber the regions by priority and mark where you would start.
 
 Successful McKinsey candidates in one coach's data averaged about 2:30 head-down and 2:15 to 3:00 presenting, and Bain runs snappier. Write fragments on the page, since you will speak the sentences.
 
@@ -328,7 +339,7 @@ Plan on two minutes to structure and three to share. Player 2 often stops you af
 | Recreation | 200 | 180 |
 | Cargo | 100 | 150 |
 
-Read it in this order before you speak: title, axes, units, period, the biggest bar, the trend, the outlier, the so what. Then work it out loud. Totals first: $600M to $660M, +10% overall. Growth by line next: Commuter +10%, Recreation -10%, Cargo +50%. Mix last: Cargo mix rose from 16.7% to 22.7%, and you read 16.7% off the Fraction Scroll, since 100 of 600 is one sixth. Recreation is the outlier.
+Read it in this order before you speak: title, axes, units, period, the biggest bar, the trend, the outlier, the so what. Then work it out loud. Totals first: $600M to $660M, +10% overall. Growth by line next: Commuter +10%, Recreation -10%, Cargo +50%. Mix last: Cargo mix rose from 16.7% to 22.7%, and you read 16.7% off the Fraction Scroll, since 100 of 600 is one sixth. Recreation is the outlier, since it is the one line that shrank.
 
 The Loot: growth comes from cargo while recreation shrinks, and margin by line is the next question before money follows cargo.
 
@@ -382,7 +393,7 @@ You take three steps on the ride: recap the problem and what you did, recommend,
 
 [Cosmo writes for 30 seconds]
 
-**COSMO:** Dana, you brought us in to build a growth plan for a $600M brand. We sized your home market, read your product lines, and worked the private-label threat. I opened expecting the commuter line abroad to lead, and I turned once I read the line results. Three things. First, the recommendation: grow outside Utah and behind cargo. Utah takes about 16.8K e-bikes a year across all brands, $33.6M, so the home state cannot carry the plan, and cargo grew 50% last year while recreation fell 10%. Hold off on a price war with the private label until dealer sell-through is in. Second, the number I trust least is the 8% of Wasatch Front households I assumed own an e-bike. Take it to 4% and Utah drops to about 9.6K units and $19.2M, so I would firm it up with a consumer survey. Third, next steps: margin by line before we fund cargo, the dealer sell-through pull, and California and Texas sized the way we sized Utah.
+**COSMO:** Tell her this. She brought us in to build a growth plan for a $600M brand. We sized her home market, read the product lines, and worked the private-label threat. I opened expecting the commuter line abroad to lead, and I turned once I read the line results. Three things. First, the recommendation: grow outside Utah and behind cargo. Utah takes about 16.8K e-bikes a year across all brands, $33.6M, so the home state cannot carry the plan, and cargo grew 50% this year while recreation fell 10%. Hold off on a price war with the private label until dealer sell-through is in. Second, the number I trust least is the 8% of Wasatch Front households I assumed own an e-bike. Take it to 4% and Utah drops to about 9.6K units and $19.2M, so I would firm it up with a consumer survey. Third, next steps: margin by line before we fund cargo, the dealer sell-through pull, and California and Texas sized the way we sized Utah.
 
 Player 2 will push on one point. Hold or move, with a reason either way. Trophy unlocked: Answer First.
 
@@ -394,8 +405,6 @@ Casing is a decathlon: you train the weak events and let the strong ones coast. 
 
 The only XP that counts comes from out-loud reps with a partner. Math in silence is easy. Math with a person watching and taking notes is a different skill, and it is the one on the scoresheet.
 
-Trophies mark the habits worth repeating, one unlock per habit. New Game+ carries the full set of fifteen.
-
 An MBA second-year with 20 to 30 cases behind them, given and taken, will tell you where you come off flat. AI casing works for drills, structure, and concept review. Its feedback runs positive, because the model praises whatever you did, and that is dangerous in the week before World 1.
 
 **Foundations.** Watch and work through five full live cases. Learn the business basics you skipped (a P&L, fixed versus variable cost) and skim industry primers so a hospital or trucking case does not start from zero.
@@ -405,3 +414,5 @@ An MBA second-year with 20 to 30 cases behind them, given and taken, will tell y
 **Adaptability.** Get your mental math fast and accurate, get comfortable reading charts under a clock, and sharpen the hydra. Take cases in different styles. A Bain case runs snappier than a McKinsey case, and a Capital One mini case is its own creature.
 
 The BYU MBA Strategy and Consulting Association runs case practice on Tuesdays at 5 pm. Show up, take a case, give a case. You earn the XP for the Dungeon in that room.
+
+Trophies mark the habits worth repeating, one unlock per habit. New Game+ carries the full set of fifteen.
