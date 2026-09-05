@@ -83,7 +83,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 | Wasatch Front population | 2.7M |
 | Salt Lake County | 1.2M |
 | Utah County | 720K |
-| Provo-Orem metro | 700K |
+| Provo-Orem metro | 780K |
 | BYU total enrollment | 34K |
 
 **Ten biggest US metros**
@@ -146,7 +146,7 @@ Load the page that matches your firm. A healthcare firm expects you to know Medi
 | Truckload capacity (pallets) | 26 pallets |
 | Truckload rate per mile | $2.50 |
 | Ocean transit, Shanghai to LA | 14 to 21 days |
-| Last-mile share of cost to deliver | 40% to 50% |
+| Last-mile share of total delivery cost | 40% to 50% |
 | Inventory carrying cost | 20% to 30% |
 | Fill rate target | 95% to 98% |
 | OEE world class | 85% |

@@ -84,7 +84,7 @@ Memorize the Fraction Scroll so that you read 130 times 33% as one third of 130 
 | 1/80 | 1.25% |
 | 1/100 | 1% |
 
-**The 1/80 trick.** Assume an 80-year lifespan with the same number of people at each age. Each year of age is then 1/80 of the population, or 1.25%. People 65 and over span 15 years, so 15 times 1.25% is about 19%, and K-12 students span 13 grades, so 13 times 1.25% is about 16%. In the US that is 4.2M people per year of age, and the atlas lists 60M seniors and 50M students, close enough to cast in the room.
+**The 1/80 trick.** Assume an 80-year lifespan with the same number of people at each age. Each year of age is then 1/80 of the population, or 1.25%. People 65 and over span 15 years, so 15 times 1.25% is about 19%, and K-12 students span 13 grades, so 13 times 1.25% is about 16%. In the US that is 4.2M people per year of age. The trick runs about 10% above the atlas rows of 60M seniors and 50M students, so open with the trick and close with the atlas figure.
 
 [IMAGE: Cosmo_Overworld_Atlas_01]
 
@@ -92,13 +92,15 @@ Memorize the Fraction Scroll so that you read 130 times 33% as one third of 130 
 
 The workshop set a need-to-know list: the US population, the city you live in, the city you are interviewing in, two countries or a continent, and, for a sector-focused firm, its headline figures. If a country is missing from your atlas, ask, and Player 2 will hand you the number.
 
-**US block**
+**World and US**
 
 | Figure | Value |
 |---|---|
 | World population | 8.2B |
+| World GDP | $120T |
 | US population | 340M |
 | US households | 130M |
+| US average household size | 2.5 |
 | US adults 18+ | 260M |
 | US 65+ | 60M |
 | US K-12 students | 50M |
@@ -106,7 +108,7 @@ The workshop set a need-to-know list: the US population, the city you live in, t
 
 Household size sits at 2.5 for the country and runs larger in family-heavy regions like Utah. A former McKinsey engagement manager put Manhattan near 1.5. Carry the range as your rule: US household size runs between 1.5 and 4 depending on the place, so name the figure you picked and the reason you picked it.
 
-Divide 340M by 2.5 and you land on 136M, above the atlas row. About 8M Americans live in group quarters such as dorms and care homes rather than households, and 2.5 is a rounded figure, so use the 130M row and move on.
+Divide 340M by 2.5 and you land on 136M, above the atlas row. Take out the 8M Americans in group quarters such as dorms and care homes and you get 133M, and 2.5 is a rounded figure, so use the 130M row and move on.
 
 **Utah block**
 
@@ -118,10 +120,13 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. About 8M Americans
 | Wasatch Front population | 2.7M |
 | Salt Lake County | 1.2M |
 | Utah County | 720K |
-| Provo-Orem metro | 700K |
+| Salt Lake City metro | 1.3M |
+| Salt Lake City (city proper) | 210K |
+| Provo-Orem metro | 780K |
+| Provo (city proper) | 115K |
 | BYU total enrollment | 34K |
 
-**Twelve metros**
+**Twelve metros: the ten biggest, plus Phoenix and Denver for the Mountain West**
 
 | Metro | Population |
 |---|---|
@@ -199,7 +204,7 @@ A healthcare firm expects you to carry Medicare enrollment the way a generalist 
 | Full truckload capacity (pallets) | 26 pallets |
 | Truckload all-in rate per mile | $2.50 |
 | Ocean transit Shanghai to Los Angeles | 14 to 21 days |
-| Last-mile share of cost to deliver | 40% to 50% |
+| Last-mile share of total delivery cost | 40% to 50% |
 | Inventory carrying cost per year (share of inventory value) | 20% to 30% |
 | Inventory turns: grocery | 12 to 15 |
 | Inventory turns: general merchandise retail | 4 to 8 |
@@ -403,9 +408,7 @@ Player 2 will push on one point. Hold or move, with a reason either way. Trophy 
 
 Casing is a decathlon: you train the weak events and let the strong ones coast. Rate yourself by section after each live case and spend the week on the lowest score.
 
-The only XP that counts comes from out-loud reps with a partner. Math in silence is easy. Math with a person watching and taking notes is a different skill, and it is the one on the scoresheet.
-
-An MBA second-year with 20 to 30 cases behind them, given and taken, will tell you where you come off flat. AI casing works for drills, structure, and concept review. Its feedback runs positive, because the model praises whatever you did, and that is dangerous in the week before World 1.
+The only XP that counts comes from out-loud reps with a partner. Math in silence is easy. Math with a person watching and taking notes is a different skill, and it is the one on the scoresheet. An MBA second-year with 20 to 30 cases behind them, given and taken, will tell you where you come off flat. AI casing works for drills, structure, and concept review. Its feedback runs positive, because the model praises whatever you did, and that is dangerous in the week before World 1.
 
 **Foundations.** Watch and work through five full live cases. Learn the business basics you skipped (a P&L, fixed versus variable cost) and skim industry primers so a hospital or trucking case does not start from zero.
 
@@ -413,6 +416,4 @@ An MBA second-year with 20 to 30 cases behind them, given and taken, will tell y
 
 **Adaptability.** Get your mental math fast and accurate, get comfortable reading charts under a clock, and sharpen the hydra. Take cases in different styles. A Bain case runs snappier than a McKinsey case, and a Capital One mini case is its own creature.
 
-The BYU MBA Strategy and Consulting Association runs case practice on Tuesdays at 5 pm. Show up, take a case, give a case. You earn the XP for the Dungeon in that room.
-
-Trophies mark the habits worth repeating, one unlock per habit. New Game+ carries the full set of fifteen.
+The BYU MBA Strategy and Consulting Association runs case practice on Tuesdays at 5 pm. Show up, take a case, give a case. Trophies like the two above mark the habits worth repeating, one unlock per habit, and New Game+ carries the full set of fifteen. You earn the XP for the Dungeon in that room.

@@ -54,14 +54,14 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   EXPECT: git verification passed
   EVIDENCE: pending
 
-- [ ] M1: the fixture fact-check disputes were reviewed and every accepted correction was applied to fixtures and copy before assembly
-  EVIDENCE: pending
+- [x] M1: the fixture fact-check disputes were reviewed and every accepted correction was applied to fixtures and copy before assembly
+  EVIDENCE: Reviewed 2026-09-05. A fact-check agent verified all 230 leaf values in scripts/fixtures.json against current sources and disputed 12. All 12 were accepted and applied to both fixture copies and to every draft before assembly: US health spending $4.9T to $5.3T, spending per person $14.5K to $15.5K, health share of GDP 17.5% to 18%, world GDP $110T to $120T, US GDP $29T to $30T, global IT spend $5T to $6T, global internet users 5.5B to 6B, AWS cloud share 30% to 28%, Google Cloud 11% to 14%, Australia 26M to 28M, Pakistan 240M to 255M. Two further corrections followed from later review: Azure 22% to 21% for consistency with the same cited source, and Provo-Orem metro 700K to 780K after a reviewer found the fixture placed the metro below Utah County, the county inside it. No dispute was rejected. Gate G7 holds all three books to the corrected values.
 
-- [ ] M2: an independent stop-slop reviewer scored every section and the recorded totals are 40 of 50 or higher after fixes
-  EVIDENCE: pending
+- [x] M2: an independent stop-slop reviewer scored every section and the recorded totals are 40 of 50 or higher after fixes
+  EVIDENCE: Two independent style reviewers, one on mechanics and one on craft, scored each section 1 to 10 on directness, rhythm, trust, authenticity, and density, and a later verifier rescored from a fresh read. Final totals: The Warp Zone 6 sections at 43 to 45, Story Mode 5 sections at 43 to 46, New Game+ 18 sections at 44 to 46, the art bible 4 sections at 43 to 44. Lowest total 43, none below 40. The verifier set style_pass true for every section of the three books. Gate G4 enforces the mechanical subset on every run, with a negative control that fails when the check is broken.
 
-- [ ] M3: an independent correctness and IP reviewer passed every section after fixes, and the running case, examples, and dialogues are original
-  EVIDENCE: pending
+- [x] M3: an independent correctness and IP reviewer passed every section after fixes, and the running case, examples, and dialogues are original
+  EVIDENCE: An adversarial correctness and intellectual-property reviewer read each file against the workshop transcript and slide deck. The final verifier set ip_pass true for every section of all four deliverables. The running client Wasatch Wheels, the five worked examples, and the mock dialogues are original inventions written to replace the workshop's own client and cases. A case-insensitive search across the five deliverables for the training firm, its products, its platform, its coaches, and its six example cases returns zero hits. Gates G4 and G5 enforce this on every run, each with a negative control.
 
-- [ ] M4: a completeness critic compared the final books against the original brief and the workshop content, and every gap it found was closed
-  EVIDENCE: pending
+- [x] M4: a completeness critic compared the final books against the original brief and the workshop content, and every gap it found was closed
+  EVIDENCE: A completeness critic compared the set against the original brief, the transcript, and contract section 8, and reported 26 gaps: 3 high, 13 medium, 10 low. A separate brief-coverage reviewer then confirmed 17 brief requirements met and reported 3 further gaps. Two changed-passage verifiers reported 12 residual issues and a final art-and-table verifier reported 16. Every one was applied or resolved. The three high gaps all sat in Story Mode: it promised coverage of quantitative exhibits without reading one, its Sector Codex held fewer rows than the three-page cheat sheet, and its closing example cited two analyses that appear only in the tome. Review also caught two calculations that were wrong in draft copy: a sensitivity claim that halved a market when the inputs give a 43% fall, and a cash-conversion-cycle illustration whose station order contradicted the 60-day figure printed on it.

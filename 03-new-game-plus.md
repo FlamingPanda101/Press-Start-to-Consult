@@ -183,7 +183,7 @@ A Sizing Dungeon run and most Number Cruncher fights open on a population, a hou
 
 ### The Need-to-Know Rule
 
-The coaches' short list is the minimum: the US population, the city you live in, the city you are interviewing in, two countries or one continent, and a sector's headline figure if the firm works in one sector (Medicare enrollees, 68M, for a healthcare boutique). For you, Cosmo, that means 340M for the US, Provo at 115K inside a Provo-Orem metro of 700K, the interview city (Dallas at 1.3M inside a Dallas-Fort Worth metro of 8M), and, since Wasatch Wheels sells in 25 countries, Germany at 84M, Canada at 40M, and Europe at 745M.
+The coaches' short list is the minimum: the US population, the city you live in, the city you are interviewing in, two countries or one continent, and a sector's headline figure if the firm works in one sector (Medicare enrollees, 68M, for a healthcare boutique). For you, Cosmo, that means 340M for the US, Provo at 115K inside a Provo-Orem metro of 780K, the interview city (Dallas at 1.3M inside a Dallas-Fort Worth metro of 8M), and, since Wasatch Wheels sells in 25 countries, Germany at 84M, Canada at 40M, and Europe at 745M.
 
 ### Deriving Households
 
@@ -238,7 +238,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | Salt Lake City (city proper) | 210K |
 | Salt Lake City metro | 1.3M |
 | Provo (city proper) | 115K |
-| Provo-Orem metro | 700K |
+| Provo-Orem metro | 780K |
 | BYU total enrollment | 34K |
 
 **States**
