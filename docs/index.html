@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Press Start to Consult</title>
+<meta name="description" content="A case interview strategy guide for BYU Marriott MBA students, written as a 16-bit retro game guide.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+<nav class="topbar__inner" aria-label="Books">
+<a class="brand" href="index.html"><span class="brand__press">PRESS START</span><span class="brand__to">TO CONSULT</span></a>
+<ul class="topbar__links">
+<li><a href="warp-zone.html">The Warp Zone</a></li>
+<li><a href="story-mode.html">Story Mode</a></li>
+<li><a href="new-game-plus.html">New Game+</a></li>
+</ul>
+</nav>
+</header>
+<main id="main" class="home" tabindex="-1">
+<section class="hero">
+<p class="hero__kicker">BYU Marriott MBA</p>
+<h1 class="hero__title">PRESS START<br>TO CONSULT</h1>
+<p class="hero__sub">Cosmo the Cougar's case interview strategy guide. Three books, one universe, every number checked by a script.</p>
+<div class="hero__hud" aria-hidden="true">
+<span class="bar"><b>HP composure</b><span class="bar__track"><i style="width:100%"></i></span></span>
+<span class="bar"><b>MP mental math</b><span class="bar__track"><i style="width:64%"></i></span></span>
+<span class="bar"><b>XP live cases</b><span class="bar__track"><i style="width:28%"></i></span></span>
+</div>
+</section>
+<div class="search">
+<label class="search__label" for="q">Search the guide</label>
+<input id="q" type="search" class="search__input" placeholder="inventory turns, MECE, the pause menu..." autocomplete="off" aria-describedby="search-help">
+<p id="search-help" class="search__help">Searches every section of all three books.</p>
+<ul id="results" class="results" aria-live="polite"></ul>
+</div>
+<section class="cards" aria-label="The three books">
+<a class="card" href="warp-zone.html">
+<span class="card__tag">Book 1 &middot; 3 pages</span>
+<span class="card__title">The Warp Zone</span>
+<span class="card__blurb">The night before. Numbers, the case skeleton, and the boss checklists, with nothing you have to read twice.</span>
+<span class="card__go">Read<span aria-hidden="true"> &rsaquo;</span></span>
+</a>
+<a class="card" href="story-mode.html">
+<span class="card__tag">Book 2 &middot; 10 pages</span>
+<span class="card__title">Story Mode</span>
+<span class="card__blurb">Two to four weeks out. The whole method, run end to end on one client, with the reference tables you will reach for most.</span>
+<span class="card__go">Read<span aria-hidden="true"> &rsaquo;</span></span>
+</a>
+<a class="card" href="new-game-plus.html">
+<span class="card__tag">Book 3 &middot; 30 to 40 pages</span>
+<span class="card__title">New Game+</span>
+<span class="card__blurb">The completion run. Framework skill trees, a full sector codex, and five mock interviews with pushback and a math correction.</span>
+<span class="card__go">Read<span aria-hidden="true"> &rsaquo;</span></span>
+</a>
+</section>
+<section class="how">
+<h2>How the three fit together</h2>
+<p>You are Cosmo. The interviewer is Player 2, playing co-op rather than against you. The recruiting pipeline is the Quest Line, the case is a multi-phase Boss Fight, and a number without a "so what" is an empty treasure chest.</p>
+<p>Start in <a href="story-mode.html">Story Mode</a> if you have a few weeks. Open <a href="warp-zone.html">The Warp Zone</a> the night before. Work <a href="new-game-plus.html">New Game+</a> when you want the framework skill trees, the sector codex, and mock interviews with real pushback.</p>
+</section>
+</main>
+<footer class="foot">
+<p>Built from a case interview workshop at the BYU Marriott School of Business. The running client, Wasatch Wheels, is fictional.</p>
+<p>Cosmo the Cougar and the block Y are trademarks of Brigham Young University, used here for a student project.</p>
+<p><a href="https://github.com/FlamingPanda101/Press-Start-to-Consult">Source and the markdown these pages are built from</a></p>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

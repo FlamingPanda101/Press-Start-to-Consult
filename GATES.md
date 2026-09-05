@@ -1,8 +1,8 @@
 # Gates: Press Start to Consult
 
-OWNS: README.md, 01-the-warp-zone.md, 02-story-mode.md, 03-new-game-plus.md, image-prompts.md, scripts/**, GATES.md, .gitignore
+OWNS: README.md, 01-the-warp-zone.md, 02-story-mode.md, 03-new-game-plus.md, image-prompts.md, HANDOFF-TO-DESIGN.md, scripts/**, docs/**, GATES.md, .gitignore
 
-Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-prompt file, synthesized from the BYU workshop without the training firm's IP, and push the set to the GitHub repo
+Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-prompt file, synthesized from the BYU workshop without the training firm's IP, publish a static website of the set that GitHub Pages can serve, and push everything to the GitHub repo
 
 - [x] G0: this ledger states outcomes that can fail
   CHECK: node C:/Users/Josep/.claude/skills/unlazy/scripts/gate-lint.mjs GATES.md
@@ -53,6 +53,51 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   CHECK: node scripts/verify.mjs git
   EXPECT: git verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=5b349211b9ebb2183d6a766b01ad6ce07b51eab4f9e09e724909b43f288296fb; exit=0; EXPECT=matched; output-sha256=b2d5fdd7dc0af69debf9db6f8ea2927b67b9032596ee86d7fad035e4de35758a; output-bytes=24; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+
+- [ ] W1: the site regenerates from the source markdown alone, and a second build produces byte-identical output
+  CHECK: node scripts/verify-site.mjs build-idempotent
+  EXPECT: build idempotency verified
+  EVIDENCE: pending
+
+- [ ] W2: every heading and every table row in each source book reaches its rendered page, so the site carries the whole guide
+  CHECK: node scripts/verify-site.mjs parity
+  EXPECT: source parity verified
+  EVIDENCE: pending
+
+- [ ] W3: all 45 art slots render, each supplied image file exists on disk, and each slot without art holds a sized placeholder carrying its ID
+  CHECK: node scripts/verify-site.mjs art
+  EXPECT: art slot verification passed
+  EVIDENCE: pending
+
+- [ ] W4: the built pages meet the accessibility floor: a language, one h1, no skipped heading level, a skip link, alt text on every image, and a labelled main landmark
+  CHECK: node scripts/verify-site.mjs a11y
+  EXPECT: accessibility verification passed
+  EVIDENCE: pending
+
+- [ ] W5: every internal link and table-of-contents anchor resolves to an element that exists on the target page
+  CHECK: node scripts/verify-site.mjs links
+  EXPECT: link verification passed
+  EVIDENCE: pending
+
+- [ ] W6: every table sits inside a scroll container and no rule forces the page wider than the viewport
+  CHECK: node scripts/verify-site.mjs overflow
+  EXPECT: overflow verification passed
+  EVIDENCE: pending
+
+- [ ] W7: the output is GitHub Pages ready: an entry page, no Jekyll processing, and no absolute or off-site asset path
+  CHECK: node scripts/verify-site.mjs pages-ready
+  EXPECT: pages readiness verified
+  EVIDENCE: pending
+
+- [ ] W8: the figures rendered into the site still match the fixtures, so the website cannot drift from the verified numbers
+  CHECK: node scripts/verify-site.mjs figures
+  EXPECT: rendered figure verification passed
+  EVIDENCE: pending
+
+- [ ] W9: the rendered pages contain no training-firm name, banned string, or dash, checked against the same negative control as the books
+  CHECK: node scripts/verify-site.mjs banned
+  EXPECT: rendered banned string verification passed
+  EVIDENCE: pending
 
 - [x] M1: the fixture fact-check disputes were reviewed and every accepted correction was applied to fixtures and copy before assembly
   EVIDENCE: Reviewed 2026-09-05. A fact-check agent verified all 230 leaf values in scripts/fixtures.json against current sources and disputed 12. All 12 were accepted and applied to both fixture copies and to every draft before assembly: US health spending $4.9T to $5.3T, spending per person $14.5K to $15.5K, health share of GDP 17.5% to 18%, world GDP $110T to $120T, US GDP $29T to $30T, global IT spend $5T to $6T, global internet users 5.5B to 6B, AWS cloud share 30% to 28%, Google Cloud 11% to 14%, Australia 26M to 28M, Pakistan 240M to 255M. Two further corrections followed from later review: Azure 22% to 21% for consistency with the same cited source, and Provo-Orem metro 700K to 780K after a reviewer found the fixture placed the metro below Utah County, the county inside it. No dispute was rejected. Gate G7 holds all three books to the corrected values.
