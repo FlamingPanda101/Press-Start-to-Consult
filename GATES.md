@@ -49,10 +49,10 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   EXPECT: worked example verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=6fcae681fec797a1c66cb771ae4f3ac0616fefa7a67204f5462f06c0fd10260d; exit=0; EXPECT=matched; output-sha256=b8812236abb9066b0d3c50180d160f51b067084d44e0a478f95cb6fc96a2ed31; output-bytes=35; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
-- [ ] G9: the working tree is clean, every deliverable is tracked, and HEAD matches origin/main on GitHub
+- [x] G9: the working tree is clean, every deliverable is tracked, and HEAD matches origin/main on GitHub
   CHECK: node scripts/verify.mjs git
   EXPECT: git verification passed
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=5b349211b9ebb2183d6a766b01ad6ce07b51eab4f9e09e724909b43f288296fb; exit=0; EXPECT=matched; output-sha256=b2d5fdd7dc0af69debf9db6f8ea2927b67b9032596ee86d7fad035e4de35758a; output-bytes=24; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W1: the site regenerates from the source markdown alone, and a second build produces byte-identical output
   CHECK: node scripts/verify-site.mjs build-idempotent
