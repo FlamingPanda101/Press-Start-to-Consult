@@ -192,14 +192,22 @@ const checks = {
     const t1 = e.y1.reduce((a, c) => a + c), t2 = e.y2.reduce((a, c) => a + c)
     const pct = (a, c) => `${c >= a ? '+' : ''}${Math.round((c - a) / a * 100)}%`
     const exhibit = [`$${t1}M`, `$${t2}M`, pct(e.y1[0], e.y2[0]), pct(e.y1[1], e.y2[1]), pct(e.y1[2], e.y2[2]), `${(e.y1[2] / t1 * 100).toFixed(1)}%`, `${(e.y2[2] / t2 * 100).toFixed(1)}%`]
-    const computed = { sizing_utah_ebikes: sizing, quant_germany_bikes: germany, breakeven_assembly_plant: breakeven, exhibit_segments: exhibit }
+    const z = W.sensitivity_utah_half_ownership.inputs
+    const zOwn = z.households * z.wasatch_share * z.own_rate_wasatch + z.households * (1 - z.wasatch_share) * z.own_rate_rural
+    const zUnits = zOwn / z.replacement_years * z.trueup_multiplier
+    const sensitivity = [`${(zUnits / 1000).toFixed(1)}K units`, `$${M1(zUnits * z.avg_price)}`]
+    const computed = { sizing_utah_ebikes: sizing, quant_germany_bikes: germany, breakeven_assembly_plant: breakeven, exhibit_segments: exhibit, sensitivity_utah_half_ownership: sensitivity }
     for (const [name, arr] of Object.entries(computed)) {
       const exp = W[name].expected_strings
       for (const x of exp) if (!arr.includes(x)) errs.push(`fixture ${name} expects "${x}" but recomputation gives [${arr.join(', ')}]`)
     }
     const tome = read('03-new-game-plus.md'), story = read('02-story-mode.md')
-    for (const [name, arr] of Object.entries(computed)) for (const x of W[name].expected_strings) if (!tome.includes(x)) errs.push(`tome lacks ${name} string "${x}"`)
+    for (const [name, arr] of Object.entries(computed)) {
+      if (name === 'sensitivity_utah_half_ownership') continue // this one is taught only in Story Mode's close
+      for (const x of W[name].expected_strings) if (!tome.includes(x)) errs.push(`tome lacks ${name} string "${x}"`)
+    }
     for (const x of W.sizing_utah_ebikes.expected_strings) if (!story.includes(x)) errs.push(`story mode lacks sizing string "${x}"`)
+    for (const x of W.sensitivity_utah_half_ownership.expected_strings) if (!story.includes(x)) errs.push(`story mode lacks sensitivity string "${x}"`)
     if (errs.length) fail(errs)
     console.log('worked example verification passed')
   },

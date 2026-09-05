@@ -6,11 +6,13 @@
 
 ## Title Screen
 
-You are Cosmo, and a chair in the Dungeon has your name on it. This tome is the long route: the full case from the Opening Cutscene to the Chairlift, with the numbers and mock dialogues the shorter books compress.
+You are Cosmo, and a chair in the Dungeon has your name on it.
 
 ### Three books, one universe
 
-The Warp Zone is the three-page cheat sheet for the night before an interview. Story Mode is ten pages, enough to run a full case with a partner. New Game+ is the completion run: the full Player Inventory, the Levels, the Boss Fights with long mock dialogues, the Side Quests, and the Training Grounds. Read it front to back before your first live case, then treat it as a reference.
+The Warp Zone is the three-page cheat sheet for the night before an interview. Story Mode is ten pages, enough to run a full case with a partner. New Game+ is the completion run. Read it front to back before your first live case, then treat it as a reference.
+
+One coach framed the whole exercise as a selection test that runs both ways: the case compresses the job into thirty minutes, so if you enjoy this kind of problem solving you will tend to enjoy the work. Dread the half hour, and you have learned something about the next two years before you sign anything.
 
 ### HP, MP, XP
 
@@ -22,7 +24,7 @@ XP is live cases completed out loud with a partner. Reading this tome earns zero
 
 ### Co-op, never PvP
 
-The workshop coaches framed Player 2, the interviewer, as your partner in the case. Player 2 dodges a question to steer you toward your framework, nods at your equation to catch a missing step, and asks "what else?" because the case still has Loot in it. Firms hire the person they want in the team room at 11 pm, so play like that person: think out loud, say why you want each piece of data, and treat pushback as a teammate testing the plan.
+The workshop coaches framed Player 2, the interviewer, as your partner in the case. Firms hire the person they want in the team room at 11 pm, so play like that person: think out loud, say why you want each piece of data, and treat pushback as a teammate testing the plan.
 
 [IMAGE: Cosmo_Title_Screen_01]
 
@@ -30,13 +32,9 @@ The workshop coaches framed Player 2, the interviewer, as your partner in the ca
 
 The Quest Line has four stages: Network, Fit, Case, Offer. The Overworld gets you into the chair, Character Select tests your backstory, the Boss Fight tests your structure, math, and judgment, and the Victory Screen follows.
 
-### The Overworld and its rules
-
-Networking gets you the interview, and then the firm walls it off from the assessment. The value of networking swings by firm: some treat a partner's referral as a ticket to the chair, others prohibit partner referrals, and at some firms a referral from a BYU MBA two years into the job carries weight. MBA programs are the best-organized candidate pool, so firms come to the Tanner Building and take names.
-
 ### Fit versus case
 
-Character Select is the fit interview, or the PEI at McKinsey. You hold no formal authority at the client: the client keeps the budget and the org chart, and you keep the argument. You move people by persuasion, and Player 2 wants proof you have done it before, on a mission, in an MBA project, or at a prior job. A former McKinsey engagement manager told the room that strong candidates have lost offers by over-indexing on the case and under-indexing on fit. The same coach added that nobody grew up planning to be a consultant, so you learn both halves from zero. Split your prep time between them.
+Character Select is the fit interview, or the PEI at McKinsey. A former McKinsey engagement manager told the room that strong candidates have lost offers by over-indexing on the case and under-indexing on fit. The same coach added that nobody grew up planning to be a consultant, so you learn both halves from zero. Split your prep time between them.
 
 ### The three worlds
 
@@ -47,8 +45,6 @@ Character Select is the fit interview, or the PEI at McKinsey. You hold no forma
 | World 0 (the gate) | Recruiter screen, then a digital assessment | A recruiter, then software | Short call, sometimes with a mini case |
 | World 1 | Two video cases | Senior associates or managers, 2 to 4 years out of business school | 30 minutes each |
 | World 2 | Two or three in-person cases | Junior partners and partners, 4 to 20 years in | 45 minutes each |
-
-A recruiter runs the screen. Speak in complete sentences and laugh at the recruiter's jokes. A screener from the business side may add a sizing question.
 
 A case runs about 30 minutes, and 45 to 60 with behavioral questions attached. One coach described his McKinsey format: 10 minutes of chit-chat, then 50 minutes for behavioral questions and the case.
 
@@ -66,11 +62,11 @@ A case runs about 30 minutes, and 45 to 60 with behavioral questions attached. O
 
 Firms want three things: structure, problem solving, communication. Behind the rubric sit three questions. The first asks whether you can reason in structures and numbers, and Player 2 reads that off your framework and your math. The second asks about initiative. You show it when you ask for the revenue data because you want to solve the problem, the way an analyst would. The third asks whether people would enjoy working with you and managing you: you are the associate a partner can send to Omaha to sit with the cranky client.
 
-Scoring is broad and qualitative, a handful of big buckets, and weak math or structure shows through them. Firms are hiring future partners, so a slip on step 17 of a segmentation does not decide the outcome. Above the bar beats the badge on your resume: the partner picks the person who can do the work, and the school on the badge comes second.
+Scoring is broad and qualitative, a handful of big buckets, and weak math or structure shows through them. Firms are hiring future partners, so a slip on step 17 of a segmentation does not decide the outcome. Above the bar beats the badge on your resume.
 
 ### Casing beyond consulting
 
-Corporate strategy, general management, marketing, and finance roles case candidates too, and more of them do it each year. Capital One requires multiple mini and full cases, and Bank of America uses mini cases. Delta and Walmart told BYU they wanted stronger casing from MBA recruits, and Disney's corporate strategy group cases its hires. Economic consulting firms run heavier math, because their work is forensic, such as a damages figure for residents after 15 years of pollution.
+Corporate strategy, general management, marketing, and finance roles case candidates too, and more of them do it each year. Capital One requires multiple mini and full cases, and Bank of America uses mini cases. Delta and Walmart told BYU they wanted stronger casing from MBA recruits, and Disney's corporate strategy group cases its hires. Economic consulting firms run heavier math, because their work is forensic, such as a damages figure for residents after 15 years of pollution. The field runs past the named firms into hundreds of boutiques, and a firm's niche sets how quantitative its cases run. Read the niche before you prep: a shop built on litigation or pricing work asks for more arithmetic than a generalist strategy shop.
 
 ### The randomness
 
@@ -151,19 +147,19 @@ Capex of $90M for the assembly plant over a net benefit of $30M per year: M over
 
 ### Friendly Numbers, Said Out Loud
 
-Round before you compute, and announce the rounding. Germany holds 84M people. Say "I will round to 80M for clean division, which understates by about 5%," then divide. Player 2 hears you control the error. Pick 5 or 8 instead of 7 for your own assumptions. If Player 2 handed you the 7, keep it, or round to 8 and say the answer runs one seventh high, about 14%.
+Round before you compute, and announce the rounding. Germany holds 84M people. Say "I will round to 80M for clean division, which understates by about 5%," then divide. Player 2 hears you control the error. Pick 5 or 8 instead of 7 for your own assumptions. If Player 2 handed you the 7, keep it. Round it to 8 only where the 7 multiplies, and say the answer runs about 14% high.
 
 Then sense-check before you speak the answer:
 
-- Units. Confirm the answer is a flow, dollars or units per year. One student at the workshop counted the stock of bikes in garages as a year of sales, then caught it.
+- Units. Confirm the answer is a flow, dollars or units per year.
 - Magnitude. Recount the zeros against a number you own. A $33.6B Utah e-bike market would mean close to $10,000 per resident per year, and you catch the slip from M to B.
 - Round trip. Reverse the last step. If 400K times $150 gave you $60M, check that $60M over 400K returns $150.
 
 ### Casting Out Loud
 
-Write the equation before you touch a number: "Households, times ownership rate, divided by replacement years, times price." Then look up and get the nod. Player 2 flags a missing step there for the price of ten seconds. Find the same gap after three minutes of arithmetic and you pay for it with those three minutes and a rebuild while Player 2 watches. Then narrate each step: "40M cyclists, 60% casual, so 24M." Player 2 reads silent scribbling after the nod as lost, whatever you wrote on the page. One coach said the failure mode is solving in silence for five minutes and then surfacing with a number.
+Write the equation before you touch a number: "Households, times ownership rate, divided by replacement years, times price." Then look up and get the nod. Player 2 flags a missing step there for the price of ten seconds. Then narrate each step: "40M cyclists, 60% casual, so 24M." One coach said the failure mode is solving in silence for five minutes and then surfacing with a number.
 
-Most consulting firms do not allow a calculator, Capital One does, and a former Bain consultant told the room that BCG runs video rounds with your hands and paper on camera, so ask the recruiter what your round allows. Many interviewers stop you after the setup, since full arithmetic takes three or four times longer than the setup and they see most of what they need in the setup. Build the habit for the firms that make you finish, since math is the one section of the case with a single right answer.
+Most consulting firms do not allow a calculator, Capital One does, and a former Bain consultant told the room that BCG runs video rounds with your hands and paper on camera, so ask the recruiter what your round allows. Build the habit for the firms that make you finish the arithmetic.
 
 ### The Ten-Minute Daily Drill
 
@@ -191,11 +187,11 @@ The coaches' short list is the minimum: the US population, the city you live in,
 
 ### Deriving Households
 
-Size shared durable goods by household, because a family shares one lawn mower and one bike rack. Size personal goods such as phones and helmets by person. E-bikes can go either way, so say which base you chose: the Utah walkthrough in the Sizing Dungeon uses households, and the German walkthrough in Boss Fight I uses riders. Divide population by household size. The US runs 340M at 2.5 per household, and that division overshoots the atlas row of 130M, because about 8M Americans live in group quarters such as dorms and care homes rather than households. Use 130M. Utah runs 3.5M at 3.0, so 1.2M households. A former McKinsey engagement manager put Manhattan near 1.5. The Census Bureau counts it nearer 2. Either passes the reasonable test if you say which one you are using and why. For a metro with no household row, borrow the state figure: Salt Lake City metro 1.3M divided by 3.0 is about 430K households.
+E-bikes can go either way, household or person, so say which base you chose: the Utah walkthrough in the Sizing Dungeon uses households, and the German walkthrough in Boss Fight I uses riders. Divide population by household size. The US runs 340M at 2.5 per household, and that division overshoots the atlas row of 130M, because 8M Americans live in dorms and care homes and the true average runs above 2.5. Use 130M. Utah runs 3.5M at 3.0, so 1.2M households. A former McKinsey engagement manager put Manhattan near 1.5. The Census Bureau counts it nearer 2. Either passes the reasonable test if you say which one you are using and why. For a metro with no household row, borrow the state figure: Salt Lake City metro 1.3M divided by 3.0 is about 430K households.
 
 ### Deriving Age Cohorts
 
-Run the Spellbook's 1/80 trick. Spread an 80-year lifespan into even slices, and each year of age is 1.25% of the population, 4.2M people in the US. A cohort's share is its span in years times 1.25%. Test it on two atlas rows: ages 65 and over span 15 years, about 19%, next to an atlas row of 60M of 340M, about 18%. Under 18 spans 18 years, 22.5%, next to 73M of 340M, about 21%. You land within two points either way, so use the trick for slices with no atlas row: ages 25 to 44 span 20 years, and 20 times 4.2M is about 84M Americans. Then tilt for the place, Utah young and Florida old, and say the tilt out loud so Player 2 can nod. Skip the tilt for a national figure or for a state that sits near the national profile, such as Ohio, and spend those seconds on the next floor of the dungeon.
+Run the Spellbook's 1/80 trick. Spread an 80-year lifespan into even slices, and each year of age is 1.25% of the population, 4.2M people in the US. A cohort's share is its span in years times 1.25%, which lands within two points of the atlas rows, so use the trick for slices with no atlas row: ages 25 to 44 span 20 years, and 20 times 4.2M is about 84M Americans. Then tilt for the place, Utah young and Florida old, and say the tilt out loud so Player 2 can nod.
 
 ### The Atlas
 
@@ -281,8 +277,6 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | Austin metro | 2.5M | 1M |
 | Salt Lake City metro | 1.3M | 210K |
 
-Miami and Minneapolis-St. Paul have no city-proper row in the atlas, so use the metro for both.
-
 [IMAGE: Cosmo_World_Atlas_01]
 
 **Countries**
@@ -328,7 +322,7 @@ State the assumptions first, then the arithmetic.
 
 ### The Missing Number
 
-Ask. The coaches were blunt: Player 2 runs the case to watch what you do with a number and will hand you Argentina's population on request. If Player 2 returns the question with "what would you assume," anchor on a country of similar size that you do know: Argentina sits near Spain's 48M and Canada's 40M, so call it 45M, flag it as an assumption, and move on. If you reach Boss Fight I and find a figure from the Opening Cutscene unconfirmed, ask then. A wrong input poisons the math and the loot behind it. In the team room a researcher swaps each rounded figure for a sourced one, and a flagged assumption survives that swap. A bluffed number takes the model down with it.
+Ask. The coaches were blunt: Player 2 runs the case to watch what you do with a number and will hand you Argentina's population on request. If Player 2 returns the question with "what would you assume," anchor on a country of similar size that you do know: Argentina sits near Spain's 48M and Canada's 40M, so call it 45M, flag it as an assumption, and move on. If you reach Boss Fight I and find a figure from the Opening Cutscene unconfirmed, ask then. A wrong input poisons the math and the loot behind it.
 
 ## Player Inventory III: Sector Codex, Healthcare
 
@@ -342,7 +336,7 @@ Four parties share $5.3T a year, $15.5K per person. Follow the money between the
 
 **Patients** receive care and pay a slice through premiums, deductibles, and copays. A payer sets or negotiates the price, so patient price sensitivity matters less than it does for e-bikes.
 
-**Payers** collect premiums or tax dollars and pay claims: Medicare (68M: 65 and over, plus younger people with disabilities), Medicaid and CHIP (72M), employer plans (155M lives), and the ACA marketplace (24M), with 8% of people uninsured. Low-income seniors sit in two buckets, so the figures do not sum to 340M.
+**Payers** collect premiums or tax dollars and pay claims: Medicare (68M: 65 and over, plus younger people with disabilities), Medicaid and CHIP (72M), employer plans (155M lives), and the ACA marketplace (24M), with 8% of people uninsured. Low-income seniors sit in two payer groups, so the figures do not sum to 340M.
 
 **Providers** deliver care and bill the payer: 6,100 hospitals with 920K beds, 1M active physicians, 3.3M registered nurses. Hospital care takes 30% of spending, yet a typical hospital clears a 1% to 4% operating margin.
 
@@ -407,7 +401,7 @@ Run it as a Sizing Dungeon and flag $15K per admission as your least-supported n
 
 Revenue is admissions times revenue per admission, so split the levers into volume (ALOS, occupancy) and rate (contract renewal, payer mix, case mix). Start with volume: the prompt rules out building, and a rate move waits on the next contract cycle.
 
-The Loot: ALOS from 4.5 to 4.0 days adds 12.5% more admissions, and occupancy from 70% to 80% adds 14% more bed-days, so neither move reaches 15% on its own. ALOS to 3.9 days does (4.5 divided by 3.9 is about 1.15). Pull neither lever until you confirm the hospital turns patients away today: check ED boarding hours and transfer refusals. Lead with ALOS: a shorter stay costs less per admission, while more filled beds mean more nurses. Keep occupancy under 80% so flu season has slack. Next: ALOS by service line and post-acute discharge bottlenecks.
+The Loot: ALOS from 4.5 to 4.0 days adds 12.5% more admissions, and occupancy from 70% to 80% adds 14% more bed-days, so neither move reaches 15% on its own. ALOS to 3.9 days does (4.5 divided by 3.9 is about 1.15). Pull neither lever until you confirm the hospital turns patients away today: check ED boarding hours and transfer refusals. Lead with ALOS, since a shorter stay costs less per admission and more filled beds mean more nurses. Next: ALOS by service line and post-acute discharge bottlenecks.
 
 **Prompt two, structured.** Player 2 says: a regional health plan with 500K members may subsidize a Wasatch Wheels commuter e-bike for members who ride to work. Structure whether it pays.
 
@@ -419,7 +413,7 @@ Run the breakeven before Player 2 asks: $5M across 10K riders over 12 months nee
 
 [IMAGE: Cosmo_Sector_SupplyChain_01]
 
-Operations cases hand you more numbers per minute than any other boss form, so load this page into MP first. Logistics costs the US about 9% of GDP, $2.5T a year, and trucks carry 72% of freight tonnage.
+Operations cases carry more numbers per minute than any other boss form, so load this page into MP first. Logistics costs the US about 9% of GDP, $2.5T a year, and trucks carry 72% of freight tonnage.
 
 ### Inventory Turns
 
@@ -430,6 +424,8 @@ Inventory turns equal cost of goods sold divided by average inventory: how often
 Days inventory outstanding (DIO), days sales outstanding (DSO), and days payables outstanding (DPO) divide inventory, receivables, and payables by their daily flows: cost of goods sold for DIO and DPO, revenue for DSO. DIO equals 365 divided by turns. The cash conversion cycle is DIO plus DSO minus DPO: the days you fund the company between paying suppliers and collecting from dealers.
 
 Wasatch Wheels has revenue of $600M. Assume cost of goods sold $360M, inventory $90M, dealer receivables $50M, and supplier payables $60M.
+
+[IMAGE: Cosmo_CashCycle_Steps_01]
 
 - Turns: $360M divided by $90M = 4, so DIO = 365 divided by 4, about 90 days
 - DSO: $50M divided by $600M, times 365, about 30 days
@@ -456,7 +452,7 @@ Overall equipment effectiveness multiplies availability (uptime over scheduled t
 
 Takt time equals available production time divided by demand. Wasatch Wheels builds 400K bikes a year on 250 days of two 8-hour shifts, 240K minutes, so takt is 240K divided by 400K: one bike per 36 seconds, 100 an hour. Cycle time is one station's time per unit. The slowest station is the bottleneck, and throughput, units completed per hour, drops to its pace.
 
-Little's Law: work in process equals throughput times flow time. At 100 bikes an hour and three hours from frame to box, the floor holds 300 bikes. Cut flow time to two hours and 100 bikes, about $90K at $900 of cost each, leave the floor.
+Little's Law: work in process equals throughput times flow time. At 100 bikes an hour and three hours from frame to box, the floor holds 300 bikes. Cut flow time to two hours and 100 bikes leave the floor, about $90K at $900 of cost each.
 
 [IMAGE: Cosmo_Sector_Warehouse_01]
 
@@ -465,6 +461,8 @@ Little's Law: work in process equals throughput times flow time. At 100 bikes an
 Pick rate counts lines per labor hour: 100 to 200 picks per hour by hand, 300+ picks per hour semi-automated (pick-to-light, conveyors), and goods-to-person systems run higher. Space utilization should run 80% to 85%, or aisles clog and picks slow. Dock-to-stock, trailer arrival to pickable stock, should run under 24 hours. Cost per order equals warehouse cost divided by orders you ship, and warehousing runs 2% to 5% of sales: for Wasatch Wheels, 3% of $600M is $18M, about $45 per bike, the bar for any automation proposal.
 
 ### Freight Modes
+
+[IMAGE: Cosmo_Freight_Ladder_01]
 
 | Mode | Cargo | Capacity | Cost logic |
 |---|---|---|---|
@@ -476,7 +474,7 @@ Pick rate counts lines per labor hour: 100 to 200 picks per hour by hand, 300+ p
 | Ocean | Containers | 40-foot box: 2,390 cu ft, 58,000 lb. Largest ships carry 24,000 TEU | Per container, so density sets unit cost. Shanghai to Los Angeles: 14 to 21 days, $2,000 to $3,000 per box in a normal market |
 | Air | Urgent or high value | Belly holds on passenger flights or freighters, ULD pallets and containers | Chargeable weight, the greater of actual and volumetric. 5x to 10x ocean per kg. You buy days |
 
-Bikes fill a container by volume long before its weight limit. At 200 bikes per box and $2,500 a box, ocean freight is about $12.50 per bike, so most of the $150 per unit the US plant saves in Boss Fight I is tariff.
+Bikes fill a container by volume long before its weight limit.
 
 ### Drayage and the Last Mile
 
@@ -492,11 +490,11 @@ Small wobbles in end demand grow into large swings upstream because each buyer u
 
 ### Nearshoring and Tariffs
 
-Nearshoring moves production from Asia to Mexico, and reshoring brings it home to the US. Both shorten lead time, cut tariff exposure, and shrink safety stock. You trade higher labor cost for lower freight, duties, and cash in transit. Compare on landed cost per unit plus the working-capital release, and state your tariff assumption, because policy moves faster than a plant. Boss Fight I runs the US plant version: $150 per unit in savings, payback in 3 years, and a tariff that may move. A sourcing program saves 5% to 15% of addressed spend.
+Nearshoring moves production from Asia to Mexico, and reshoring brings it home to the US. Both shorten lead time, cut tariff exposure, and shrink safety stock. You trade higher labor cost for lower freight, duties, and cash in transit. Compare on landed cost per unit plus the working-capital release, and state your tariff assumption, because policy moves faster than a plant. A sourcing program saves 5% to 15% of addressed spend.
 
 ### The Driver Shortage
 
-The US runs 60K to 80K truck drivers short, and hours-of-service rules cap driving at 11 hours a day. Rates rise when capacity tightens, shippers move long lanes to intermodal, and carriers give first call to shippers who load fast and allow drop and hook. A 500-mile lane fits one driver-day. A 1,200-mile lane needs a relay, a team, or a train.
+The US runs 60K to 80K truck drivers short, and hours-of-service rules cap driving at 11 hours a day. Rates rise when capacity tightens, shippers move long lanes to intermodal, and carriers give first call to shippers who load fast and let drivers swap trailers. A 500-mile lane fits one driver-day. A 1,200-mile lane needs a relay, a team, or a train.
 
 ### Three Mini Prompts
 
@@ -510,7 +508,7 @@ The US runs 60K to 80K truck drivers short, and hours-of-service rules cap drivi
 
 [IMAGE: Cosmo_Sector_Tech_01]
 
-Tech cases turn up at firms with no tech practice, because a soap maker and a police department both carry an app and a cloud bill now. A dozen short formulas break a software business apart as fast as a profit tree, and the benchmarks are your reasonable test.
+Tech cases turn up at firms with no tech practice, because a soap maker and a police department both carry an app and a cloud bill now. The benchmarks below are your reasonable test.
 
 ### SaaS Unit Economics
 
@@ -554,7 +552,7 @@ Tech cases turn up at firms with no tech practice, because a soap maker and a po
 | Sales and marketing share, growth stage | 30% to 50% |
 | Public SaaS EV to revenue | 5x to 10x |
 
-Market figures: global IT spending $6T. Cloud market share: AWS 28%, Azure 21%, Google Cloud 14%. Global internet users 6B and global smartphone users 4.9B. US smartphone penetration 90%. US e-commerce share of retail 16%.
+Market figures: global IT spending $6T; cloud share AWS 28%, Azure 21%, Google Cloud 14%; global internet users 6B and global smartphone users 4.9B; US smartphone penetration 90% and US e-commerce share of retail 16%.
 
 ### Mini Prompt 1: The Connected-Bike Subscription
 
@@ -610,7 +608,7 @@ End with the objective and a check: "So the goal is a growth strategy for Wasatc
 
 [IMAGE: Cosmo_Dialogue_Tree_01]
 
-Ask three to five clarifying questions. You may ask none, though confirming a figure is cheap insurance. Player 2 answers advanced branches and dodges analysis in disguise, and a dodge says nothing bad about you. Player 2 also hears a novice branch for what it is, and a data request with no reason attached is the most common one.
+Ask three to five clarifying questions. You may ask none, though confirming a figure is cheap insurance. Player 2 answers advanced branches and dodges analysis in disguise, and a dodge says nothing bad about you. Player 2 also hears a novice branch for what it is.
 
 Novice branches:
 
@@ -634,7 +632,7 @@ Bring courage to unfamiliar industries. If e-bikes and dealer sales are new to y
 
 ### Ask for the Pause Menu
 
-Close the tree with one line: "I think I have what I need. I'd like to take two minutes to organize my thoughts, and then I'll walk you through my approach." The coaches said each trained interviewer expects this request and grants it. Player 2 has watched hundreds of heads bend over paper and remembers none of them, so your hair is safe.
+Close the tree with one line: "I think I have what I need. I'd like to take two minutes to organize my thoughts, and then I'll walk you through my approach." Player 2 has watched hundreds of heads bend over paper and remembers none of them.
 
 ### Mock Dialogue: The Wasatch Wheels Opening
 
@@ -680,7 +678,7 @@ The Dialogue Tree closes, and you turn a two-paragraph prompt into a plan a team
 
 ### The Pause Menu
 
-Ask for it: "Thanks, that helps. I'd like two or three minutes to organize my thoughts, and then I'll walk you through my approach." The former McKinsey engagement manager said any trained interviewer expects this request. You unlock a trophy: Asked for the Pause.
+Ask for it: "Thanks, that helps. I'd like two or three minutes to organize my thoughts, and then I'll walk you through my approach." The former McKinsey engagement manager said any trained interviewer expects this request.
 
 Use the two minutes in a fixed order.
 
@@ -728,12 +726,12 @@ In the table, you have run the renumber on the fixed map and moved Line Economic
 | | Speed and power rules in the 24 other countries | we know which markets need a new spec |
 | 2. Line Economics | Contribution margin by line at the $2,000 average price | we grow the line that earns |
 | | Wasatch Wheels units by line over three years | we back the line with momentum |
-| | Battery and warranty cost per unit by line | margin holds after the sale |
+| | Pricing power by line: units lost per 10% price move | we know which line can carry a price rise |
 | 3. Customer | Willingness to pay by segment against the $1,500 to $4,000 range | we know whether to raise price or add a cheaper model |
 | | Age, income, and household type of buyers by line | we find the riders the brand misses |
 | | Repeat and referral rate among current owners | we turn owners into sellers |
-| 4. Company and Channels | States and metros with no Wasatch Wheels dealer | we know where a dealer push adds reach |
-| | Website share of units and margin against dealer margin | we scale the channel that pays |
+| 4. Company and Channels | Capability gaps against the top three rivals in battery, software, and dealer support | we know what to build before we scale |
+| | Acquisition cost and lifetime value of a buyer by channel | we spend where a rider costs least and stays longest |
 | | Taiwan assembly capacity above 400K units, plus cash to add a line | the plan is fundable |
 
 ### Delivering it in three minutes
@@ -744,7 +742,7 @@ Talk from the page. The order:
 2. Regions in priority order. Name each, give one sentence per quest with its number and its "so that," and move on. "First, the market. I'd count e-bike units per year by country, so that we know where demand sits."
 3. Close with your compass: the region you would start in and why, and ask Player 2 to begin there.
 
-You run past three minutes when you have not ranked anything, because then you have to say all of it. Three minutes with no repeats is the safe target.
+You run past three minutes when you have not ranked anything, because then you have to say all of it.
 
 ### Timing benchmarks
 
@@ -756,9 +754,13 @@ A skill tree is a Quest Map you built before the Boss Fight started. Tier 1 is t
 
 [IMAGE: Cosmo_Framework_SkillTree_01]
 
+### The Starter Map
+
+Draw Market, Product, Customer, Company when the prompt hands you no obvious tree. Market holds size, growth, and the competitor set. Product holds the lines, their features, and their economics. Customer holds the segments, what they want, and what they pay. Company holds cost, capacity, and channels. The coaches praised a student who opened an unfamiliar prompt with these four, because the regions cover most business problems and hold no overlap. Reach for it on a broad prompt with no clear root, and drop it the moment a named tree fits: a falling-profit prompt wants the profit tree, and a buy-or-pass prompt wants the M&A tree.
+
 ### Profitability
 
-**Tier 1.** Profit equals revenue minus cost, and you draw four regions around it. You split revenue by product line, channel, and geography. Inside the line that leaks, you separate unit volume from price. You split cost into variable cost per unit and fixed cost. The fourth region is the market, meaning growth and competitor moves, so that you can tell a company problem from an industry problem.
+**Tier 1.** Profit equals revenue minus cost, and you draw four regions around it. Region one splits revenue by line, channel, and geography, separating unit volume from price inside the line that leaks. Region two is variable cost per unit. Region three is fixed cost. The fourth region is the market, meaning growth and competitor moves, so that you can tell a company problem from an industry problem.
 
 **Tier 2.** Pull revenue by line for three years, so that you find the line that is leaking. Split units from price inside that line to learn whether volume fell or price gave way. Compare variable cost per unit with last year and the closest rival, because a supplier or freight problem shows up there.
 
@@ -792,7 +794,7 @@ A skill tree is a Quest Map you built before the Boss Fight started. Tier 1 is t
 
 **Tier 1.** Cost sets the floor, customer willingness to pay sets the ceiling, and competitor prices set the reference point. A fourth region covers architecture and channel: list price, discounts, financing, bundles, and dealer reaction.
 
-**Tier 2.** Compute variable cost per unit by line, so that you know the floor and how much room today's price leaves above it. Measure willingness to pay by segment through a survey or conjoint study to find the ceiling. Estimate units lost per 10% price move, which gives you a working elasticity.
+**Tier 2.** Compute variable cost per unit by line, so that you know the floor and how much room today's price leaves above it. Measure willingness to pay by segment through a price-versus-features survey to find the ceiling. Estimate units lost per 10% price move, which gives you a working elasticity.
 
 **Tier 3.** You give a price, a rationale, and a test. Cargo posted +50% and its buyers haul children, which points to low price sensitivity, so you test a modest increase there and watch units. A big-box private label sits 40% below the average price, so you hold on price support until the dealer sell-through data is in.
 
@@ -826,9 +828,7 @@ World 2 prompts often blend two frameworks. Dana Okafor might ask whether Wasatc
 
 ### Compass Rules
 
-Your Compass is a hypothesis, and you state it as soon as the map is on the table: "My hypothesis is that growth comes from the commuter line in the US and Germany, so I would start in region one." Once you state it, Player 2 can steer you and can see you hunting for an answer.
-
-Prioritize by the hypothesis. Renumber the regions so the one that tests the Compass sits at the top, and say why you put it there.
+State your Compass as soon as the map is on the table: "My hypothesis is that growth comes from the commuter line in the US and Germany, so I would start in region one." Player 2 can then steer you and can see you hunting for an answer.
 
 Run 80/20. You will get most of the answer from two or three of the twelve quests. Pick the quest whose result would change the recommendation and ask for that data before the rest.
 
@@ -840,7 +840,7 @@ The Sizing Dungeon appears as a mini case in a screening call or as one room ins
 
 ### Ground Rules Before You Descend
 
-Market size means revenue in dollars per year unless Player 2 says otherwise. Profit needs a margin, and Player 2 did not hand you one. Confirm the unit at the Save Point, ask for the Pause Menu, sketch the five floors as a tree, and walk Player 2 through it before you touch a number. The interviewers who let you run past the structure grade each step out loud.
+Market size means revenue in dollars per year unless Player 2 says otherwise. Profit needs a margin, and Player 2 did not hand you one. Confirm the unit at the Save Point, ask for the Pause Menu, sketch the five floors as a tree, and walk Player 2 through it before you touch a number. Player 2 grades each step you speak once the structure passes.
 
 [IMAGE: Cosmo_MarketSizing_Steps_01]
 
@@ -884,13 +884,9 @@ The probe arrives as "why 60%?" and the answer has three parts: an anchor you ca
 
 **PLAYER 2:** I'm curious about the 8% on the Wasatch Front. Talk me through it.
 
-**COSMO:** Two anchors. Americans have bought about 5M e-bikes since 2018 against 130M households, so about 4% own one. The Wasatch Front has the trails and the commuter income, so I doubled that to 8%. Rural Utah stays at the national 4%. If you have a better figure, I'll swap it in.
+**COSMO:** Two anchors. About 5M Americans own an e-bike against 130M households, so about 4% of households have one. The Wasatch Front has the trails and the commuter income, so I doubled that to 8%. Rural Utah stays at the national 4%. If you have a better figure, I'll swap it in.
 
 Three answers like that unlock the Reasonable Numbers trophy.
-
-### Household Size Logic
-
-The US averages 2.5 people per household, which turns 340M people into about 130M households. Utah runs 3.0 because of families with children, so 3.5M people make 1.2M households after rounding. Manhattan sits near 1.5 because more residents live alone. Pick the size that fits the place, nudge it toward a friendly divisor, and say so.
 
 ### Walkthrough: E-Bikes Sold in Utah Per Year
 
@@ -917,7 +913,7 @@ A helmet belongs to a person, and age drives replacement and price, so you segme
 | 18 to 64 | 3.6M | 25%, 900K | 80%, 720K | 6 years | 120K | $120 | $14.4M |
 | 65 and over | 0.9M | 10%, 90K | 80%, 72K | 6 years | 12K | $100 | $1.2M |
 
-Residents buy 222K helmets for $21M a year. A 20% true-up for out-of-state visitors and rental fleets brings it to $25.2M. The rows earn their place: kids outgrow helmets and wear cheaper ones, adults keep theirs for years, and seniors ski in smaller numbers. Player 2 will probe the 25% adult participation, and you have the anchor ready: half the state lives in the Denver metro (3M), within two hours of a dozen resorts.
+Residents buy 222K helmets for $21M a year. A 20% true-up for out-of-state visitors and rental fleets brings it to $25.2M. Player 2 will probe the 25% adult participation, and you have the anchor ready: half the state lives in the Denver metro (3M), within two hours of a dozen resorts.
 
 ### The Map Becomes the Model
 
@@ -927,7 +923,7 @@ In the team room, the tree you drew in two minutes becomes the spreadsheet: each
 
 [IMAGE: Cosmo_Boss_Numbers_02]
 
-The Number Cruncher spawns after the Quest Map and respawns two or three times before the close. This is the one phase of the Boss Fight with a single right answer, and the arithmetic sits at sixth-grade level plus one-variable algebra and fractions. The boss does its damage through pressure: twenty-three times five is easy in silence and hard with a person watching you write, so the training that raises your MP is math spoken out loud with a partner.
+The Number Cruncher spawns after the Quest Map and respawns two or three times before the close. This is the one phase of the Boss Fight with a single right answer, and it does its damage through pressure: the arithmetic is easy and the audience is not.
 
 ### The three forms
 
@@ -944,9 +940,9 @@ The boss takes three forms. In verbal form, Player 2 reads a story problem and y
 
 **Structure first and get the nod.** Say the equation in words, then stop and ask Player 2 whether the approach works. If you skip a step, Player 2 says so before you spend three minutes on the wrong arithmetic. At many firms the nod ends the question: a former McKinsey engagement manager told the room that full arithmetic takes three to four times as long as the setup, so an interviewer may take your structure and move on. Build the structure as if it were the whole answer.
 
-**Solve out loud.** Narrate each multiplication and division as you write it. You are in co-op with Player 2, and four minutes of silence leaves your partner nothing to grade. Round to friendly numbers and say so: "I'll call Germany 80M for clean math. The real figure is 84M." After each step, compare the result with the one before it. A segment larger than its parent population means a decimal slipped, and Player 2 credits the catch.
+**Solve out loud.** Narrate each multiplication and division as you write it. You are in co-op with Player 2, and four minutes of silence leaves your partner nothing to grade. After each step, compare the result with the one before it. A segment larger than its parent population means a decimal slipped, and Player 2 credits the catch.
 
-**The three-part answer.** A number without Loot is an empty chest. Part one is the number, in the units Player 2 asked for. Part two is the Loot: what the number means and what the client should do about it. Part three is what comes next: the next analysis and the risk that could flip the answer. Lead with the number, the way a partner briefs an executive: "Three updates. Number one..." Executives pay you to hide the mountain of data and hand over what matters. Player 2 grades the same instinct.
+**The three-part answer.** A number without Loot is an empty chest. Part one is the number, in the units Player 2 asked for. Part two is the Loot: what the number means and what the client should do about it. Part three is what comes next: the next analysis and the risk that could flip the answer. Executives pay you to hide the mountain of data and hand over what matters.
 
 ### Walkthrough: the German expansion
 
@@ -967,7 +963,7 @@ Sense check the total before you move on. 5M bikes across 40M cyclists means one
 
 In chart and graph form the numbers sit in front of you, and the boss tests whether you read them in order. Run this checklist before you speak:
 
-1. Title: the claim the exhibit makes.
+1. Title: the exhibit's claim.
 2. Axes: what runs across and what runs up.
 3. Units: dollars or units, millions or thousands, percent or points.
 4. Time period: one year, five years, one quarter.
@@ -976,7 +972,7 @@ In chart and graph form the numbers sit in front of you, and the boss tests whet
 7. The outlier: the row that moves against the others.
 8. The so what: one sentence Player 2 could repeat to the client.
 
-Revenue by product line, in $M:
+Player 2 slides one exhibit across, titled REVENUE BY PRODUCT LINE, $M.
 
 | Product line | Last year | This year |
 |---|---|---|
@@ -997,13 +993,15 @@ Structure in words: saving per unit times volume, minus the new fixed cost, give
 - Simple payback: $90M divided by $30M = 3 years
 - Breakeven volume: $30M divided by $150 = 200K units per year
 
+Simple payback ignores the time value of money, so a dollar saved in year three counts the same as a dollar saved this year. It also ignores what the plant saves after year three, where the rest of a long-lived asset's value sits. If Player 2 pushes, run net present value at the client's hurdle rate across the plant's life and an internal rate of return to set beside that hurdle.
+
 The Loot: the plant pays back in 3 years at current volume and still breaks even if volume halves. The risk is the assumption that tariffs stay where they are, since the $150 saving carries the case: at $100 per unit, the net benefit drops to $10M and payback stretches to 9 years. Next steps: a tariff scenario from trade counsel and capex quotes from two builders. The question is binary, so the answer is binary: build, and name the tariff risk in the same breath.
 
 ### Mock dialogue: the German boss
 
 **PLAYER 2:** Let's test your first region with numbers. Wasatch Wheels wants to enter Germany. Use 80M people. The real figure is 84M. Half the population does not buy a bicycle in a given decade. Of the people who do buy, 60% are casual riders on a 12-year replacement cycle, 30% are commuters on a 6-year cycle, and 10% are enthusiasts on a 4-year cycle. E-bikes are 25% of casual purchases, 50% of commuter purchases, and 50% of enthusiast purchases. I want bikes bought per year, e-bikes among them, and the meaning for the client.
 
-[Cosmo writes as Player 2 talks.]
+[Cosmo writes as Player 2 talks]
 
 **COSMO:** Let me read that back by segment. 80M people, half of them buy. Casual: 60%, one bike per 12 years, 25% electric. Commuter: 30%, one per 6 years, 50% electric. Enthusiast: 10%, one per 4 years, 50% electric. You want annual units, bikes then e-bikes.
 
@@ -1017,7 +1015,7 @@ The Loot: the plant pays back in 3 years at current volume and still breaks even
 
 **PLAYER 2:** Take it.
 
-[Cosmo writes for 60 seconds.]
+[Cosmo writes for 60 seconds]
 
 **COSMO:** Approach first, then numbers. Population times the buying share gives cyclists, split three ways by segment. Each segment divided by its replacement cycle gives bikes per year, summed. Each segment's bikes times its e-bike share gives e-bikes, summed. Does that setup work for you?
 
@@ -1051,7 +1049,7 @@ The Loot: the plant pays back in 3 years at current volume and still breaks even
 
 **PLAYER 2:** Casual riders are 24M people, twice the commuter pool. Sell me on leaving the biggest crowd for later.
 
-**COSMO:** I would sequence casual second, and the purchase clock is the reason. A casual rider buys an e-bike about once in 48 years and a commuter about once in 12, so the commuter clock runs four times faster. Commuters ride on weekdays, where range and reliability sell, and commuter is our largest line at $330M. Casual is wave two, once dealers carry us.
+**COSMO:** I would sequence casual second, and the purchase clock is the reason. A casual rider buys an e-bike about once in 48 years and a commuter about once in 12, so the commuter clock runs four times faster. Commuters ride on weekdays, where range and reliability sell. Casual is wave two, once dealers carry us.
 
 **PLAYER 2:** You said the market can move our numbers. That assumes German commuters pay what US riders pay.
 
@@ -1067,7 +1065,9 @@ The second boss can arrive before or after the math and carries no numbers. Play
 
 ### A mini Quest Map
 
-The Idea Hydra is the Quest Map shrunk to a four-minute window. On the Quest Map you split a broad prompt (grow Wasatch Wheels) into four regions with three quests each after two minutes of silence. Against the hydra you split a pointed prompt (a retailer undercut us, tell me what to look into) into three necks with two to four heads each after 30 to 60 seconds. Player 2 grades the same three things in both fights: categories that cover the question without overlapping, ideas that fit this client, and the Loot, the action you name at the end. The shorter prep means thinner cupboards, and the coaches said Player 2 expects that.
+The Idea Hydra is the Quest Map shrunk to a four-minute window. You split a pointed prompt (a retailer undercut us, tell me what to look into) into three necks with two to four heads each after 30 to 60 seconds. Player 2 grades the same three things in both fights: categories that cover the question without overlapping, ideas that fit this client, and the Loot, the action you name at the end. The shorter prep means thinner cupboards, and the coaches said Player 2 expects that.
+
+Player 2 holds no answer key for this fight. A different set of defensible necks scores the same, and the coaches said it twice about creative answers: math has one right answer, and the rest of the case is an art graded on coverage.
 
 ### The four steps
 
@@ -1078,7 +1078,7 @@ The four steps take three to four minutes in all:
 3. Grow the heads, 1 to 2 minutes. Two to four ideas per neck, each specific to this client.
 4. Start and what else, 30 seconds. Pick the head you would chase first and say why. Name one thing you left out.
 
-Two rules stop you from losing count of heads. Expect "And what else?" and answer it by going one level deeper on a neck you already named or by opening a fourth neck. Never restate a used head. Treat the push like a dodge, a request for depth. And turn topics into checks: "battery quality" is a topic, while "tear down the battery and compare cell supplier against ours" is a head Player 2 can picture a team doing.
+Two rules run this fight. Expect "And what else?" and answer it by going one level deeper on a neck you already named or by opening a fourth neck. Never restate a used head. Treat the push like a dodge, a request for depth. And turn topics into checks: "battery quality" is a topic, while "tear down the battery and compare cell supplier against ours" is a head Player 2 can picture a team doing.
 
 ### The private-label prompt
 
@@ -1142,7 +1142,7 @@ Your starting point: mystery-shop the bike this week and pull dealer sell-throug
 
 Player 2 says: the cargo line is up +50% this year. On the website one order in four is a cargo bike. At dealers it is one sale in twelve. Dana wants ideas to raise the cargo share of dealer sales.
 
-- Dealer incentives: cargo margin at or above commuter margin, a spiff on cargo sales, a demo-bike program, and a floor-space allowance.
+- Dealer incentives: cargo margin at or above commuter margin, a bonus per cargo sale, a demo-bike program, and a floor-space allowance.
 - Customer experience: a test-ride loop with a weighted child seat, a staff script for parents who came in for a commuter.
 - Offer: an entry cargo model near $2,500, accessory bundles, family financing, and a trade-up credit for commuter owners whose families grew.
 
@@ -1152,7 +1152,7 @@ Your starting point: compare dealer margin and floor space per unit on a $3,500 
 
 [IMAGE: Cosmo_FinalBoss_Chairlift_02]
 
-The last boss announces itself with a corny line. After 30 to 45 minutes of Quest Maps, exhibits, and hydra heads, Player 2 leans back and says one of the standard versions: "I have dinner with the CEO tonight and I need a concise message for her," or "The CEO caught me in the elevator and I have one floor," or the BYU edition, "Dana Okafor is riding the chairlift with me this afternoon, one ride, about a minute." Player 2 wants you to compress the whole case into one minute. You lose HP here in two ways: you summarize the last question alone, or you freeze because the case has no tidy answer.
+The last boss announces itself with a corny line. After 30 to 45 minutes of Quest Maps, exhibits, and hydra heads, Player 2 leans back and says one of the standard versions: "I have dinner with the CEO tonight and I need a concise message for her," or the BYU edition, "Dana Okafor is riding the chairlift with me this afternoon, one ride, about a minute." You lose HP here in two ways: you summarize the last question alone, or you freeze because the case has no tidy answer.
 
 ### Ask for 30 seconds
 
@@ -1176,7 +1176,7 @@ One assumption in your recommendation carries more weight than its evidence. Nam
 
 ### Draw on the whole fight
 
-Build the recommendation from all of it: the growth map, the German math, the product-line exhibit, the plant breakeven, and the private-label hydra. Pull one number from each phase: cargo grew +50% while recreation posted -10%, commuters buy 1M of the 2M e-bikes sold in Germany each year, and the plant pays back in 3 years. Put those three side by side and Dana hears one story instead of three case questions.
+Build the recommendation from all of it. Pull one number from each phase: cargo grew +50% while recreation posted -10%, commuters buy 1M of the 2M e-bikes sold in Germany each year, and the plant pays back in 3 years. Put those three side by side and Dana hears one story instead of three case questions.
 
 ### Three updates
 
@@ -1220,15 +1220,21 @@ Speak the way a partner briefs an executive: "Three updates for you. Number one.
 
 The first screen is a two-minute recap that leaves no time for the recommendation. The second repeats the last question and forgets the first three. The third is a close with no next steps. Continue? Ask for 30 seconds, write three lines, and lead with the answer.
 
+### The Blank Screen
+
+Mid-case, your mind empties. Say out loud what you are doing: "Let me take stock for a second." Reread your own objective line at the top of the page, name the last thing you established, and ask for ten seconds. Player 2 is co-op and would rather hear the stall than watch the silence, and the sentence you speak while stalling points you at the next quest more often than not.
+
 ## Side Quests
 
-Player 2 scores your case in the Boss Fight. You earn your seat in the Dungeon, and your spot on the team after you win, in four side quests. Skip them and you can win the fight without reaching the Victory Screen.
+Fit stories, networking, the other boss forms, and the AI trap decide whether you reach the chair and whether the team wants you once you do. Skip them and you can win the fight without reaching the Victory Screen.
 
 [IMAGE: Cosmo_SideQuest_Fit_01]
 
 ### Character Select
 
 Firms label the fit interview behavioral, fit, or a branded name such as McKinsey's personal experience interview. You will hold no formal authority inside the client: you cannot spend a dollar of the client's money or hire or fire anyone in the client's building. Your job is influence, and Player 2 wants proof that you have moved people who did not report to you.
+
+McKinsey scores its personal experience interview on three themes: personal impact, entrepreneurial drive, and inclusive leadership. Tag each prepared story to at least one theme, and know which story you would lead with when Player 2 names the theme first.
 
 Pull your backstory from missions, MBA projects, and jobs. One coach said many of the best leadership stories he heard as an interviewer came from missions. A companion who refused a new approach or a district whose numbers were sliding is a story about influence without authority. Class projects supply conflict and deadlines. Jobs supply dollar figures.
 
@@ -1242,35 +1248,41 @@ Build each story in five beats:
 
 Tell it in about two minutes. At some firms Player 2 then spends five to ten minutes inside the Moves beat asking why you chose that path. "We" hides you, so say "I." Prepare five or six stories, tag each to more than one prompt, and rehearse them out loud with a partner.
 
-Balance your prep. A former McKinsey engagement manager told the room that strong candidates have lost offers by over-preparing the case and under-preparing fit. A case runs about 30 minutes, and with behavioral questions the slot runs 45 to 60. Rubric question three is whether Player 2 would send you alone to Omaha to sit with a cranky client, so follow up on the small talk Player 2 opened with, and bring stories that prove you belong in that room.
+Three answers open or close most fit rounds, and you write them once and reuse them. The resume walk-through runs two minutes: the thread from your first job to this chair, one line per stop, ending on the reason the next stop is consulting. The reason for consulting names the work you want, the pace, the spread of problems, and the skill you plan to build. The reason for this firm runs on the specifics you collected in the Overworld: the practice a second-year described, the office culture a partner named at the Tanner Building, the project a coffee chat put in front of you.
+
+Player 2 then turns the round over and asks what you want to know. Bring two questions the firm's website cannot answer, and tie one of them to something Player 2 said. A question the recruiting page answers costs you the last two minutes of the round, and Player 2 files it as low interest.
+
+Give fit the prep hours the case gets. Rubric question three is the Omaha test, so follow up on the small talk Player 2 opened with, and bring stories that prove you belong in that room.
 
 ### The Overworld
 
 Networking is travel across the map: coffee chats, campus events, NPCs who hand you the key to the chair. Once you sit down, the firm walls off the Overworld from the assessment, so a warm referral adds nothing to your case score.
 
-Referral value is hyper-variable by firm. Some firms take a partner's recommendation and put you in the chair. Others prohibit direct partner recommendations for campus candidates. At some, a note from a BYU MBA two years into the job carries real weight, and one coach said that note tends to get you the interview. Ask each contact how referrals work at their firm.
+Referral value swings by firm. Some firms take a partner's recommendation and put you in the chair. Others prohibit direct partner recommendations for campus candidates. At some, a note from a BYU MBA two years into the job carries weight, and one coach said that note is what gets you the interview. Ask each contact how referrals work at their firm.
 
-MBA programs are the best-organized candidate pool a firm has, so partners come to the Tanner Building to shake hands and answer questions. One coach put in the miles as a candidate, collected zero formal referrals, and used those connections to land interviews. In each conversation, learn one thing the website does not list and ask who else you should talk to. Those specifics become your Character Select answer for why this firm.
+MBA programs are the best-organized candidate pool a firm has, so partners come to the Tanner Building to shake hands and answer questions. One coach put in the miles as a candidate, collected zero formal referrals, and used those connections to land interviews. In each conversation, learn one thing the website does not list and ask who else you should talk to.
 
 ### Other Boss Forms
 
-The one-on-one case has been the standard boss since the 1930s. Four variants show up on the Quest Line, and each rewards the same skills in a different costume.
+Two things change what you do in the chair: the hand on the wheel, and the costume the firm puts on the boss.
+
+**The hand on the wheel.** McKinsey runs interviewer-led cases: Player 2 picks the next question, hands you one piece of the case at a time, and expects a clean answer to the question on the table. Bain and BCG lean candidate-led: you drive from your own map, name the region you want next, and ask for the data that region needs. In an interviewer-led round, answer Player 2's question, stop, and wait for the handoff. In a candidate-led round, close each answer by naming where you go next and what you want to see.
 
 **The recruiter screen (World 0).** A recruiter cut is rare if you speak in complete thoughts and laugh at their jokes. If the caller works in the business, expect a simple mini case such as sizing the e-bikes sold in Utah. Mini cases run 15 to 20 minutes, so walk the five floors of the Sizing Dungeon and land the number with its Loot.
 
-**The digital gate (World 0).** Firms use a digital, gamified, or AI assessment to decide who gets an interview. As of 2026 it sits before the chair, and a few firms have moved it inside the main process. Once you clear the bar, the firm sets the score aside. Some gates are reasoning games, some are a chatbot case, and some test numbers and charts under a clock, so read the firm's own prep page, then drill mental math and chart reading, the work that raises your MP.
+**The digital gate (World 0).** Once you clear the bar, the firm sets the score aside. Some gates are reasoning games, some are a chatbot case, and some test numbers and charts under a clock, so read the firm's own prep page, then drill mental math and chart reading, the work that raises your MP.
 
-**The presentation interview.** EY and PwC favor this form: a blank deck of six to eight slides, a spreadsheet with ten tabs, three hours alone in a small room without your phone, then a panel. Read the question first, write an answer-first storyline before you open the spreadsheet, and give each slide one message in its title. Panel questions are a Boss Fight in a suit: number, Loot, next step.
+**The presentation interview.** In the EY and PwC form, you sit alone with the deck, the spreadsheet, and no phone. Read the question first, write an answer-first storyline before you open the spreadsheet, and give each slide one message in its title. Panel questions are a Boss Fight in a suit: number, Loot, next step.
 
-**The group interview.** Few MBAs see this form. Firms use it on PhD and advanced-degree candidates to see whether a brilliant person can work in a small room. One coach described a room of about seven candidates working one case for two hours. Open with a structure, hand airtime to the quiet person, and tie the group's ideas together at the close.
+**The group interview.** Few MBAs see this form. Open with a structure, hand airtime to the quiet person, and tie the group's ideas together at the close.
 
 ### The AI Trap
 
 You can drill with AI and get sharper, or you can grade with AI and walk into the Dungeon blind. Good uses include mental math drills, Fraction Scroll quizzes, fresh prompts at 11 pm, building a Quest Map and asking the model to find the missing Region, and plain-language explanations of a sector new to you.
 
-The trap is the feedback. One coach put it this way: the grading skews positive, and the model praises whatever you produce. A tool that calls your six-minute framework excellent has stolen the one thing practice exists for: finding the weak event in your decathlon. Player 2 grades against the bar, and the encouragement you felt at midnight stays home.
+The trap is the feedback. One coach put it this way: the grading skews positive, and the model praises whatever you produce. A tool that calls your six-minute framework excellent has stolen the one thing practice exists for: finding the weak event in your decathlon.
 
-Case with humans for the verdict. The best feedback comes from an MBA2 who went through consulting recruiting and has sat on both sides of the table for 20 to 30 cases. That person will tell you how you come across. The BYU MBA Strategy and Consulting Association runs case practice on Tuesdays at 5 pm. Use AI for the drill and a person for the score.
+Case with humans for the verdict. The best feedback comes from an MBA2 who went through consulting recruiting and has sat on both sides of the table for 20 to 30 cases. That person will tell you how you come across. Use AI for the drill and a person for the score.
 
 [IMAGE: Cosmo_GameOver_Continue_01]
 
@@ -1294,7 +1306,7 @@ The Boss Fight is a decathlon. A former McKinsey engagement manager told the roo
 
 ### Out Loud Only
 
-Silent drills build MP and earn no XP. Math with someone watching is a different skill from math alone, and Player 2 grades the watched kind. Say the equation before you touch a number, say each step, say the loot. Your partner hears the ramble past three minutes that you cannot.
+Silent drills build MP and earn no XP. Say the equation before you touch a number, say each step, say the loot. Your partner hears the ramble past three minutes that you cannot.
 
 ### The Three Tiers
 
@@ -1330,6 +1342,10 @@ Playing Player 2 earns XP too: you hear a dodge from the other side and see a ma
 ### Taking Feedback
 
 Write the feedback down before you speak. Ask for the moment it happened if the note is vague. Skip the defense and spend that time on the drill that stops the ramble. Target the note that costs the most points in your next case. Keep a log of date, partner, case type, scores, and the note. Weigh the source: a second-year with 20 to 30 cases in both chairs sees patterns, a first-year partner sees timing and numbers, and an AI partner sees a strong candidate no matter how you did. Repeat the case type until you run three cases without hearing that note.
+
+### Scout the Firm
+
+Before a round, learn two things about the firm across the table: the pace it likes and the shape its cases take, interviewer-led or candidate-led. Candidate forums carry the pace, the firm's own prep materials carry the format and its sample cases, and a second-year who interviewed there last fall carries the rest. You are calibrating the timing benchmarks in Level 2, the 2:30 head down and the 2:15 to 3:00 walkthrough, to the firm in front of you. Walk in knowing which end of that range your Player 2 expects.
 
 ## Trophy Room
 
@@ -1369,9 +1385,16 @@ You unlock each of these fifteen Trophies with a partner watching.
 | CAGR | Compound annual growth rate: the steady yearly rate from a start value to an end value. |
 | Contribution margin | Price minus variable cost per unit: what each unit contributes toward fixed cost and profit. |
 | Fixed and variable cost | Fixed cost holds steady as volume moves (rent). Variable cost rises with each unit (parts, freight). |
+| Gross margin | Revenue minus the cost of making the product, divided by revenue: what is left to cover the rest of the company. |
+| Operating margin | Operating profit divided by revenue, after selling costs and overhead come out. |
+| EBITDA | Earnings before interest, taxes, depreciation, and amortization: a rough stand-in for the operating cash a business throws off. |
 | Breakeven | The volume where revenue covers total cost: fixed cost divided by contribution per unit. |
 | Payback | Years for annual net benefit to repay the investment: capex divided by net benefit per year. |
 | NPV | Net present value: future cash flows discounted to today, minus the investment. A positive result means the project creates value. |
+| ROI | Return on investment: the gain divided by the money you put in, over a stated period. |
+| IRR | Internal rate of return: the yearly return a project earns on the cash it ties up. |
+| Hurdle rate | The lowest return a company accepts before it funds a project. |
+| Terminal value | The worth of all years past the end of your forecast, rolled into one figure. |
 | CAC | Customer acquisition cost: sales and marketing spend divided by new customers won. |
 | LTV | Lifetime value: the profit one customer brings over the whole relationship, estimated as margin per period divided by churn. |
 | Churn | The share of customers or revenue lost in a period. |

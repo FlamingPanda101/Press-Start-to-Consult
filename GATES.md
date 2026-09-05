@@ -14,10 +14,10 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   EXPECT: structure verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=636312103bd5324ae2b982e459dc585322d8adca9cf7c9997eebf909623c4e97; exit=0; EXPECT=matched; output-sha256=4d266c74cbbbe1ea950b09a0ac8971283b08f362c0fb1bc282e0976888e3947e; output-bytes=30; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
-- [ ] G2: each book's prose word count lands in its page-length band (3, 10, and 30 to 40 pages)
+- [x] G2: each book's prose word count lands in its page-length band (3, 10, and 30 to 40 pages)
   CHECK: node scripts/verify.mjs words
   EXPECT: word count verification passed
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=e8a2b2bcd838e2299d10b7a1f322e12928c3b3c710d811e20cdf5ac6bc026336; exit=0; EXPECT=matched; output-sha256=d9081f300c590e8817fb05abae0bd640307a115a67f885ed815fd225034b9eaa; output-bytes=299; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] G3: every image placeholder in the books has exactly one complete art-bible entry and no entry is orphaned
   CHECK: node scripts/verify.mjs placeholders
@@ -29,20 +29,20 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   EXPECT: banned string verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=f294fa51c76854a7f2a0cd878c71bfe52c0685460c89c4b70ac5c20e3bdc27ae; exit=0; EXPECT=matched; output-sha256=dbdadc2df51e27ce938b23bfec6ab03848f2bc86ef3e62e792c3aa4f38ccac0e; output-bytes=34; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
-- [ ] G5: no run of nine or more consecutive words is shared with the workshop transcript or deck, and the negative control still trips the check
+- [x] G5: no run of nine or more consecutive words is shared with the workshop transcript or deck, and the negative control still trips the check
   CHECK: node scripts/verify.mjs overlap-all
   EXPECT: source overlap verification passed
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=919fb2126176c8f5221ebb1fef6e6e25a55d40bde33346ee77d8a5717ee618cb; exit=0; EXPECT=matched; output-sha256=89671581e137e55cb14ef5aa4a8739eb2d4d54afa9ed989a5f672f34cafa6fd1; output-bytes=35; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] G6: every Fraction Scroll row in every book is arithmetically correct when recomputed and matches the fixture
   CHECK: node scripts/verify.mjs fractions
   EXPECT: fraction scroll verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=908a8a02c7eac4a01d20f95afc7338657799689bca4991157894563f997c6401; exit=0; EXPECT=matched; output-sha256=e029a6485700aaa11d669d39bf6ef004a08759099bc81a1180e9e7a6fd4a8504; output-bytes=36; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
-- [ ] G7: population and sector figures agree across the three books and the tome carries the full atlas and codex
+- [x] G7: population and sector figures agree across the three books and the tome carries the full atlas and codex
   CHECK: node scripts/verify.mjs atlas
   EXPECT: atlas and sector consistency verification passed
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=0389c913ac22c96ee4b5b9c4ff27b69feccaf8d8fdafac9a9b96c2c5a1d7c136; exit=0; EXPECT=matched; output-sha256=d87dc386a3405cbff091d5961215d2c44344ee372010226270c9dfbe19c38cfc; output-bytes=49; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] G8: the four worked examples recompute from their inputs to the printed strings, and those strings appear in the books
   CHECK: node scripts/verify.mjs math

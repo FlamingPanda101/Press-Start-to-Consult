@@ -423,6 +423,21 @@
         "16.7%",
         "22.7%"
       ]
+    },
+    "sensitivity_utah_half_ownership": {
+      "inputs": {
+        "households": 1200000,
+        "wasatch_share": 0.75,
+        "own_rate_wasatch": 0.04,
+        "own_rate_rural": 0.04,
+        "replacement_years": 6,
+        "trueup_multiplier": 1.2,
+        "avg_price": 2000
+      },
+      "expected_strings": [
+        "9.6K units",
+        "$19.2M"
+      ]
     }
   }
 }

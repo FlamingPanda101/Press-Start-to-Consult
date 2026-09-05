@@ -6,9 +6,9 @@
 
 ## HUD Check
 
-1. **Opening Cutscene and Save Point (about 1 minute).** Take notes, then recap out loud with the numbers first. Over video, 60 and 16 sound alike.
-2. **Dialogue Tree (2 to 3 minutes).** Ask three to five questions: business model, scope, target metric, gaps in your notes. A dodge means the question belongs in your map.
-3. **Pause Menu, then Quest Map (2 minutes head down, about 3 to deliver).** Ask for two minutes each time. The coaches said trained interviewers expect it. Draw four regions with three quantified quests each, then renumber them by priority.
+1. **Opening Cutscene and Save Point (about 1 minute).** Take notes, then recap out loud: client, goal, numbers confirmed. Over video, 60 and 16 sound alike.
+2. **Dialogue Tree (2 to 3 minutes).** Ask three to five questions: business model, scope, target metric, gaps in your notes. Put a dodged question in your map.
+3. **Pause Menu, then Quest Map (2 minutes head down, about 3 to deliver).** Ask for two minutes each time. The coaches said any trained Player 2 expects it. Draw four regions with three quantified quests each, then renumber them by priority.
 4. **The variable middle.** Expect Number Cruncher rounds (about 2 minutes to structure, 3 to solve and share) and Idea Hydra rounds (3 to 4 minutes), in any number and any order.
 5. **Final Boss: The Chairlift (about 1 minute).** Ask for 30 seconds, then deliver a one-sentence recap, the recommendation before its support, the least-supported assumption, and next steps.
 
@@ -17,7 +17,7 @@
 - **Add:** line up the zeros, add from the left, say each subtotal out loud.
 - **Subtract:** round the number you are taking away up to a clean figure, subtract, then add back what you over-subtracted: 500 minus 198 is 500 minus 200, plus 2, so 302.
 - **Multiply:** strip the zeros, multiply the small numbers, put the zeros back: 400K units times $150 is 4 times 15, then six zeros, $60M.
-- **Divide:** swap the divisor for a Scroll fraction: 84K divided by 6 is 84K times 16.7%, about 14K.
+- **Divide:** factor the divisor: 84K divided by 6 is half of 84K, then a third, about 14K.
 - **Big numbers:** carry the unit (K, M, B, T). Thousands times thousands make millions.
 - **Percents:** find 10% by moving the decimal, then scale: 15% is 10% plus half of it.
 
@@ -88,7 +88,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 
 **Ten biggest US metros**
 
-| Metro | People | Metro | People |
+| Metro | Population | Metro | Population |
 |---|---|---|---|
 | New York metro | 20M | San Francisco Bay Area | 7.5M |
 | Los Angeles metro | 13M | Washington DC metro | 6.3M |
@@ -98,7 +98,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 
 **Twelve countries**
 
-| Country | People | Country | People |
+| Country | Population | Country | Population |
 |---|---|---|---|
 | India | 1.44B | Japan | 124M |
 | China | 1.41B | Germany | 84M |
@@ -109,7 +109,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 
 **Regions**
 
-| Region | People |
+| Region | Population |
 |---|---|
 | Asia | 4.8B |
 | Africa | 1.5B |
@@ -166,15 +166,15 @@ Load the page that matches your firm. A healthcare firm expects you to know Medi
 
 ## Quest Map in 60 Seconds
 
-Draw four regions with three quests each, then rename them for the prompt, renumber by priority, quantify each quest, and attach a "so that." Use your Compass, the hypothesis, to pick the region you start in.
+Build the four regions from this prompt, quantify each quest, and attach a "so that." Use your Compass, the hypothesis, to pick the region you start in.
 
-- **Profitability:** Revenue (price, volume, mix), Cost (fixed, variable). Under each, probe external causes (demand, competitor moves) and internal causes (capacity, recent changes) so nothing lands in two places. Add what you suspect, such as a rival's price cut.
+- **Profitability:** Revenue (price, volume, mix), Cost (fixed, variable). Split each into external causes (demand, competitor moves) and internal causes (capacity, recent changes) with no overlap. Add what you suspect, such as a rival's price cut.
 - **Market entry:** Market attractiveness (size, growth, share concentration), Customer (segments, willingness to pay, channel), Entry economics (price, margin, investment, payback), Capabilities and entry mode (build, partner, buy).
 - **Growth:** Market, Product, Customer, Company. Or run the product-market matrix, current or new product by current or new market, and size each cell.
 - **M&A:** Standalone value of the target, Synergies (revenue and cost, each sized), Deal economics (price against value, payback), Risks (culture, regulators, key people). Close with a binary answer: buy or pass.
 - **Pricing:** Cost floor (unit economics), Customer ceiling (willingness to pay, elasticity), Competitor reference prices, Strategy and channel (skim or penetrate, dealer margin).
-- **Operations:** Map the process, find the bottleneck, then Cost per unit, Capacity and utilization, Quality and waste, Speed (cycle time, OTIF).
-- **The Sizing Dungeon, five floors:** (1) population, households, or businesses, (2) three or four segments, (3) percent who own or buy, (4) purchase frequency, under one per year for durables, (5) average price. True up 10% to 20% for fleets, rentals, and businesses. Market size means revenue per year unless Player 2 says otherwise. Utah e-bikes, all brands (the Wasatch Wheels case): 1.2M households, 72K owned on the Wasatch Front plus 12K rural for 84K, 14K a year, 16.8K with fleets, $33.6M.
+- **Operations:** Map the process, find the bottleneck, then Cost per unit, Capacity and utilization, Quality and waste, Speed (cycle time, on-time-in-full delivery).
+- **The Sizing Dungeon, five floors:** (1) population, households, or businesses, (2) three or four segments, (3) percent who own or buy, (4) purchase frequency, under one per year for durables, (5) average price. True up 10% to 20% for fleets, rentals, and businesses. Market size means revenue per year unless Player 2 says otherwise. Utah e-bikes, all brands (the Wasatch Wheels case): 1.2M households, 72K on the Wasatch Front plus 12K rural for 84K, 14K a year, 16.8K with fleets, $33.6M.
 
 ## Boss Checklists
 
@@ -187,7 +187,7 @@ Draw four regions with three quests each, then rename them for the prompt, renum
 
 **Boss Fight II: The Idea Hydra**
 
-1. Recap and confirm the narrower question (30 seconds).
+1. Recap the narrower question in 30 seconds, then ask for 30 to 60 seconds of prep. Player 2 expects the ask.
 2. Name three necks that do not overlap (about 1 minute).
 3. Hang two to four heads on each neck.
 4. Say where you would start and what else (30 seconds).
@@ -202,7 +202,7 @@ Draw four regions with three quests each, then rename them for the prompt, renum
 
 1. You counted the installed base, a stock, instead of annual sales, a flow.
 2. You assumed 100% ownership, or any figure you cannot defend when Player 2 asks "why 60%?"
-3. You did the math in silence, or before Player 2 nodded at the structure.
+3. You did the math in silence, or before the nod.
 4. You skipped the Pause Menu, or rambled past three minutes on the Quest Map.
 5. You handed over a number with no Loot, or called your dodged question dumb.
 
