@@ -90,6 +90,14 @@ const checks = {
       const slots = (h.match(/class="art art--pending"/g) || []).length
       const ratios = (h.match(/--ar:\d+\/\d+/g) || []).length
       if (ratios < slots) errs.push(`${p}: ${slots - ratios} pending slots reserve no aspect ratio`)
+      // The first image is the largest contentful paint and must not be deferred;
+      // every later one must be, so a long book does not fetch 30 images at once.
+      const imgs = [...h.matchAll(/<img[^>]*>/g)].map(m => m[0])
+      imgs.forEach((tag, i) => {
+        const lazy = /loading="lazy"/.test(tag)
+        if (i === 0 && lazy) errs.push(`${p}: the first image is lazy, which delays the largest paint`)
+        if (i > 0 && !lazy) errs.push(`${p}: a below-the-fold image is not lazy`)
+      })
     }
     if (withArt + pending !== declared.size) errs.push(`${withArt + pending} slots rendered, ${declared.size} declared`)
     if (errs.length) fail(errs)

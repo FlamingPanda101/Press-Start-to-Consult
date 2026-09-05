@@ -98,8 +98,14 @@ function render(md, art, ctx) {
     const [w, h] = s.ar.split(':').map(Number)
     if (s.src) {
       ctx.withArt.push(id)
+      // The first image on a page is the largest contentful paint, so it loads
+      // eagerly. Everything below the fold stays lazy.
+      const first = ctx.withArt.length === 1
+      const load = first
+        ? 'loading="eager" fetchpriority="high" decoding="sync"'
+        : 'loading="lazy" decoding="async"'
       return `<figure class="art" style="--ar:${w}/${h}">`
-        + `<img src="${s.src}" alt="${esc(s.alt || s.gist)}" width="${w * 100}" height="${h * 100}" loading="lazy" decoding="async">`
+        + `<img src="${s.src}" alt="${esc(s.alt || s.gist)}" width="${w * 100}" height="${h * 100}" ${load}>`
         + `</figure>`
     }
     ctx.pending.push(id)
