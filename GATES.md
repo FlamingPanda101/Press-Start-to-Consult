@@ -17,12 +17,12 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] G2: each book's prose word count lands in its page-length band (3, 10, and 30 to 40 pages)
   CHECK: node scripts/verify.mjs words
   EXPECT: word count verification passed
-  EVIDENCE: automatic-evidence=v1; definition-sha256=e8a2b2bcd838e2299d10b7a1f322e12928c3b3c710d811e20cdf5ac6bc026336; exit=0; EXPECT=matched; output-sha256=d9081f300c590e8817fb05abae0bd640307a115a67f885ed815fd225034b9eaa; output-bytes=299; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=e8a2b2bcd838e2299d10b7a1f322e12928c3b3c710d811e20cdf5ac6bc026336; exit=0; EXPECT=matched; output-sha256=ec3a168796787318717fdc727d9021ed859351b64e93c350037d85dd041ba32d; output-bytes=299; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] G3: every image placeholder in the books has exactly one complete art-bible entry and no entry is orphaned
   CHECK: node scripts/verify.mjs placeholders
   EXPECT: placeholder verification passed
-  EVIDENCE: automatic-evidence=v1; definition-sha256=5239255f0dcb762ce6a8b57d2ea321e055062cb5af4437c00f3cd940e3a704f3; exit=0; EXPECT=matched; output-sha256=64d77bf2adc30b9b8e8c4e5c3ec95331eef1ad024fd3de2e835f2c988273ec64; output-bytes=74; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=5239255f0dcb762ce6a8b57d2ea321e055062cb5af4437c00f3cd940e3a704f3; exit=0; EXPECT=matched; output-sha256=ee4386ccc874d6498594deda72451b3337410a0c92b21f7302e7708371e4cf2d; output-bytes=74; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] G4: no training-firm names, case names, banned jargon, adverbs, or dashes appear in any deliverable, and the negative control still trips the check
   CHECK: node scripts/verify.mjs banned-all
@@ -49,10 +49,10 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   EXPECT: worked example verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=6fcae681fec797a1c66cb771ae4f3ac0616fefa7a67204f5462f06c0fd10260d; exit=0; EXPECT=matched; output-sha256=b8812236abb9066b0d3c50180d160f51b067084d44e0a478f95cb6fc96a2ed31; output-bytes=35; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
-- [ ] G9: the working tree is clean, every deliverable is tracked, and HEAD matches origin/main on GitHub
+- [x] G9: the working tree is clean, every deliverable is tracked, and HEAD matches origin/main on GitHub
   CHECK: node scripts/verify.mjs git
   EXPECT: git verification passed
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=5b349211b9ebb2183d6a766b01ad6ce07b51eab4f9e09e724909b43f288296fb; exit=0; EXPECT=matched; output-sha256=b2d5fdd7dc0af69debf9db6f8ea2927b67b9032596ee86d7fad035e4de35758a; output-bytes=24; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] M1: the fixture fact-check disputes were reviewed and every accepted correction was applied to fixtures and copy before assembly
   EVIDENCE: Reviewed 2026-09-05. A fact-check agent verified all 230 leaf values in scripts/fixtures.json against current sources and disputed 12. All 12 were accepted and applied to both fixture copies and to every draft before assembly: US health spending $4.9T to $5.3T, spending per person $14.5K to $15.5K, health share of GDP 17.5% to 18%, world GDP $110T to $120T, US GDP $29T to $30T, global IT spend $5T to $6T, global internet users 5.5B to 6B, AWS cloud share 30% to 28%, Google Cloud 11% to 14%, Australia 26M to 28M, Pakistan 240M to 255M. Two further corrections followed from later review: Azure 22% to 21% for consistency with the same cited source, and Provo-Orem metro 700K to 780K after a reviewer found the fixture placed the metro below Utah County, the county inside it. No dispute was rejected. Gate G7 holds all three books to the corrected values.
