@@ -1,6 +1,7 @@
 // Gate oracles for the docs/ website. Usage: node scripts/verify-site.mjs <check>
 // Every check exits 1 on any failure and prints a success-only marker on pass.
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 import { execFileSync } from 'node:child_process'
 import { join } from 'node:path'
 import { load as loadBlock, blockedIn } from './blocklist.mjs'
@@ -176,7 +177,8 @@ const checks = {
       for (const m of h.matchAll(/href="([^"]+)"/g)) {
         const href = m[1]
         if (/^(https?:|mailto:)/.test(href)) continue
-        const [file, frag] = href.split('#')
+        // Strip the cache-busting query before resolving the file on disk.
+        const [file, frag] = href.split('#').map((part, i) => i === 0 ? part.split('?')[0] : part)
         const target = file ? file : p
         if (file && !existsSync(join(OUT, file))) { errs.push(`${p}: link to missing file ${file}`); continue }
         if (frag && !ids.get(target)?.has(frag)) errs.push(`${p}: anchor #${frag} does not exist on ${target}`)
@@ -231,6 +233,21 @@ const checks = {
       }
       if (!/<title>[^<]+<\/title>/.test(h)) errs.push(`${p}: no title`)
       if (!/<meta name="description"/.test(h)) errs.push(`${p}: no description`)
+      // Pages caches hard and cannot be purged, so every mutable local asset must
+      // carry a content fingerprint or a return visitor keeps the stale copy.
+      for (const m of h.matchAll(/(?:src|href)="(assets\/[^"?]+\.(?:css|js|json|svg))(\?v=([a-f0-9]+))?"/g)) {
+        if (!m[3]) errs.push(`${p}: ${m[1]} has no ?v= fingerprint, so a cached copy can go stale`)
+      }
+      for (const m of h.matchAll(/data-search="(assets\/[^"?]+)(\?v=([a-f0-9]+))?"/g)) {
+        if (!m[3]) errs.push(`${p}: the search index reference has no fingerprint`)
+      }
+    }
+    // A fingerprint has to actually track its file's content.
+    const digest = t => createHash('sha256').update(t).digest('hex').slice(0, 10)
+    for (const [file, key] of [['assets/site.css', 'css'], ['assets/site.js', 'js'], ['assets/search-index.json', 'idx']]) {
+      const want = digest(read(join(OUT, file)))
+      const seen = new Set([...PAGES.flatMap(p => [...page(p).matchAll(new RegExp(file.replace(/[.\\/]/g, m => '\\' + m) + '\\?v=([a-f0-9]+)', 'g'))].map(m => m[1]))])
+      for (const got of seen) if (got !== want) errs.push(`${file} is referenced as v=${got} but its content hashes to ${want}`)
     }
     if (errs.length) fail(errs)
     console.log('pages readiness verified')

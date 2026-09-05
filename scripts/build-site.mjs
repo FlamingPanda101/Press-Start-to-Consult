@@ -3,6 +3,7 @@
 // Usage: node scripts/build-site.mjs
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, readdirSync, rmSync } from 'node:fs'
 import { join } from 'node:path'
+import { createHash } from 'node:crypto'
 
 const OUT = 'docs'
 const BOOKS = [
@@ -221,7 +222,10 @@ function render(md, art, ctx) {
 }
 
 // ---------------------------------------------------------------- shell
-const head = (title, desc, depth = '') => `<!DOCTYPE html>
+// Assets are fingerprinted so a rebuild reaches visitors who already have the
+// old file cached. GitHub Pages caches aggressively and offers no purge.
+const fp = (path, v) => `${path}?v=${v}`
+const head = (title, desc, V) => `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -232,27 +236,27 @@ const head = (title, desc, depth = '') => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
-<link rel="stylesheet" href="${depth}assets/site.css">
-<link rel="icon" href="${depth}assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="${fp('assets/site.css', V.css)}">
+<link rel="icon" href="${fp('assets/favicon.svg', V.ico)}" type="image/svg+xml">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>`
 
-const nav = (current, depth = '') => `<header class="topbar">
+const nav = current => `<header class="topbar">
 <nav class="topbar__inner" aria-label="Books">
-<a class="brand" href="${depth}index.html"><span class="brand__press">PRESS START</span><span class="brand__to">TO CONSULT</span></a>
+<a class="brand" href="index.html"><span class="brand__press">PRESS START</span><span class="brand__to">TO CONSULT</span></a>
 <ul class="topbar__links">
-${BOOKS.map(b => `<li><a href="${depth}${b.slug}.html"${b.slug === current ? ' aria-current="page"' : ''}>${esc(b.title)}</a></li>`).join('\n')}
+${BOOKS.map(b => `<li><a href="${b.slug}.html"${b.slug === current ? ' aria-current="page"' : ''}>${esc(b.title)}</a></li>`).join('\n')}
 </ul>
 </nav>
 </header>`
 
-const foot = (depth = '') => `<footer class="foot">
+const foot = V => `<footer class="foot">
 <p>Built from a case interview workshop at the BYU Marriott School of Business. The running client, Wasatch Wheels, is fictional.</p>
 <p>Cosmo the Cougar and the block Y are trademarks of Brigham Young University, used here for a student project.</p>
 <p><a href="https://github.com/FlamingPanda101/Press-Start-to-Consult">Source and the markdown these pages are built from</a></p>
 </footer>
-<script src="${depth}assets/site.js" defer></script>
+<script src="${fp('assets/site.js', V.js)}" defer></script>
 </body>
 </html>`
 
@@ -267,6 +271,7 @@ if (artSrc && existsSync(artSrc)) {
 
 const art = readArt()
 const search = []
+const pages = []
 let totalSlots = 0, totalArt = 0, totalPending = 0
 
 for (const b of BOOKS) {
@@ -297,7 +302,28 @@ for (const b of BOOKS) {
   const tocHtml = toc.map(s =>
     `<li class="toc__l${s.level}"><a href="#${s.id}">${esc(s.text)}</a></li>`).join('\n')
 
-  writeFileSync(join(OUT, `${b.slug}.html`), `${head(`${b.title} | Press Start to Consult`, b.blurb)}
+  pages.push([b, toc, html, tocHtml])
+  console.log(`${b.slug}.html: ${toc.length} sections, ${ctx.slots.length} art slots (${ctx.withArt.length} with art)`)
+}
+
+// The index must exist before any page is written, because each page carries the
+// index's fingerprint so a stale cached copy can never be used.
+const indexJson = JSON.stringify(search)
+writeFileSync(join(OUT, 'assets', 'search-index.json'), indexJson)
+const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">`
+  + `<rect width="16" height="16" fill="#002E5D"/>`
+  + `<path fill="#FFFFFF" d="M3 3h2v2H3zm8 0h2v2h-2zM5 5h2v2H5zm4 0h2v2H9zM7 7h2v2H7zm0 2h2v4H7z"/></svg>`
+writeFileSync(join(OUT, 'assets', 'favicon.svg'), favicon)
+const digest = t => createHash('sha256').update(t).digest('hex').slice(0, 10)
+const V = {
+  css: digest(readFileSync(join(OUT, 'assets', 'site.css'), 'utf8')),
+  js: digest(readFileSync(join(OUT, 'assets', 'site.js'), 'utf8')),
+  idx: digest(indexJson),
+  ico: digest(favicon),
+}
+
+for (const [b, toc, html, tocHtml] of pages) {
+  writeFileSync(join(OUT, `${b.slug}.html`), `${head(`${b.title} | Press Start to Consult`, b.blurb, V)}
 ${nav(b.slug)}
 <div class="shell">
 <button class="toc-toggle" aria-expanded="false" aria-controls="toc">Contents</button>
@@ -312,11 +338,8 @@ ${tocHtml}
 ${html}
 </main>
 </div>
-${foot()}`)
-  console.log(`${b.slug}.html: ${toc.length} sections, ${ctx.slots.length} art slots (${ctx.withArt.length} with art)`)
+${foot(V)}`)
 }
-
-writeFileSync(join(OUT, 'assets', 'search-index.json'), JSON.stringify(search))
 
 const cards = BOOKS.map(b => {
   const cover = [...art.values()].find(s => s.id.toLowerCase().includes(b.slug.replace('-', '').slice(0, 8)) && s.src)
@@ -328,9 +351,9 @@ const cards = BOOKS.map(b => {
 </a>`
 }).join('\n')
 
-writeFileSync(join(OUT, 'index.html'), `${head('Press Start to Consult', 'A case interview strategy guide for BYU Marriott MBA students, written as a 16-bit retro game guide.')}
+writeFileSync(join(OUT, 'index.html'), `${head('Press Start to Consult', 'A case interview strategy guide for BYU Marriott MBA students, written as a 16-bit retro game guide.', V)}
 ${nav('index')}
-<main id="main" class="home" tabindex="-1">
+<main id="main" class="home" tabindex="-1" data-search="${fp('assets/search-index.json', V.idx)}">
 <section class="hero">
 <p class="hero__kicker">BYU Marriott MBA</p>
 <h1 class="hero__title">PRESS START<br>TO CONSULT</h1>
@@ -356,13 +379,8 @@ ${cards}
 <p>Start in <a href="story-mode.html">Story Mode</a> if you have a few weeks. Open <a href="warp-zone.html">The Warp Zone</a> the night before. Work <a href="new-game-plus.html">New Game+</a> when you want the framework skill trees, the sector codex, and mock interviews with real pushback.</p>
 </section>
 </main>
-${foot()}`)
+${foot(V)}`)
 
 writeFileSync(join(OUT, '.nojekyll'), '')
-writeFileSync(join(OUT, 'assets', 'favicon.svg'),
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">`
-  + `<rect width="16" height="16" fill="#002E5D"/>`
-  + `<path fill="#FFFFFF" d="M3 3h2v2H3zm8 0h2v2h-2zM5 5h2v2H5zm4 0h2v2H9zM7 7h2v2H7zm0 2h2v4H7z"/></svg>`)
-
 console.log(`\n${totalSlots} art slots total: ${totalArt} with art, ${totalPending} awaiting art`)
 console.log(`search index: ${search.length} sections`)

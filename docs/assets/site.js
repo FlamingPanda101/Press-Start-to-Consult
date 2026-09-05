@@ -57,7 +57,8 @@
   var load = function () {
     if (index || loading) return;
     loading = true;
-    fetch('assets/search-index.json')
+    var url = (document.getElementById('main') || {}).dataset;
+    fetch((url && url.search) || 'assets/search-index.json')
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (d) { index = d; loading = false; if (pending !== null) { run(pending); pending = null; } })
       .catch(function () { loading = false; index = []; });
