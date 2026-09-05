@@ -1,0 +1,428 @@
+{
+  "fractions": [
+    [
+      "1/2",
+      "50%"
+    ],
+    [
+      "1/3",
+      "33.3%"
+    ],
+    [
+      "1/4",
+      "25%"
+    ],
+    [
+      "1/5",
+      "20%"
+    ],
+    [
+      "1/6",
+      "16.7%"
+    ],
+    [
+      "1/7",
+      "14.3%"
+    ],
+    [
+      "1/8",
+      "12.5%"
+    ],
+    [
+      "1/9",
+      "11.1%"
+    ],
+    [
+      "1/10",
+      "10%"
+    ],
+    [
+      "1/11",
+      "9.1%"
+    ],
+    [
+      "1/12",
+      "8.3%"
+    ],
+    [
+      "1/15",
+      "6.7%"
+    ],
+    [
+      "1/20",
+      "5%"
+    ],
+    [
+      "1/25",
+      "4%"
+    ],
+    [
+      "1/30",
+      "3.3%"
+    ],
+    [
+      "1/40",
+      "2.5%"
+    ],
+    [
+      "1/50",
+      "2%"
+    ],
+    [
+      "1/80",
+      "1.25%"
+    ],
+    [
+      "1/100",
+      "1%"
+    ]
+  ],
+  "atlas": {
+    "world": {
+      "World population": "8.2B",
+      "World GDP": "$120T"
+    },
+    "us": {
+      "US population": "340M",
+      "US households": "130M",
+      "US average household size": "2.5",
+      "US adults 18+": "260M",
+      "US under 18": "73M",
+      "US 65+": "60M",
+      "US labor force": "170M",
+      "US K-12 students": "50M",
+      "US college students": "19M",
+      "US GDP": "$30T",
+      "US healthcare spending": "$5.3T",
+      "US retail sales per year": "$7.5T",
+      "People per single year of age in the US": "4.2M",
+      "Share of US population per single year of age": "1.25%",
+      "US median household income": "$80K",
+      "US life expectancy": "78"
+    },
+    "utah": {
+      "Utah population": "3.5M",
+      "Utah households": "1.2M",
+      "Utah average household size": "3.0",
+      "Wasatch Front population": "2.7M",
+      "Salt Lake County": "1.2M",
+      "Utah County": "720K",
+      "Salt Lake City (city proper)": "210K",
+      "Salt Lake City metro": "1.3M",
+      "Provo (city proper)": "115K",
+      "Provo-Orem metro": "700K",
+      "BYU total enrollment": "34K"
+    },
+    "states": {
+      "California": "39M",
+      "Texas": "31M",
+      "Florida": "23M",
+      "New York": "19.5M",
+      "Pennsylvania": "13M",
+      "Illinois": "12.5M",
+      "Ohio": "11.8M",
+      "Georgia": "11M",
+      "North Carolina": "11M",
+      "Michigan": "10M",
+      "Washington": "8M",
+      "Arizona": "7.5M",
+      "Massachusetts": "7M",
+      "Colorado": "6M",
+      "Utah": "3.5M",
+      "Nevada": "3.3M",
+      "Idaho": "2M"
+    },
+    "metros": {
+      "New York metro": "20M",
+      "Los Angeles metro": "13M",
+      "Chicago metro": "9.5M",
+      "Dallas-Fort Worth metro": "8M",
+      "Houston metro": "7.5M",
+      "San Francisco Bay Area": "7.5M",
+      "Washington DC metro": "6.3M",
+      "Atlanta metro": "6.3M",
+      "Miami metro": "6.2M",
+      "Philadelphia metro": "6.2M",
+      "Phoenix metro": "5M",
+      "Boston metro": "5M",
+      "Seattle metro": "4M",
+      "Minneapolis-St. Paul metro": "3.7M",
+      "Denver metro": "3M",
+      "Austin metro": "2.5M",
+      "Salt Lake City metro": "1.3M"
+    },
+    "cities": {
+      "New York City": "8.3M",
+      "Los Angeles": "3.8M",
+      "Chicago": "2.7M",
+      "Houston": "2.3M",
+      "Phoenix": "1.7M",
+      "Philadelphia": "1.55M",
+      "Dallas": "1.3M",
+      "Austin": "1M",
+      "San Francisco": "800K",
+      "Seattle": "750K",
+      "Denver": "720K",
+      "Washington DC": "700K",
+      "Boston": "650K",
+      "Atlanta": "500K"
+    },
+    "countries": {
+      "India": "1.44B",
+      "China": "1.41B",
+      "United States": "340M",
+      "Indonesia": "280M",
+      "Pakistan": "255M",
+      "Nigeria": "230M",
+      "Brazil": "215M",
+      "Bangladesh": "175M",
+      "Russia": "145M",
+      "Mexico": "130M",
+      "Japan": "124M",
+      "Philippines": "115M",
+      "Egypt": "110M",
+      "Vietnam": "100M",
+      "Iran": "90M",
+      "Turkey": "86M",
+      "Germany": "84M",
+      "United Kingdom": "68M",
+      "France": "68M",
+      "Italy": "59M",
+      "South Korea": "52M",
+      "Spain": "48M",
+      "Canada": "40M",
+      "Saudi Arabia": "36M",
+      "Australia": "28M"
+    },
+    "regions": {
+      "Asia": "4.8B",
+      "Africa": "1.5B",
+      "Europe": "745M",
+      "European Union": "450M",
+      "Latin America and Caribbean": "660M",
+      "North America (US, Canada, Mexico)": "510M",
+      "South America": "440M",
+      "Oceania": "45M"
+    }
+  },
+  "sectors": {
+    "healthcare": {
+      "US healthcare spending": "$5.3T",
+      "Healthcare share of US GDP": "18%",
+      "US healthcare spending per person": "$15.5K",
+      "US hospitals": "6,100",
+      "US hospital beds": "920K",
+      "US physicians (active)": "1M",
+      "US registered nurses (employed)": "3.3M",
+      "Medicare enrollees": "68M",
+      "Medicaid and CHIP enrollees": "72M",
+      "Uninsured share of US population": "8%",
+      "Employer-sponsored insurance covered lives": "155M",
+      "ACA marketplace enrollees": "24M",
+      "Hospital care share of US health spending": "30%",
+      "Physician services share of US health spending": "20%",
+      "Retail prescription drugs share of US health spending": "9%",
+      "Medical loss ratio floor (individual and small group)": "80%",
+      "Medical loss ratio floor (large group)": "85%",
+      "Typical hospital operating margin": "1% to 4%",
+      "Average hospital length of stay": "4.5 days",
+      "Typical hospital occupancy": "65% to 70%",
+      "30-day readmission rate (Medicare)": "15%",
+      "Generics share of US prescriptions": "90%",
+      "Generics share of US drug spend": "20%",
+      "Cost to bring a new drug to market": "$2B+",
+      "Drug development timeline": "10 to 15 years",
+      "Clinical-trial success rate from Phase I to approval": "10%"
+    },
+    "supplychain": {
+      "US logistics cost share of GDP": "9%",
+      "US logistics spend": "$2.5T",
+      "Trucking share of US freight tonnage": "72%",
+      "Full truckload capacity (weight)": "45,000 lb",
+      "Full truckload capacity (pallets)": "26 pallets",
+      "Dry van trailer length": "53 ft",
+      "LTL shipment weight range": "150 lb to 15,000 lb",
+      "Parcel weight ceiling": "150 lb",
+      "Truckload all-in rate per mile": "$2.50",
+      "Air freight cost vs ocean per kg": "5x to 10x",
+      "40-foot container volume": "2,390 cu ft",
+      "40-foot container max payload": "58,000 lb",
+      "Ocean transit Shanghai to Los Angeles": "14 to 21 days",
+      "Ocean freight Shanghai to LA per 40-foot container (normal market)": "$2,000 to $3,000",
+      "Intermodal savings vs truck on 700+ mile lanes": "10% to 30%",
+      "Largest container ships": "24,000 TEU",
+      "LA and Long Beach share of US containerized imports": "30%",
+      "Last-mile share of total delivery cost": "40% to 50%",
+      "Inventory carrying cost per year (share of inventory value)": "20% to 30%",
+      "Inventory turns: grocery": "12 to 15",
+      "Inventory turns: general merchandise retail": "4 to 8",
+      "Inventory turns: industrial manufacturing": "4 to 6",
+      "Inventory turns: auto dealers": "3 to 5",
+      "Fill rate target": "95% to 98%",
+      "OTIF typical": "85% to 95%",
+      "OTIF best-in-class": "95%+",
+      "Inventory accuracy target": "98%+",
+      "OEE world class": "85%",
+      "OEE typical": "60%",
+      "US manufacturing capacity utilization": "77%",
+      "Manual pick rate": "100 to 200 picks per hour",
+      "Semi-automated pick rate": "300+ picks per hour",
+      "Warehouse space utilization target": "80% to 85%",
+      "Dock-to-stock target": "under 24 hours",
+      "Warehousing cost share of sales": "2% to 5%",
+      "Truck driver shortage (US)": "60K to 80K",
+      "Hours-of-service daily driving limit": "11 hours",
+      "Procurement savings from a sourcing program": "5% to 15%",
+      "ABC rule": "20% of SKUs drive 80% of value"
+    },
+    "tech": {
+      "Software gross margin": "70% to 85%",
+      "Hardware or marketplace gross margin": "40% to 60%",
+      "LTV to CAC benchmark": "3x",
+      "CAC payback benchmark": "under 18 months",
+      "Net revenue retention (good)": "100% to 120%",
+      "Net revenue retention (best-in-class)": "120%+",
+      "Monthly gross churn: SMB": "3% to 5%",
+      "Monthly gross churn: enterprise": "under 1%",
+      "Annual gross churn: healthy SaaS": "5% to 10%",
+      "Rule of 40": "growth % + profit margin % >= 40",
+      "Magic number benchmark": "0.75+",
+      "Burn multiple (good)": "under 1.5",
+      "DAU/MAU (good)": "20%+",
+      "DAU/MAU (social apps)": "50%+",
+      "Visitor to trial conversion": "2% to 5%",
+      "Trial to paid conversion": "10% to 25%",
+      "Freemium to paid conversion": "2% to 5%",
+      "Marketplace take rate": "10% to 30%",
+      "App store take rate": "15% to 30%",
+      "Payments take rate": "3%",
+      "Cloud market share: AWS": "28%",
+      "Cloud market share: Azure": "21%",
+      "Cloud market share: Google Cloud": "14%",
+      "Global IT spending": "$6T",
+      "US smartphone penetration": "90%",
+      "Global smartphone users": "4.9B",
+      "Global internet users": "6B",
+      "US e-commerce share of retail": "16%",
+      "SaaS R&D share of revenue": "20% to 30%",
+      "Growth-stage SaaS sales and marketing share of revenue": "30% to 50%",
+      "Public SaaS valuation (EV to revenue)": "5x to 10x"
+    },
+    "other": {
+      "Grocery gross margin": "25% to 30%",
+      "Grocery net margin": "1% to 3%",
+      "Apparel gross margin": "50% to 60%",
+      "Retail sales per square foot (typical)": "$300 to $600",
+      "In-store conversion": "20% to 40%",
+      "E-commerce conversion": "2% to 3%",
+      "Retail shrink": "1.5% to 2%",
+      "CPG trade spend share of revenue": "15% to 25%",
+      "Bank net interest margin": "3%",
+      "Bank efficiency ratio": "55% to 60%",
+      "Bank ROE": "10% to 15%",
+      "Credit card interchange": "2%",
+      "Mid-market EV/EBITDA multiple": "8x to 12x",
+      "LBO leverage": "4x to 6x EBITDA",
+      "PE target IRR": "20% to 25%",
+      "PE target MOIC": "2x to 3x",
+      "PE hold period": "3 to 7 years",
+      "Airline load factor": "83% to 85%",
+      "Airline fuel share of costs": "20% to 30%",
+      "Airline labor share of costs": "30% to 35%",
+      "Restaurant food cost": "28% to 35%",
+      "Restaurant labor cost": "25% to 35%",
+      "Restaurant prime cost target": "under 65%",
+      "Restaurant occupancy (rent) cost": "6% to 10%"
+    }
+  },
+  "worked_examples": {
+    "sizing_utah_ebikes": {
+      "inputs": {
+        "utah_population": 3500000,
+        "household_size": 3,
+        "wasatch_share": 0.75,
+        "own_rate_wasatch": 0.08,
+        "own_rate_rural": 0.04,
+        "replacement_years": 6,
+        "trueup_multiplier": 1.2,
+        "avg_price": 2000
+      },
+      "expected_strings": [
+        "1.2M households",
+        "72K",
+        "12K",
+        "84K",
+        "14K",
+        "16.8K",
+        "$33.6M"
+      ]
+    },
+    "quant_germany_bikes": {
+      "inputs": {
+        "germany_population_shorthand": 80000000,
+        "cyclist_share": 0.5,
+        "casual_share": 0.6,
+        "commuter_share": 0.3,
+        "enthusiast_share": 0.1,
+        "casual_years": 12,
+        "commuter_years": 6,
+        "enthusiast_years": 4,
+        "ebike_share_casual": 0.25,
+        "ebike_share_commuter": 0.5,
+        "ebike_share_enthusiast": 0.5
+      },
+      "expected_strings": [
+        "40M cyclists",
+        "24M",
+        "12M",
+        "4M",
+        "5M bikes",
+        "2M e-bikes",
+        "0.5M",
+        "1M"
+      ]
+    },
+    "breakeven_assembly_plant": {
+      "inputs": {
+        "capex": 90000000,
+        "annual_fixed_opex": 30000000,
+        "saving_per_unit": 150,
+        "annual_units": 400000
+      },
+      "expected_strings": [
+        "$60M",
+        "$30M",
+        "3 years",
+        "200K units"
+      ]
+    },
+    "exhibit_segments": {
+      "inputs": {
+        "segments": [
+          "Commuter",
+          "Recreation",
+          "Cargo"
+        ],
+        "y1": [
+          300,
+          200,
+          100
+        ],
+        "y2": [
+          330,
+          180,
+          150
+        ]
+      },
+      "expected_strings": [
+        "$600M",
+        "$660M",
+        "+10%",
+        "-10%",
+        "+50%",
+        "16.7%",
+        "22.7%"
+      ]
+    }
+  }
+}

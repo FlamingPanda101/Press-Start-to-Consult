@@ -1,0 +1,8 @@
+.unlazy/
+.unlazy-hook-state.json
+node_modules/
+.claude/settings.local.json
+*.pdf
+*.mp3
+*.m4a
+*.mp4
