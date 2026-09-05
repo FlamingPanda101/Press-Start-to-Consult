@@ -275,13 +275,22 @@ for (const b of BOOKS) {
   const { html, toc } = render(md, art, ctx)
   totalSlots += ctx.slots.length; totalArt += ctx.withArt.length; totalPending += ctx.pending.length
 
-  // Section text for the search index, split on h2/h3 boundaries.
-  const plain = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ')
+  // Section text for the search index, split on h2/h3 boundaries. Slice from the
+  // start of the heading's tag, not from the id attribute inside it, or the
+  // attribute text survives the tag strip and shows up in search snippets.
+  const startOf = id => {
+    const at = html.indexOf(`id="${id}"`)
+    return at < 0 ? -1 : html.lastIndexOf('<', at)
+  }
   for (const s of toc) {
-    const idx = html.indexOf(`id="${s.id}"`)
+    const idx = startOf(s.id)
     const nxt = toc[toc.indexOf(s) + 1]
-    const end = nxt ? html.indexOf(`id="${nxt.id}"`) : html.length
-    const body = html.slice(idx, end > idx ? end : html.length).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+    const end = nxt ? startOf(nxt.id) : html.length
+    const body = html.slice(idx, end > idx ? end : html.length)
+      .replace(/<a class="anchor"[^>]*>#<\/a>/g, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+      .replace(/\s+/g, ' ').trim()
     search.push({ b: b.title, u: `${b.slug}.html#${s.id}`, h: s.text, t: body.slice(0, 900) })
   }
 
