@@ -23,7 +23,7 @@
 
 [IMAGE: Cosmo_Fraction_Scroll_01]
 
-**The Fraction Scroll**
+#### The Fraction Scroll
 
 | Fraction | Percent |
 |---|---|
@@ -59,7 +59,7 @@
 
 Carry these in your head: US population, your city, the interview city, two countries or a continent, and your target firm's sector headline. Ask Player 2 for the rest.
 
-**World and US**
+#### World and US
 
 | Figure | Value |
 |---|---|
@@ -73,7 +73,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 | US K-12 students | 50M |
 | US GDP | $30T |
 
-**Utah**
+#### Utah
 
 | Figure | Value |
 |---|---|
@@ -86,7 +86,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 | Provo-Orem metro | 780K |
 | BYU total enrollment | 34K |
 
-**Ten biggest US metros**
+#### Ten biggest US metros
 
 | Metro | Population | Metro | Population |
 |---|---|---|---|
@@ -96,7 +96,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 | Dallas-Fort Worth metro | 8M | Miami metro | 6.2M |
 | Houston metro | 7.5M | Philadelphia metro | 6.2M |
 
-**Twelve countries**
+#### Twelve countries
 
 | Country | Population | Country | Population |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 | Brazil | 215M | Canada | 40M |
 | Mexico | 130M | Australia | 28M |
 
-**Regions**
+#### Regions
 
 | Region | Population |
 |---|---|
@@ -123,7 +123,7 @@ Carry these in your head: US population, your city, the interview city, two coun
 
 Load the page that matches your firm. A healthcare firm expects you to know Medicare enrollees cold.
 
-**Healthcare**
+#### Healthcare
 
 | Metric | Figure |
 |---|---|
@@ -136,7 +136,7 @@ Load the page that matches your firm. A healthcare firm expects you to know Medi
 | Employer insurance covered lives | 155M |
 | Hospital operating margin | 1% to 4% |
 
-**Supply Chain and Operations**
+#### Supply Chain and Operations
 
 | Metric | Figure |
 |---|---|
@@ -151,7 +151,7 @@ Load the page that matches your firm. A healthcare firm expects you to know Medi
 | Fill rate target | 95% to 98% |
 | OEE world class | 85% |
 
-**Tech**
+#### Tech
 
 | Metric | Figure |
 |---|---|
@@ -178,27 +178,27 @@ Build the four regions from this prompt, quantify each quest, and attach a "so t
 
 ## Boss Checklists
 
-**Boss Fight I: The Number Cruncher**
+#### Boss Fight I: The Number Cruncher
 
 1. Recap the data, confirm each number, and name the unit: units or dollars.
 2. Write the equation in words before any number and get Player 2's nod.
 3. Solve out loud, one step at a time, and sense-check each result.
 4. Give the three-part answer: the number, the Loot (what it means and what the client should do), and what is next.
 
-**Boss Fight II: The Idea Hydra**
+#### Boss Fight II: The Idea Hydra
 
 1. Recap the narrower question in 30 seconds, then ask for 30 to 60 seconds of prep.
 2. Name three necks that do not overlap (about 1 minute).
 3. Hang two to four heads on each neck.
 4. Say where you would start and what else (30 seconds).
 
-**Final Boss: The Chairlift**
+#### Final Boss: The Chairlift
 
 1. Recap why the client called and what you found across the whole case.
 2. Recommend: a binary answer to a binary question, the support, and the least-supported assumption.
 3. Name three next steps, deeper or wider, starting with the one that firms up that assumption.
 
-**Five Game Over screens**
+#### Five Game Over screens
 
 1. You counted the installed base, a stock, instead of annual sales, a flow.
 2. You assumed 100% ownership, or any figure you cannot defend when Player 2 asks "why 60%?"

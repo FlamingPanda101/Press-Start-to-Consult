@@ -60,7 +60,7 @@ Cast by three rules. Write the equation before you touch a number and get Player
 
 Memorize the Fraction Scroll so that you read 130 times 33% as one third of 130 and say about 43.
 
-**The Fraction Scroll**
+#### The Fraction Scroll
 
 | Fraction | Percent |
 |---|---|
@@ -92,7 +92,7 @@ Memorize the Fraction Scroll so that you read 130 times 33% as one third of 130 
 
 The workshop set a need-to-know list: the US population, the city you live in, the city you are interviewing in, two countries or a continent, and, for a sector-focused firm, its headline figures. If a country is missing from your atlas, ask, and Player 2 will hand you the number.
 
-**World and US**
+#### World and US
 
 | Figure | Value |
 |---|---|
@@ -110,7 +110,7 @@ Household size sits at 2.5 for the country and runs larger in family-heavy regio
 
 Divide 340M by 2.5 and you land on 136M, above the atlas row. Take out the 8M Americans in group quarters such as dorms and care homes and you get 133M, and 2.5 is a rounded figure, so use the 130M row and move on.
 
-**Utah block**
+#### Utah block
 
 | Figure | Value |
 |---|---|
@@ -126,7 +126,7 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. Take out the 8M Am
 | Provo (city proper) | 115K |
 | BYU total enrollment | 34K |
 
-**Twelve metros: the ten biggest, plus Phoenix and Denver for the Mountain West**
+#### Twelve metros: the ten biggest, plus Phoenix and Denver for the Mountain West
 
 | Metro | Population |
 |---|---|
@@ -143,7 +143,7 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. Take out the 8M Am
 | Phoenix metro | 5M |
 | Denver metro | 3M |
 
-**Twelve countries**
+#### Twelve countries
 
 | Country | Population |
 |---|---|
@@ -160,7 +160,7 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. Take out the 8M Am
 | Canada | 40M |
 | Australia | 28M |
 
-**Regions**
+#### Regions
 
 | Region | Population |
 |---|---|
@@ -176,7 +176,7 @@ Divide 340M by 2.5 and you land on 136M, above the atlas row. Take out the 8M Am
 
 A healthcare firm expects you to carry Medicare enrollment the way a generalist carries the US population. Drop one of these into your structure and Player 2 stops explaining the sector to you.
 
-**Healthcare**
+#### Healthcare
 
 | Metric | Value |
 |---|---|
@@ -193,7 +193,7 @@ A healthcare firm expects you to carry Medicare enrollment the way a generalist 
 | Employer-sponsored insurance covered lives | 155M |
 | Uninsured share of US population | 8% |
 
-**Supply Chain and Operations**
+#### Supply Chain and Operations
 
 | Metric | Value |
 |---|---|
@@ -211,7 +211,7 @@ A healthcare firm expects you to carry Medicare enrollment the way a generalist 
 | Fill rate target | 95% to 98% |
 | OEE world class | 85% |
 
-**Tech**
+#### Tech
 
 | Metric | Value |
 |---|---|

@@ -197,7 +197,7 @@ Run the Spellbook's 1/80 trick. Spread an 80-year lifespan into even slices, and
 
 The metro is the market for most sizing, so say which figure you mean: New York City at 8.3M and the New York metro at 20M are different quests. Match the base to the client's channel: a dealer network sells to a metro, a state law applies to a state, and a bike-share contract with a city hall fits the city-proper figure.
 
-**World and United States**
+#### World and United States
 
 | Figure | Value |
 |---|---|
@@ -210,7 +210,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | US healthcare spending | $5.3T |
 | US retail sales per year | $7.5T |
 
-**US Demographics**
+#### US Demographics
 
 | Figure | Value |
 |---|---|
@@ -225,7 +225,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | US median household income | $80K |
 | US life expectancy | 78 |
 
-**Utah**
+#### Utah
 
 | Figure | Value |
 |---|---|
@@ -241,7 +241,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | Provo-Orem metro | 780K |
 | BYU total enrollment | 34K |
 
-**States**
+#### States
 
 | State | Population | State | Population |
 |---|---|---|---|
@@ -255,7 +255,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | Georgia | 11M | Idaho | 2M |
 | North Carolina | 11M | | |
 
-**Metros and City Proper**
+#### Metros and City Proper
 
 | Metro area | Metro population | City proper |
 |---|---|---|
@@ -279,7 +279,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 
 [IMAGE: Cosmo_World_Atlas_01]
 
-**Countries**
+#### Countries
 
 | Country | Population | Country | Population |
 |---|---|---|---|
@@ -297,7 +297,7 @@ The metro is the market for most sizing, so say which figure you mean: New York 
 | Philippines | 115M | Australia | 28M |
 | Egypt | 110M | | |
 
-**Regions**
+#### Regions
 
 | Region | Population |
 |---|---|
@@ -913,11 +913,21 @@ State the Loot: $33.6M a year against $600M of Wasatch Wheels revenue means owni
 
 A helmet belongs to a person, and age drives replacement and price, so you segment Colorado's 6M people by age. The 1/80 trick puts people under 18 at 18 times 1.25%, about 22.5%. You round to 25% for clean math and say so. You take 65 and over at 15% (0.9M) rather than the trick's 19%, because Colorado skews young, which leaves 60% (3.6M) for 18 to 64.
 
-| Segment | Population | Skiers | Own helmet | Cycle | Units a year | Price | Revenue |
-|---|---|---|---|---|---|---|---|
-| Under 18 | 1.5M | 20%, 300K | 90%, 270K | 3 years | 90K | $60 | $5.4M |
-| 18 to 64 | 3.6M | 25%, 900K | 80%, 720K | 6 years | 120K | $120 | $14.4M |
-| 65 and over | 0.9M | 10%, 90K | 80%, 72K | 6 years | 12K | $100 | $1.2M |
+First the funnel, from people down to helmets owned.
+
+| Segment | Population | Skiers | Own a helmet |
+|---|---|---|---|
+| Under 18 | 1.5M | 20%, 300K | 90%, 270K |
+| 18 to 64 | 3.6M | 25%, 900K | 80%, 720K |
+| 65 and over | 0.9M | 10%, 90K | 80%, 72K |
+
+Then the money, from helmets owned down to revenue.
+
+| Segment | Cycle | Units a year | Price | Revenue |
+|---|---|---|---|---|
+| Under 18 | 3 years | 90K | $60 | $5.4M |
+| 18 to 64 | 6 years | 120K | $120 | $14.4M |
+| 65 and over | 6 years | 12K | $100 | $1.2M |
 
 Residents buy 222K helmets for $21M a year. A 20% true-up for out-of-state visitors and rental fleets brings it to $25.2M. Player 2 will probe the 25% adult participation, and you have the anchor ready: half the state lives in the Denver metro (3M), within two hours of a dozen resorts.
 
