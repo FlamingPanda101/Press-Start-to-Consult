@@ -3,6 +3,7 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { join } from 'node:path'
+import { load as loadBlock, blockedIn } from './blocklist.mjs'
 
 const OUT = 'docs'
 const PAGES = ['index.html', 'warp-zone.html', 'story-mode.html', 'new-game-plus.html']
@@ -13,6 +14,10 @@ const fail = msgs => { for (const m of msgs) console.log('FAIL ' + m); process.e
 const text = h => h.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ')
   .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&middot;/g, '.').replace(/&rsaquo;/g, '>')
   .replace(/&ldquo;|&rdquo;/g, '"').replace(/&quot;/g, '"').replace(/\s+/g, ' ')
+
+// Blocked proper nouns live as salted hashes so this repository can be public
+// without naming anyone. The hashing lives in one place, shared with the builder.
+const BSET = loadBlock()
 
 const checks = {
   // Rebuilding must not change anything: the site is a pure function of the markdown.
@@ -255,18 +260,20 @@ const checks = {
   },
 
   banned() {
-    const words = ['really', 'just', 'literally', 'genuinely', 'honestly', 'simply', 'actually', 'deeply', 'truly', 'fundamentally', 'inherently', 'inevitably', 'interestingly', 'importantly', 'crucially', 'basically', 'essentially', 'ultimately', 'incredibly', 'extremely', 'very', 'landscape', 'navigate', 'unpack', 'delve', 'ohsnap', 'laravia']
-    const phrases = ['management consulted', 'strategy simplified', 'oh snap', 'rick wilmot', 'abby chen', 'grand pause', 'game plan', 'deep dive', 'lean into', 'moving forward', 'circle back', "here's the thing", 'it turns out', 'at the end of the day', 'not just']
+    const words = ['really', 'just', 'literally', 'genuinely', 'honestly', 'simply', 'actually', 'deeply', 'truly', 'fundamentally', 'inherently', 'inevitably', 'interestingly', 'importantly', 'crucially', 'basically', 'essentially', 'ultimately', 'incredibly', 'extremely', 'very', 'landscape', 'navigate', 'unpack', 'delve', ]
+    const phrases = ['grand pause', 'game plan', 'deep dive', 'lean into', 'moving forward', 'circle back', "here's the thing", 'it turns out', 'at the end of the day', 'not just']
     const scan = (label, body) => {
       const out = []
       const low = body.toLowerCase()
       for (const w of words) if (new RegExp(`\\b${w}\\b`).test(low)) out.push(`${label}: banned word "${w}"`)
       for (const p of phrases) if (low.includes(p)) out.push(`${label}: banned phrase "${p}"`)
+      for (const hit of blockedIn(body, BSET)) out.push(`${label}: blocked name "${hit}"`)
       if (/[\u2013\u2014]/.test(body)) out.push(`${label}: dash character`)
       return out
     }
-    // The control proves the scan can fail.
-    if (scan('control', 'This is really just a very deep dive with an em dash \u2014 by Management Consulted.').length < 4)
+    // The control proves the scan can fail. It uses the canary from the blocklist
+    // rather than a real name, so no name has to live in this repository.
+    if (scan('control', 'This is really just a very deep dive with an em dash \u2014 by zzblockednamecanaryzz.').length < 5)
       fail(['negative control did not trip the rendered banned check'])
     const errs = []
     for (const p of PAGES) errs.push(...scan(p, text(page(p))))

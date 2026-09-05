@@ -3,6 +3,7 @@
 import { readFileSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { execSync } from 'node:child_process'
+import { load as loadBlock, blockedIn } from './blocklist.mjs'
 
 const BOOKS = ['01-the-warp-zone.md', '02-story-mode.md', '03-new-game-plus.md']
 const ART = 'image-prompts.md'
@@ -21,6 +22,10 @@ function proseWords(text, includeTables = false) {
     .split(/\s+/)
     .filter(w => /[A-Za-z0-9]/.test(w)).length
 }
+
+// Blocked proper nouns live as salted hashes so this repository can be public
+// without naming anyone. The hashing lives in one place, shared with the builder.
+const BSET = loadBlock()
 
 const checks = {
   structure() {
@@ -81,8 +86,8 @@ const checks = {
   },
 
   banned(files = PROSE) {
-    const words = ['really', 'just', 'literally', 'genuinely', 'honestly', 'simply', 'actually', 'deeply', 'truly', 'fundamentally', 'inherently', 'inevitably', 'interestingly', 'importantly', 'crucially', 'basically', 'essentially', 'ultimately', 'incredibly', 'extremely', 'very', 'landscape', 'navigate', 'unpack', 'delve', 'delves', 'ohsnap', 'laravia']
-    const phrases = ['management consulted', 'managementconsulted', 'strategy simplified', 'mc platform', 'oh snap', 'o-snap', 'rick wilmot', 'abby chen', 'grand pause', 'game plan', 'deep dive', 'deep-dive', 'lean into', 'game-changer', 'game changer', 'double down', 'moving forward', 'circle back', 'on the same page', "here's the thing", "here's what", "here's why", "here's how", 'it turns out', 'let me be clear', 'the truth is', 'at the end of the day', "in today's", "it's worth noting", 'when it comes to', 'make no mistake', 'full stop', 'let that sink in', 'this matters because', 'at its core', 'the reality is', 'plot twist', 'not just', "isn't just", 'is not just']
+    const words = ['really', 'just', 'literally', 'genuinely', 'honestly', 'simply', 'actually', 'deeply', 'truly', 'fundamentally', 'inherently', 'inevitably', 'interestingly', 'importantly', 'crucially', 'basically', 'essentially', 'ultimately', 'incredibly', 'extremely', 'very', 'landscape', 'navigate', 'unpack', 'delve', 'delves', ]
+    const phrases = ['grand pause', 'game plan', 'deep dive', 'deep-dive', 'lean into', 'game-changer', 'game changer', 'double down', 'moving forward', 'circle back', 'on the same page', "here's the thing", "here's what", "here's why", "here's how", 'it turns out', 'let me be clear', 'the truth is', 'at the end of the day', "in today's", "it's worth noting", 'when it comes to', 'make no mistake', 'full stop', 'let that sink in', 'this matters because', 'at its core', 'the reality is', 'plot twist', 'not just', "isn't just", 'is not just']
     const errs = []
     for (const f of files) {
       const lines = read(f).split('\n')
@@ -91,6 +96,7 @@ const checks = {
         const low = l.toLowerCase()
         for (const w of words) if (new RegExp(`\\b${w}\\b`).test(low)) errs.push(`${f}:${i + 1} banned word "${w}"`)
         for (const p of phrases) if (new RegExp(`\\b${p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+')}\\b`).test(low)) errs.push(`${f}:${i + 1} banned phrase "${p}"`)
+        for (const hit of blockedIn(l, BSET)) errs.push(`${f}:${i + 1} blocked name "${hit}"`)
       })
     }
     return errs

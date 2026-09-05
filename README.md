@@ -62,4 +62,6 @@ node scripts/verify.mjs git
 
 The site has its own oracles in `scripts/verify-site.mjs`: `build-idempotent`, `parity`, `art`, `a11y`, `links`, `overflow`, `pages-ready`, `figures`, and `banned`. The parity check reads every heading, table row, and paragraph out of the markdown and fails if any of them is missing from the rendered page.
 
+The blocked-name check works the same way. `scripts/blocked-names.json` holds salted hashes of the proper nouns that must never appear, so the guard keeps working with this repository public and without any of those names living in it. Rebuild the list with `node scripts/blocklist.mjs "<name>"`, which refuses to write a list it cannot then detect.
+
 The overlap check compares every nine-word run in the books against hashed shingles of the workshop sources (`scripts/source-shingles.json`), so the sources themselves stay out of the repo. Rebuild the hashes with `node scripts/build-shingles.mjs <source files>`.
