@@ -3,6 +3,8 @@
 node_modules/
 .claude/settings.local.json
 *.pdf
+# The published editions are deliverables, not source material.
+!docs/downloads/*.pdf
 *.mp3
 *.m4a
 *.mp4

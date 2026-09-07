@@ -160,6 +160,12 @@ const checks = {
       if (!h.includes(`PDF, ${want}`)) errs.push(`${f} is ${want} on disk but the page does not say so`)
       const head = readFileSync(join(OUT, 'downloads', f)).subarray(0, 5).toString('latin1')
       if (head !== '%PDF-') errs.push(`${f} is not a PDF (starts with ${JSON.stringify(head)})`)
+      // A file on disk but untracked would 404 for every visitor, which is how
+      // the first upload failed: a blanket *.pdf ignore rule swallowed them.
+      try {
+        if (!execFileSync('git', ['ls-files', `${OUT}/downloads/${f}`], { encoding: 'utf8' }).trim())
+          errs.push(`${f} exists locally but git does not track it, so it would 404 once published`)
+      } catch { errs.push(`could not ask git whether ${f} is tracked`) }
     }
     if (errs.length) fail(errs)
     console.log(`${live} edition(s) downloadable, ${soon} marked coming soon`)
