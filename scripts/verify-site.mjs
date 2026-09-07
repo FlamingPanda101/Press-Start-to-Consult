@@ -80,6 +80,16 @@ const checks = {
       for (const m of h.matchAll(/<img src="assets\/art\/(Cosmo_[A-Za-z0-9_]+)\.jpg"/g)) { rendered.add(m[1]); withArt++ }
       for (const m of h.matchAll(/class="art__id">(Cosmo_[A-Za-z0-9_]+)</g)) { rendered.add(m[1]); pending++ }
     }
+    // The set cover renders on the home page rather than inside a book, and only
+    // once its artwork exists; until then the home page simply omits it.
+    const COVER = 'Cosmo_BoxArt_Cover_01'
+    const coverFile = join(OUT, 'assets', 'art', `${COVER}.jpg`)
+    if (existsSync(coverFile)) {
+      if (!page('index.html').includes(`assets/art/${COVER}.jpg`)) errs.push(`${COVER} exists but the home page does not show it`)
+      rendered.add(COVER); withArt++
+    } else {
+      declared.delete(COVER)
+    }
     for (const id of declared) if (!rendered.has(id)) errs.push(`art slot ${id} never renders on any page`)
     for (const id of rendered) if (!declared.has(id)) errs.push(`rendered slot ${id} has no art bible entry`)
     for (const [p] of BOOKS) for (const m of page(p).matchAll(/(?:src|srcset)="(assets\/art\/[^"]+)"/g))
@@ -113,6 +123,47 @@ const checks = {
     if (errs.length) fail(errs)
     console.log(`${declared.size} slots: ${withArt} with art, ${pending} awaiting art, every ratio reserved`)
     console.log('art slot verification passed')
+  },
+
+  downloads() {
+    const errs = []
+    const EDITIONS = [
+      'press-start-to-consult-complete.pdf',
+      'press-start-to-consult-warp-zone.pdf',
+      'press-start-to-consult-story-mode.pdf',
+      'press-start-to-consult-new-game-plus.pdf',
+    ]
+    const h = page('index.html')
+    if (!/class="downloads"/.test(h)) fail(['index.html has no downloads section'])
+    const cards = (h.match(/<li class="dl[^"]*">/g) || []).length
+    if (cards !== EDITIONS.length) errs.push(`${cards} download cards, expected ${EDITIONS.length}`)
+    let live = 0, soon = 0
+    for (const f of EDITIONS) {
+      const onDisk = existsSync(join(OUT, 'downloads', f))
+      const linked = h.includes(`href="downloads/${f}"`)
+      if (onDisk && !linked) errs.push(`${f} exists but the page does not link it`)
+      if (!onDisk && linked) errs.push(`the page links ${f} but the file is missing, so the link would 404`)
+      onDisk ? live++ : soon++
+    }
+    // A card with no file must say so rather than looking clickable.
+    const soonCards = (h.match(/class="dl dl--soon"/g) || []).length
+    if (soonCards !== soon) errs.push(`${soon} editions have no file but ${soonCards} cards are marked unavailable`)
+    for (const m of h.matchAll(/href="downloads\/([^"]+)"([^>]*)>/g)) {
+      if (!/download/.test(m[2])) errs.push(`the link to ${m[1]} has no download attribute`)
+      if (!existsSync(join(OUT, 'downloads', m[1]))) errs.push(`downloads/${m[1]} is linked but absent`)
+    }
+    // Every live card must state its real size, so nobody starts a surprise 40 MB fetch.
+    for (const f of EDITIONS) {
+      if (!existsSync(join(OUT, 'downloads', f))) continue
+      const bytes = statSync(join(OUT, 'downloads', f)).size
+      const want = bytes >= 1e6 ? `${(bytes / 1e6).toFixed(1)} MB` : `${Math.round(bytes / 1e3)} KB`
+      if (!h.includes(`PDF, ${want}`)) errs.push(`${f} is ${want} on disk but the page does not say so`)
+      const head = readFileSync(join(OUT, 'downloads', f)).subarray(0, 5).toString('latin1')
+      if (head !== '%PDF-') errs.push(`${f} is not a PDF (starts with ${JSON.stringify(head)})`)
+    }
+    if (errs.length) fail(errs)
+    console.log(`${live} edition(s) downloadable, ${soon} marked coming soon`)
+    console.log('downloads verification passed')
   },
 
   a11y() {

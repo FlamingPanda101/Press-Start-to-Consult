@@ -1,7 +1,7 @@
 // Builds docs/ (the GitHub Pages site) from the source markdown.
 // The markdown is the single source of truth; nothing here edits copy.
 // Usage: node scripts/build-site.mjs
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, readdirSync, rmSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, readdirSync, statSync, rmSync } from 'node:fs'
 import { join } from 'node:path'
 import { createHash } from 'node:crypto'
 
@@ -22,6 +22,15 @@ const BOOKS = [
     tag: 'Book 3', pages: '30 to 40 pages',
     blurb: 'The completion run. Framework skill trees, a full sector codex, and five mock interviews with pushback and a math correction.',
   },
+]
+
+// The four PDF editions offered on the home page. A file that is not present
+// yet renders as a disabled card, so the section is honest rather than broken.
+const EDITIONS = [
+  { file: 'press-start-to-consult-complete.pdf', name: 'The Complete Edition', note: 'All three books in one file, cover to glossary.' },
+  { file: 'press-start-to-consult-warp-zone.pdf', name: 'The Warp Zone', note: 'The 3-page cheat sheet for the night before.' },
+  { file: 'press-start-to-consult-story-mode.pdf', name: 'Story Mode', note: 'The 10-page standard guide.' },
+  { file: 'press-start-to-consult-new-game-plus.pdf', name: 'New Game+', note: 'The 30 to 40 page completion tome.' },
 ]
 
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -373,6 +382,22 @@ ${html}
 ${foot(V)}`)
 }
 
+const kb = n => n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.round(n / 1e3)} KB`
+const downloads = EDITIONS.map(e => {
+  const path = join(OUT, 'downloads', e.file)
+  if (!existsSync(path)) {
+    return `<li class="dl dl--soon"><span class="dl__name">${esc(e.name)}</span>`
+      + `<span class="dl__note">${esc(e.note)}</span>`
+      + `<span class="dl__meta">PDF coming soon</span></li>`
+  }
+  const size = kb(statSync(path).size)
+  return `<li class="dl"><a class="dl__link" href="downloads/${e.file}" download>`
+    + `<span class="dl__name">${esc(e.name)}</span>`
+    + `<span class="dl__note">${esc(e.note)}</span>`
+    + `<span class="dl__meta">PDF, ${size}</span></a></li>`
+}).join('\n')
+const anyPdf = EDITIONS.some(e => existsSync(join(OUT, 'downloads', e.file)))
+
 const cards = BOOKS.map(b => {
   const cover = [...art.values()].find(s => s.id.toLowerCase().includes(b.slug.replace('-', '').slice(0, 8)) && s.src)
   return `<a class="card" href="${b.slug}.html">
@@ -383,10 +408,23 @@ const cards = BOOKS.map(b => {
 </a>`
 }).join('\n')
 
+const coverSlot = art.get('Cosmo_BoxArt_Cover_01')
+let coverArt = ''
+if (coverSlot && coverSlot.src) {
+  const cr = jpegSize(join(OUT, coverSlot.src))
+  const cw = cr ? cr.w : 900, ch = cr ? cr.h : 1200
+  const cwebp = coverSlot.src.replace(/\.jpg$/, '.webp')
+  const cimg = `<img src="${coverSlot.src}" alt="${esc(coverSlot.alt || 'Box cover for Press Start to Consult')}" width="${cw}" height="${ch}" loading="eager" fetchpriority="high" decoding="sync">`
+  coverArt = `<figure class="hero__cover">`
+    + (existsSync(join(OUT, cwebp)) ? `<picture><source type="image/webp" srcset="${cwebp}">${cimg}</picture>` : cimg)
+    + `</figure>`
+}
+
 writeFileSync(join(OUT, 'index.html'), `${head('Press Start to Consult', 'A case interview strategy guide for BYU Marriott MBA students, written as a 16-bit retro game guide.', V)}
 ${nav('index')}
 <main id="main" class="home" tabindex="-1" data-search="${fp('assets/search-index.json', V.idx)}">
 <section class="hero">
+<div class="hero__text">
 <p class="hero__kicker">BYU Marriott MBA</p>
 <h1 class="hero__title">PRESS START<br>TO CONSULT</h1>
 <p class="hero__sub">Cosmo the Cougar's case interview strategy guide. Three books, one universe, every number checked by a script.</p>
@@ -395,6 +433,8 @@ ${nav('index')}
 <span class="bar"><b>MP mental math</b><span class="bar__track"><i style="width:64%"></i></span></span>
 <span class="bar"><b>XP live cases</b><span class="bar__track"><i style="width:28%"></i></span></span>
 </div>
+</div>
+${coverArt}
 </section>
 <div class="search">
 <label class="search__label" for="q">Search the guide</label>
@@ -404,6 +444,13 @@ ${nav('index')}
 </div>
 <section class="cards" aria-label="The three books">
 ${cards}
+</section>
+<section class="downloads" aria-labelledby="dl-h">
+<h2 id="dl-h">Download</h2>
+<p>${anyPdf ? 'Take it with you. Each edition is a single PDF.' : 'The printable editions are being laid out. This page will carry them as soon as they are ready.'}</p>
+<ul class="dl-list">
+${downloads}
+</ul>
 </section>
 <section class="how">
 <h2>How the three fit together</h2>

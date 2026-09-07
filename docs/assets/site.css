@@ -252,3 +252,29 @@ thead th.num { text-align: right; }
   .book { max-width: none; }
   .say--p2 .say__line::after { animation: none; }
 }
+
+/* ---------------------------------------------------------------- downloads */
+.downloads { margin: 3rem 0 0; max-width: var(--measure); }
+.downloads h2 { font-family: var(--ui); font-size: 1.35rem; margin: 0 0 .5rem; }
+.dl-list { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; gap: .75rem; }
+.dl { border: 3px solid var(--navy); background: var(--white); box-shadow: var(--shadow); }
+.dl__link, .dl--soon {
+  display: grid; grid-template-columns: 1fr auto; gap: .15rem 1rem; align-items: baseline;
+  padding: .9rem 1rem; min-height: 44px; text-decoration: none; color: var(--ink);
+}
+.dl__link { transition: background 180ms ease-out; }
+.dl__link:hover, .dl__link:focus-visible { background: var(--tan); }
+.dl__name { font-family: var(--ui); font-size: 1rem; color: var(--navy); }
+.dl__note { grid-column: 1; font-size: .9rem; }
+.dl__meta { grid-column: 2; grid-row: 1 / span 2; font-family: var(--ui); font-size: .8rem; color: var(--navy); white-space: nowrap; }
+.dl--soon { border-style: dashed; opacity: .72; }
+.dl--soon .dl__meta { color: rgba(0, 26, 56, .8); }
+.dl:has(.dl--soon) { border-style: dashed; box-shadow: none; }
+
+/* the set cover beside the hero */
+@media (min-width: 52rem) {
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 2.5rem; align-items: center; }
+}
+.hero__cover { margin: 2rem 0 0; }
+@media (min-width: 52rem) { .hero__cover { margin: 0; } }
+.hero__cover img { display: block; width: 100%; height: auto; border: 3px solid var(--white); image-rendering: pixelated; }

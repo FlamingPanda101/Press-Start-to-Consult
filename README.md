@@ -25,6 +25,19 @@ It emits four pages, a client-side search index covering every section, and the 
 
 The art is stored as JPEG and served as WebP. `python scripts/optimize-art.py` writes a WebP beside every JPEG, and each page offers the WebP first with the JPEG as a fallback source, which cuts what a reader downloads from 30 MB to under 5 MB across the whole set. Run it after adding art, then rebuild.
 
+### The PDF downloads
+
+The home page offers four editions. Drop the files into `docs/downloads/` with these exact names and rebuild; each card turns from "coming soon" into a real link with its true file size:
+
+| File | Card |
+|---|---|
+| `press-start-to-consult-complete.pdf` | The Complete Edition |
+| `press-start-to-consult-warp-zone.pdf` | The Warp Zone |
+| `press-start-to-consult-story-mode.pdf` | Story Mode |
+| `press-start-to-consult-new-game-plus.pdf` | New Game+ |
+
+A gate refuses a link to a file that is absent or is not a PDF, so the page can never offer a download that 404s.
+
 ### Publishing it
 
 The site is built for GitHub Pages with no build step on their side.

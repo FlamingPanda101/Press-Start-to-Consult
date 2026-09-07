@@ -71,7 +71,11 @@ const checks = {
     const entries = [...art.matchAll(/^### \[IMAGE: (Cosmo_[A-Za-z0-9_]+)\]\s*$/gm)].map(m => m[1])
     const errs = []
     for (const id of used.keys()) if (!entries.includes(id)) errs.push(`placeholder ${id} has no art bible entry`)
-    for (const id of entries) if (!used.has(id)) errs.push(`art bible entry ${id} is not used in any book`)
+    // The set cover is the one entry that belongs to the website rather than to a
+    // book, so it is declared in the bible and never placed in the markdown.
+    const SITE_ONLY = new Set(['Cosmo_BoxArt_Cover_01'])
+    for (const id of entries) if (!used.has(id) && !SITE_ONLY.has(id)) errs.push(`art bible entry ${id} is not used in any book`)
+    for (const id of SITE_ONLY) if (!entries.includes(id)) errs.push(`the set cover ${id} has no art bible entry`)
     const dup = entries.filter((e, i) => entries.indexOf(e) !== i)
     if (dup.length) errs.push(`duplicate art entries: ${dup.join(', ')}`)
     const blocks = art.split(/^### \[IMAGE: /m).slice(1)
