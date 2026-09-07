@@ -23,6 +23,8 @@ node scripts/build-site.mjs
 
 It emits four pages, a client-side search index covering every section, and the 45 art slots. Thirteen slots carry finished art. The other 32 render as sized placeholders that hold their exact aspect ratio, so nothing on the page moves when the remaining images land. Drop a new image into `docs/assets/art/` named for its slot ID and rebuild; the placeholder becomes a picture.
 
+The art is stored as JPEG and served as WebP. `python scripts/optimize-art.py` writes a WebP beside every JPEG, and each page offers the WebP first with the JPEG as a fallback source, which cuts what a reader downloads from 30 MB to under 5 MB across the whole set. Run it after adding art, then rebuild.
+
 ### Publishing it
 
 The site is built for GitHub Pages with no build step on their side.

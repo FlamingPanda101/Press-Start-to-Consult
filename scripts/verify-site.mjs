@@ -82,8 +82,18 @@ const checks = {
     }
     for (const id of declared) if (!rendered.has(id)) errs.push(`art slot ${id} never renders on any page`)
     for (const id of rendered) if (!declared.has(id)) errs.push(`rendered slot ${id} has no art bible entry`)
-    for (const [p] of BOOKS) for (const m of page(p).matchAll(/src="(assets\/art\/[^"]+)"/g))
+    for (const [p] of BOOKS) for (const m of page(p).matchAll(/(?:src|srcset)="(assets\/art\/[^"]+)"/g))
       if (!existsSync(join(OUT, m[1]))) errs.push(`${p}: image file ${m[1]} does not exist`)
+    // Every picture must offer the small format and keep the fallback source.
+    for (const [p] of BOOKS) {
+      const h = page(p)
+      const imgs = (h.match(/<img src="assets\/art\//g) || []).length
+      const sources = (h.match(/<source type="image\/webp"/g) || []).length
+      if (sources !== imgs) errs.push(`${p}: ${imgs} images but ${sources} WebP sources`)
+      for (const m of h.matchAll(/<source type="image\/webp" srcset="([^"]+)"><img src="([^"]+)"/g))
+        if (m[1].replace(/\.webp$/, '') !== m[2].replace(/\.jpg$/, ''))
+          errs.push(`${p}: WebP source ${m[1]} does not match its fallback ${m[2]}`)
+    }
     // Every pending slot must reserve its aspect ratio so nothing shifts when art lands.
     for (const [p] of BOOKS) {
       const h = page(p)

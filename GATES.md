@@ -99,6 +99,11 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
   EXPECT: rendered banned string verification passed
   EVIDENCE: automatic-evidence=v1; definition-sha256=c306b8e423f11782404fa15d8b1ca35dbed79b171a6d8ae7e47eb3c0325a3c18; exit=0; EXPECT=matched; output-sha256=c3d173d69cb4b0ae620f34181e9fe50298f5c770f34d9a2effbfaad2d0d4bee7; output-bytes=43; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
+- [ ] W10: every illustration is served in the small format with a fallback, and no WebP is stale against its source
+  CHECK: python scripts/optimize-art.py --check
+  EXPECT: art optimization verified
+  EVIDENCE: pending
+
 - [x] M1: the fixture fact-check disputes were reviewed and every accepted correction was applied to fixtures and copy before assembly
   EVIDENCE: Reviewed 2026-09-05. A fact-check agent verified all 230 leaf values in scripts/fixtures.json against current sources and disputed 12. All 12 were accepted and applied to both fixture copies and to every draft before assembly: US health spending $4.9T to $5.3T, spending per person $14.5K to $15.5K, health share of GDP 17.5% to 18%, world GDP $110T to $120T, US GDP $29T to $30T, global IT spend $5T to $6T, global internet users 5.5B to 6B, AWS cloud share 30% to 28%, Google Cloud 11% to 14%, Australia 26M to 28M, Pakistan 240M to 255M. Two further corrections followed from later review: Azure 22% to 21% for consistency with the same cited source, and Provo-Orem metro 700K to 780K after a reviewer found the fixture placed the metro below Utah County, the county inside it. No dispute was rejected. Gate G7 holds all three books to the corrected values.
 

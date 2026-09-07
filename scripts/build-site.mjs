@@ -125,8 +125,13 @@ function render(md, art, ctx) {
       const real = jpegSize(join(OUT, s.src))
       const iw = real ? real.w : w * 100
       const ih = real ? real.h : h * 100
+      // Flat-colour pixel art compresses far better as WebP than as JPEG. The
+      // JPEG stays as the fallback source, so old browsers still get the image.
+      const webp = s.src.replace(/\.jpg$/, '.webp')
+      const hasWebp = existsSync(join(OUT, webp))
+      const img = `<img src="${s.src}" alt="${esc(s.alt || s.gist)}" width="${iw}" height="${ih}" ${load}>`
       return `<figure class="art" style="--ar:${iw}/${ih}">`
-        + `<img src="${s.src}" alt="${esc(s.alt || s.gist)}" width="${iw}" height="${ih}" ${load}>`
+        + (hasWebp ? `<picture><source type="image/webp" srcset="${webp}">${img}</picture>` : img)
         + `</figure>`
     }
     ctx.pending.push(id)
