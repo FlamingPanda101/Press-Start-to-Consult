@@ -57,7 +57,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W1: the site regenerates from the source markdown alone, and a second build produces byte-identical output
   CHECK: node scripts/verify-site.mjs build-idempotent
   EXPECT: build idempotency verified
-  EVIDENCE: automatic-evidence=v1; definition-sha256=b5174730c7a6ea044818e5f0dd15d1f7f4033c45cc0c411b5df953127578223c; exit=0; EXPECT=matched; output-sha256=e8bdeb760efa61692fbb291723f87a5308097920720125b2591309b3854c4344; output-bytes=61; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=b5174730c7a6ea044818e5f0dd15d1f7f4033c45cc0c411b5df953127578223c; exit=0; EXPECT=matched; output-sha256=e55c34d30040be8be6caabc42d7bf7023796ff91d38b2708933a770192054685; output-bytes=61; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W2: every heading and every table row in each source book reaches its rendered page, so the site carries the whole guide
   CHECK: node scripts/verify-site.mjs parity
@@ -107,7 +107,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W11: the download section offers all four editions, links only files that exist and are real PDFs, and states each one's true size
   CHECK: node scripts/verify-site.mjs downloads
   EXPECT: downloads verification passed
-  EVIDENCE: automatic-evidence=v1; definition-sha256=68703e6c820682cabf43f600be04320acd0a6adc744a7c30eb6ee5199062492b; exit=0; EXPECT=matched; output-sha256=c8a636dfef6eb2cda8189fe509f73e8ef104d089734b753a85130e90abff0cd3; output-bytes=78; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=68703e6c820682cabf43f600be04320acd0a6adc744a7c30eb6ee5199062492b; exit=0; EXPECT=matched; output-sha256=7cb125bc6f3e93cb8069422ff4277e057dc62520b5e924025c6cf1d96a99e38b; output-bytes=78; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] M1: the fixture fact-check disputes were reviewed and every accepted correction was applied to fixtures and copy before assembly
   EVIDENCE: Reviewed 2026-09-05. A fact-check agent verified all 230 leaf values in scripts/fixtures.json against current sources and disputed 12. All 12 were accepted and applied to both fixture copies and to every draft before assembly: US health spending $4.9T to $5.3T, spending per person $14.5K to $15.5K, health share of GDP 17.5% to 18%, world GDP $110T to $120T, US GDP $29T to $30T, global IT spend $5T to $6T, global internet users 5.5B to 6B, AWS cloud share 30% to 28%, Google Cloud 11% to 14%, Australia 26M to 28M, Pakistan 240M to 255M. Two further corrections followed from later review: Azure 22% to 21% for consistency with the same cited source, and Provo-Orem metro 700K to 780K after a reviewer found the fixture placed the metro below Utah County, the county inside it. No dispute was rejected. Gate G7 holds all three books to the corrected values.
