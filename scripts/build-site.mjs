@@ -55,6 +55,24 @@ function readArt() {
   return slots
 }
 
+// Reads a JPEG's real pixel size from its SOF marker. The reserved box must match
+// the file on disk, not the ratio the art bible asked for, or the page jumps by
+// the difference as each image loads.
+function jpegSize(file) {
+  const b = readFileSync(file)
+  if (b[0] !== 0xFF || b[1] !== 0xD8) return null
+  let i = 2
+  while (i < b.length - 9) {
+    if (b[i] !== 0xFF) { i++; continue }
+    const marker = b[i + 1]
+    // SOF0..SOF15, excluding the non-frame markers DHT, JPG and DAC.
+    if (marker >= 0xC0 && marker <= 0xCF && marker !== 0xC4 && marker !== 0xC8 && marker !== 0xCC)
+      return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) }
+    i += 2 + b.readUInt16BE(i + 2)
+  }
+  return null
+}
+
 // ---------------------------------------------------------------- renderer
 function render(md, art, ctx) {
   const lines = md.split('\n')
@@ -104,8 +122,11 @@ function render(md, art, ctx) {
       const load = first
         ? 'loading="eager" fetchpriority="high" decoding="sync"'
         : 'loading="lazy" decoding="async"'
-      return `<figure class="art" style="--ar:${w}/${h}">`
-        + `<img src="${s.src}" alt="${esc(s.alt || s.gist)}" width="${w * 100}" height="${h * 100}" ${load}>`
+      const real = jpegSize(join(OUT, s.src))
+      const iw = real ? real.w : w * 100
+      const ih = real ? real.h : h * 100
+      return `<figure class="art" style="--ar:${iw}/${ih}">`
+        + `<img src="${s.src}" alt="${esc(s.alt || s.gist)}" width="${iw}" height="${ih}" ${load}>`
         + `</figure>`
     }
     ctx.pending.push(id)

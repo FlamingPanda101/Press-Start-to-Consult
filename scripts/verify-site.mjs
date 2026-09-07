@@ -122,6 +122,10 @@ const checks = {
         if (!alt) errs.push(`${p}: an img has no alt attribute`)
         else if (!alt[1].trim()) errs.push(`${p}: an img has empty alt`)
         if (!/\swidth="\d+"/.test(m[0]) || !/\sheight="\d+"/.test(m[0])) errs.push(`${p}: an img declares no dimensions, so it can shift layout`)
+        // Alt text must describe the image, never fall back to the generation
+        // prompt, which describes how to draw it and tells a reader nothing.
+        if (alt && /^(16-bit|Full-page|[a-z-]+ (infographic|screen|banner|cover|scene|plate))/.test(alt[1]))
+          errs.push(`${p}: alt text "${alt[1].slice(0, 50)}" reads as a prompt fragment, not a description`)
       }
       // Heading levels must not skip on the way down.
       const levels = [...h.matchAll(/<h([1-4])[\s>]/g)].map(m => Number(m[1]))
