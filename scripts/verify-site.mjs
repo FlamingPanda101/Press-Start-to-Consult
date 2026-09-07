@@ -167,8 +167,24 @@ const checks = {
           errs.push(`${f} exists locally but git does not track it, so it would 404 once published`)
       } catch { errs.push(`could not ask git whether ${f} is tracked`) }
     }
+    // Each book's rail offers that book's own PDF, never another book's, and only
+    // when the file is really there.
+    for (const [pageName, md] of BOOKS) {
+      const slug = pageName.replace(/\.html$/, '')
+      const want = `press-start-to-consult-${slug}.pdf`
+      const hb = page(pageName)
+      const rail = hb.match(/<a class="toc__pdf" href="downloads\/([^"]+)"([^>]*)>([\s\S]*?)<\/a>/)
+      const onDisk = existsSync(join(OUT, 'downloads', want))
+      if (!onDisk) { if (rail) errs.push(`${pageName}: the rail links a PDF that is not on disk`); continue }
+      if (!rail) { errs.push(`${pageName}: ${want} exists but the contents rail does not offer it`); continue }
+      if (rail[1] !== want) errs.push(`${pageName}: the rail offers ${rail[1]}, not this book's ${want}`)
+      if (!/\bdownload\b/.test(rail[2])) errs.push(`${pageName}: the rail PDF link has no download attribute`)
+      const bytes = statSync(join(OUT, 'downloads', want)).size
+      const size = bytes >= 1e6 ? `${(bytes / 1e6).toFixed(1)} MB` : `${Math.round(bytes / 1e3)} KB`
+      if (!rail[3].includes(size)) errs.push(`${pageName}: the rail says the wrong size for ${want}, expected ${size}`)
+    }
     if (errs.length) fail(errs)
-    console.log(`${live} edition(s) downloadable, ${soon} marked coming soon`)
+    console.log(`${live} edition(s) downloadable, ${soon} marked coming soon, ${BOOKS.length} rails offer their own book`)
     console.log('downloads verification passed')
   },
 
@@ -198,6 +214,14 @@ const checks = {
       const levels = [...h.matchAll(/<h([1-4])[\s>]/g)].map(m => Number(m[1]))
       for (let i = 1; i < levels.length; i++) if (levels[i] > levels[i - 1] + 1) errs.push(`${p}: heading jumps from h${levels[i - 1]} to h${levels[i]}`)
       for (const m of h.matchAll(/<(button|a)\b[^>]*>\s*<\/\1>/g)) errs.push(`${p}: empty ${m[1]} with no accessible name`)
+      // Every disclosure button must say what it controls and whether it is open,
+      // or a screen reader announces a button with no state and no target.
+      for (const m of h.matchAll(/<button\b[^>]*>/g)) {
+        if (!/aria-expanded="(true|false)"/.test(m[0])) errs.push(`${p}: a button has no aria-expanded state`)
+        const controls = (m[0].match(/aria-controls="([^"]+)"/) || [])[1]
+        if (!controls) errs.push(`${p}: a button declares no aria-controls target`)
+        else if (!new RegExp(`id="${controls}"`).test(h)) errs.push(`${p}: a button controls #${controls}, which does not exist`)
+      }
       // Every input needs a name a screen reader can announce: a label pointing at
       // its id, or an aria-label on the control itself.
       for (const m of h.matchAll(/<input\b[^>]*>/g)) {

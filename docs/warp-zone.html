@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=2eea7996ac">
+<link rel="stylesheet" href="assets/site.css?v=297ae7fdb3">
 <link rel="icon" href="assets/favicon.svg?v=1849ee4762" type="image/svg+xml">
 </head>
 <body>
@@ -17,7 +17,11 @@
 <header class="topbar">
 <nav class="topbar__inner" aria-label="Books">
 <a class="brand" href="index.html"><span class="brand__press">PRESS START</span><span class="brand__to">TO CONSULT</span></a>
-<ul class="topbar__links">
+<button class="books-toggle" aria-expanded="false" aria-controls="books-menu">
+<span class="books-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+<span class="books-toggle__text">Books</span>
+</button>
+<ul class="topbar__links" id="books-menu">
 <li><a href="warp-zone.html" aria-current="page">The Warp Zone</a></li>
 <li><a href="story-mode.html">Story Mode</a></li>
 <li><a href="new-game-plus.html">New Game+</a></li>
@@ -42,6 +46,7 @@
 <li class="toc__l2"><a href="#boss-checklists">Boss Checklists</a></li>
 </ol>
 <ul class="toc__results" hidden></ul>
+<a class="toc__pdf" href="downloads/press-start-to-consult-warp-zone.pdf" download><span class="toc__pdf-label">Download this book</span><span class="toc__pdf-meta">PDF, 510 KB</span></a>
 </nav>
 <main id="main" class="book" tabindex="-1" aria-label="The Warp Zone">
 <p class="book__tag">Book 1 &middot; 3 pages</p>
@@ -86,6 +91,6 @@
 <p>Cosmo the Cougar and the block Y are trademarks of Brigham Young University, used here for a student project.</p>
 <p><a href="https://github.com/FlamingPanda101/Press-Start-to-Consult">Source and the markdown these pages are built from</a></p>
 </footer>
-<script src="assets/site.js?v=9fc56cce6b" defer></script>
+<script src="assets/site.js?v=cc9ef391ba" defer></script>
 </body>
 </html>

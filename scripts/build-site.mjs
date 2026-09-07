@@ -283,10 +283,18 @@ const head = (title, desc, V) => `<!DOCTYPE html>
 <body>
 <a class="skip" href="#main">Skip to content</a>`
 
+// Logo left, menu button right: the arrangement people already expect, and it
+// puts the button within reach of a thumb. The button carries the word "Books"
+// beside the bars so it never reads as the same control as the Contents button
+// that book pages show underneath it.
 const nav = current => `<header class="topbar">
 <nav class="topbar__inner" aria-label="Books">
 <a class="brand" href="index.html"><span class="brand__press">PRESS START</span><span class="brand__to">TO CONSULT</span></a>
-<ul class="topbar__links">
+<button class="books-toggle" aria-expanded="false" aria-controls="books-menu">
+<span class="books-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+<span class="books-toggle__text">Books</span>
+</button>
+<ul class="topbar__links" id="books-menu">
 ${BOOKS.map(b => `<li><a href="${b.slug}.html"${b.slug === current ? ' aria-current="page"' : ''}>${esc(b.title)}</a></li>`).join('\n')}
 </ul>
 </nav>
@@ -379,6 +387,7 @@ ${nav(b.slug)}
 ${tocHtml}
 </ol>
 <ul class="toc__results" hidden></ul>
+${bookPdf(b)}
 </nav>
 <main id="main" class="book" tabindex="-1" aria-label="${esc(b.title)}">
 <p class="book__tag">${esc(b.tag)} &middot; ${esc(b.pages)}</p>
@@ -389,6 +398,21 @@ ${foot(V)}`)
 }
 
 const kb = n => n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.round(n / 1e3)} KB`
+
+// The contents rail offers this book's own PDF, and only when the file is there.
+// Declared as a function so the page loop above can call it, and it formats its
+// own size rather than depending on a const that initialises later.
+function bookPdf(b) {
+  const edition = EDITIONS.find(e => e.file.endsWith(`${b.slug}.pdf`))
+  if (!edition) return ''
+  const path = join(OUT, 'downloads', edition.file)
+  if (!existsSync(path)) return ''
+  const n = statSync(path).size
+  const size = n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.round(n / 1e3)} KB`
+  return `<a class="toc__pdf" href="downloads/${edition.file}" download>`
+    + `<span class="toc__pdf-label">Download this book</span>`
+    + `<span class="toc__pdf-meta">PDF, ${size}</span></a>`
+}
 const downloads = EDITIONS.map(e => {
   const path = join(OUT, 'downloads', e.file)
   if (!existsSync(path)) {

@@ -49,6 +49,41 @@
     targets.forEach(function (t) { io.observe(t); });
   }
 
+  // ---------------------------------------------------------- books menu
+  // Below the breakpoint the three book links collapse behind one button. Above
+  // it they are always a visible row, so the button is hidden and the list is
+  // never left hidden by a stale state.
+  (function () {
+    var btn = document.querySelector('.books-toggle');
+    var menu = document.getElementById('books-menu');
+    if (!btn || !menu) return;
+    var wide = window.matchMedia('(min-width: 48rem)');
+
+    var close = function () {
+      btn.setAttribute('aria-expanded', 'false');
+      if (!wide.matches) menu.hidden = true;
+    };
+    var sync = function () {
+      if (wide.matches) { menu.hidden = false; btn.setAttribute('aria-expanded', 'false'); }
+      else { menu.hidden = btn.getAttribute('aria-expanded') !== 'true'; }
+    };
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.hidden = open;
+    });
+    document.addEventListener('click', function (e) {
+      if (!wide.matches && !menu.contains(e.target) && e.target !== btn) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { close(); btn.focus(); }
+    });
+    (wide.addEventListener ? wide.addEventListener('change', sync) : wide.addListener(sync));
+    sync();
+  })();
+
   // ---------------------------------------------------- in-book search
   // Same index as the home page, filtered to the book you are reading. While a
   // query is active the results replace the contents list, so the narrow sidebar

@@ -320,3 +320,47 @@ thead th.num { text-align: right; }
 }
 .toc__results mark { background: var(--tan-deep); color: var(--ink); }
 .toc__results .r__none { display: block; padding: .6rem .4rem; font-size: .85rem; font-family: var(--body); }
+
+/* ------------------------------------------------- books menu (narrow only) */
+.books-toggle {
+  display: none; align-items: center; gap: .5rem;
+  margin-left: auto; min-height: 44px; padding: .4rem .7rem;
+  font-family: var(--ui); font-size: .95rem;
+  background: transparent; color: var(--tan);
+  border: 2px solid var(--tan); cursor: pointer;
+}
+.books-toggle:hover { color: var(--white); border-color: var(--white); }
+.books-toggle__bars { display: grid; gap: 3px; width: 18px; }
+.books-toggle__bars i { display: block; height: 3px; background: currentColor; }
+.books-toggle[aria-expanded="true"] { color: var(--white); border-color: var(--white); background: var(--navy-deep); }
+
+@media (max-width: 47.99rem) {
+  .books-toggle { display: flex; }
+  .topbar__inner { flex-wrap: wrap; }
+  /* The links become a panel under the bar rather than a row beside the logo. */
+  .topbar__links {
+    flex: 1 0 100%; flex-direction: column; gap: 0;
+    overflow-x: visible; margin-top: .6rem;
+    border-top: 2px solid rgba(245, 230, 200, .35);
+  }
+  .topbar__links[hidden] { display: none; }
+  .topbar__links a { padding: .75rem .25rem; border-bottom: 0; border-left: 3px solid transparent; }
+  .topbar__links a[aria-current="page"] { border-bottom: 0; border-left-color: var(--white); padding-left: .6rem; }
+}
+
+/* ------------------------------------------------- this book's PDF, in the rail */
+.toc__pdf {
+  display: grid; gap: .1rem; margin-top: .9rem; padding: .7rem .6rem; min-height: 44px;
+  border: 2px solid var(--navy); background: var(--navy); color: var(--white);
+  text-decoration: none;
+}
+.toc__pdf:hover, .toc__pdf:focus-visible { background: var(--navy-deep); color: var(--white); }
+.toc__pdf-label { font-family: var(--ui); font-size: .88rem; }
+.toc__pdf-meta { font-family: var(--ui); font-size: .72rem; color: var(--tan); }
+
+/* Keep the rail's own furniture in view while only the list scrolls. */
+@media (min-width: 64rem) {
+  .toc { display: flex; flex-direction: column; }
+  .toc__list, .toc__results { overflow-y: auto; min-height: 0; }
+  .toc__pdf { flex: 0 0 auto; }
+}
