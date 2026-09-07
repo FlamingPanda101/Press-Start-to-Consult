@@ -57,7 +57,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W1: the site regenerates from the source markdown alone, and a second build produces byte-identical output
   CHECK: node scripts/verify-site.mjs build-idempotent
   EXPECT: build idempotency verified
-  EVIDENCE: automatic-evidence=v1; definition-sha256=b5174730c7a6ea044818e5f0dd15d1f7f4033c45cc0c411b5df953127578223c; exit=0; EXPECT=matched; output-sha256=a904156730f7cb41dcf5897f729445b31c23fbd6f82a2dc769f02a8130823f77; output-bytes=60; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=b5174730c7a6ea044818e5f0dd15d1f7f4033c45cc0c411b5df953127578223c; exit=0; EXPECT=matched; output-sha256=7c9254c747f76461170e7ca56e99c52bb83c76493617b8d36d68598e7e56678d; output-bytes=60; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W2: every heading and every table row in each source book reaches its rendered page, so the site carries the whole guide
   CHECK: node scripts/verify-site.mjs parity
@@ -67,7 +67,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W3: all 45 art slots render, each supplied image file exists on disk, and each slot without art holds a sized placeholder carrying its ID
   CHECK: node scripts/verify-site.mjs art
   EXPECT: art slot verification passed
-  EVIDENCE: automatic-evidence=v1; definition-sha256=46cfc499f3bf45b7d348458538238aabef7ee8435cbfa8b8ac9691a88ccbbaa2; exit=0; EXPECT=matched; output-sha256=fb2973a0d5fbe16fd8a886e415c47aaef0c42f65835060f687cbcb63867a52a0; output-bytes=90; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=46cfc499f3bf45b7d348458538238aabef7ee8435cbfa8b8ac9691a88ccbbaa2; exit=0; EXPECT=matched; output-sha256=4188570aae6fa969ba80e9c36b57559e7ed0cbb56aaf9549e135af3e56f5c805; output-bytes=89; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W4: the built pages meet the accessibility floor: a language, one h1, no skipped heading level, a skip link, alt text on every image, and a labelled main landmark
   CHECK: node scripts/verify-site.mjs a11y
