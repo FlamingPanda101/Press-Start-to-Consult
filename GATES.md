@@ -22,7 +22,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] G3: every image placeholder in the books has exactly one complete art-bible entry and no entry is orphaned
   CHECK: node scripts/verify.mjs placeholders
   EXPECT: placeholder verification passed
-  EVIDENCE: automatic-evidence=v1; definition-sha256=5239255f0dcb762ce6a8b57d2ea321e055062cb5af4437c00f3cd940e3a704f3; exit=0; EXPECT=matched; output-sha256=ee4386ccc874d6498594deda72451b3337410a0c92b21f7302e7708371e4cf2d; output-bytes=74; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=5239255f0dcb762ce6a8b57d2ea321e055062cb5af4437c00f3cd940e3a704f3; exit=0; EXPECT=matched; output-sha256=35acb7dedd6987247481efa9d9f2596559b2052eef4cc05a2785c0ec8fef9226; output-bytes=74; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] G4: no training-firm names, case names, banned jargon, adverbs, or dashes appear in any deliverable, and the negative control still trips the check
   CHECK: node scripts/verify.mjs banned-all
@@ -57,7 +57,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W1: the site regenerates from the source markdown alone, and a second build produces byte-identical output
   CHECK: node scripts/verify-site.mjs build-idempotent
   EXPECT: build idempotency verified
-  EVIDENCE: automatic-evidence=v1; definition-sha256=b5174730c7a6ea044818e5f0dd15d1f7f4033c45cc0c411b5df953127578223c; exit=0; EXPECT=matched; output-sha256=7c9254c747f76461170e7ca56e99c52bb83c76493617b8d36d68598e7e56678d; output-bytes=60; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=b5174730c7a6ea044818e5f0dd15d1f7f4033c45cc0c411b5df953127578223c; exit=0; EXPECT=matched; output-sha256=e8bdeb760efa61692fbb291723f87a5308097920720125b2591309b3854c4344; output-bytes=61; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W2: every heading and every table row in each source book reaches its rendered page, so the site carries the whole guide
   CHECK: node scripts/verify-site.mjs parity
@@ -67,7 +67,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W3: all 45 art slots render, each supplied image file exists on disk, and each slot without art holds a sized placeholder carrying its ID
   CHECK: node scripts/verify-site.mjs art
   EXPECT: art slot verification passed
-  EVIDENCE: automatic-evidence=v1; definition-sha256=46cfc499f3bf45b7d348458538238aabef7ee8435cbfa8b8ac9691a88ccbbaa2; exit=0; EXPECT=matched; output-sha256=4188570aae6fa969ba80e9c36b57559e7ed0cbb56aaf9549e135af3e56f5c805; output-bytes=89; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=46cfc499f3bf45b7d348458538238aabef7ee8435cbfa8b8ac9691a88ccbbaa2; exit=0; EXPECT=matched; output-sha256=5e09a2b639cb71e68249dda6933b9c1b9e051773cb19c18bb98158912dfeade4; output-bytes=89; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W4: the built pages meet the accessibility floor: a language, one h1, no skipped heading level, a skip link, alt text on every image, and a labelled main landmark
   CHECK: node scripts/verify-site.mjs a11y
@@ -102,7 +102,7 @@ Scope: deliver three versions of the Cosmo case-prep guide plus a separate art-p
 - [x] W10: every illustration is served in the small format with a fallback, and no WebP is stale against its source
   CHECK: python scripts/optimize-art.py --check
   EXPECT: art optimization verified
-  EVIDENCE: automatic-evidence=v1; definition-sha256=e1600a5f0c4c07ed7834c7fc74c4f2190983eb0e5a28a47eb8077beba1d49115; exit=0; EXPECT=matched; output-sha256=c8747982bfbc517e54411f4e77f5a99a2aae6e42a1028c524bc7493a3c6b60fe; output-bytes=62; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
+  EVIDENCE: automatic-evidence=v1; definition-sha256=e1600a5f0c4c07ed7834c7fc74c4f2190983eb0e5a28a47eb8077beba1d49115; exit=0; EXPECT=matched; output-sha256=8fd838619afe199b9aabd7c4b395ecfd99a77070eb1fea1aea1a3ac2f1efd759; output-bytes=62; shell=C:\Windows\system32\cmd.exe; cwd=C:\Users\Josep\OneDrive\Desktop\Code\How To Survive Consulting BYU MBA; path=158e256bcb2d/31 entries
 
 - [x] W11: the download section offers all four editions, links only files that exist and are real PDFs, and states each one's true size
   CHECK: node scripts/verify-site.mjs downloads
