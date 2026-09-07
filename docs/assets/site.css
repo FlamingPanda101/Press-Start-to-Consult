@@ -69,9 +69,20 @@ a:hover { color: var(--navy-deep); }
 .brand { display: grid; align-content: center; line-height: 1.15; text-decoration: none; padding: .55rem 0; min-height: 44px; }
 .brand__press { font-family: var(--display); font-size: .68rem; color: var(--white); }
 .brand__to { font-family: var(--display); font-size: .68rem; color: var(--tan); }
-.topbar__links { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; list-style: none; margin: 0; padding: 0; }
+/* One row that scrolls sideways rather than wrapping onto a second line. The
+   scrollbar is hidden because the row is short and the overflow is obvious from
+   the clipped link; keyboard focus still scrolls it into view. */
+.topbar__links {
+  display: flex; flex-wrap: nowrap; gap: 1.1rem;
+  list-style: none; margin: 0; padding: 0;
+  min-width: 0; overflow-x: auto; overscroll-behavior-x: contain;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.topbar__links::-webkit-scrollbar { display: none; }
+.topbar__links li { flex: 0 0 auto; }
 .topbar__links a {
-  display: block; padding: .6rem .35rem; min-height: 44px; display: flex; align-items: center;
+  display: flex; align-items: center; white-space: nowrap;
+  padding: .6rem .35rem; min-height: 44px;
   font-family: var(--ui); font-size: .95rem; color: var(--tan); text-decoration: none;
   border-bottom: 3px solid transparent;
 }
@@ -279,3 +290,33 @@ thead th.num { text-align: right; }
 .hero__cover { margin: 2rem 0 0; }
 @media (min-width: 52rem) { .hero__cover { margin: 0; } }
 .hero__cover img { display: block; width: 100%; height: auto; border: 3px solid var(--white); image-rendering: pixelated; }
+
+/* ------------------------------------------------------- in-book search */
+.toc__search { margin: 0 0 .85rem; }
+.toc__search-label {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.toc__search-input {
+  width: 100%; min-height: 44px; padding: .5rem .6rem;
+  font-family: var(--body); font-size: .95rem;
+  border: 2px solid var(--navy); background: var(--white); color: var(--ink);
+}
+.toc__search-input::placeholder { color: rgba(0, 26, 56, .6); }
+.toc__search-status { font-family: var(--ui); font-size: .75rem; margin: .35rem 0 0; color: var(--navy); min-height: 1em; }
+.toc__search-status:empty { margin: 0; }
+
+.toc__results { list-style: none; margin: 0; padding: 0; }
+.toc__results[hidden] { display: none; }
+.toc__results a {
+  display: block; padding: .5rem .4rem; min-height: 44px;
+  text-decoration: none; border-left: 3px solid transparent;
+  font-family: var(--ui); font-size: .88rem;
+}
+.toc__results a:hover, .toc__results a:focus-visible { background: var(--tan); border-left-color: var(--navy); }
+.toc__results .r__snip {
+  display: block; font-family: var(--body); font-size: .78rem;
+  color: rgba(0, 26, 56, .8); margin-top: .15rem;
+}
+.toc__results mark { background: var(--tan-deep); color: var(--ink); }
+.toc__results .r__none { display: block; padding: .6rem .4rem; font-size: .85rem; font-family: var(--body); }

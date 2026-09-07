@@ -368,11 +368,17 @@ for (const [b, toc, html, tocHtml] of pages) {
 ${nav(b.slug)}
 <div class="shell">
 <button class="toc-toggle" aria-expanded="false" aria-controls="toc">Contents</button>
-<nav class="toc" id="toc" aria-label="Sections in this book">
+<nav class="toc" id="toc" aria-label="Sections in this book" data-book="${esc(b.title)}" data-search="${fp('assets/search-index.json', V.idx)}">
 <p class="toc__head">${esc(b.title)}</p>
+<div class="toc__search">
+<label class="toc__search-label" for="bq">Search ${esc(b.title)}</label>
+<input id="bq" type="search" class="toc__search-input" placeholder="Search this book" autocomplete="off" aria-describedby="bq-status">
+<p id="bq-status" class="toc__search-status" role="status" aria-live="polite"></p>
+</div>
 <ol class="toc__list">
 ${tocHtml}
 </ol>
+<ul class="toc__results" hidden></ul>
 </nav>
 <main id="main" class="book" tabindex="-1" aria-label="${esc(b.title)}">
 <p class="book__tag">${esc(b.tag)} &middot; ${esc(b.pages)}</p>

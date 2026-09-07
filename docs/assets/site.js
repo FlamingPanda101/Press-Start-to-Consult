@@ -43,9 +43,106 @@
         a.setAttribute('aria-current', 'true');
         current = a;
       });
-    }, { rootMargin: '-6rem 0px -70% 0px' });
+    // rootMargin only accepts px and %, never rem: a rem here throws and kills
+    // the rest of this file.
+    }, { rootMargin: '-96px 0px -70% 0px' });
     targets.forEach(function (t) { io.observe(t); });
   }
+
+  // ---------------------------------------------------- in-book search
+  // Same index as the home page, filtered to the book you are reading. While a
+  // query is active the results replace the contents list, so the narrow sidebar
+  // never shows two competing lists.
+  (function () {
+    var nav = document.getElementById('toc');
+    if (!nav) return;
+    var input = document.getElementById('bq');
+    var list = nav.querySelector('.toc__list');
+    var out = nav.querySelector('.toc__results');
+    var status = document.getElementById('bq-status');
+    if (!input || !list || !out || !status) return;
+
+    var book = nav.getAttribute('data-book');
+    var src = nav.getAttribute('data-search') || 'assets/search-index.json';
+    var rows = null, loading = false, queued = null;
+
+    var esc = function (t) {
+      return String(t).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    };
+
+    var mark = function (text, q) {
+      var i = text.toLowerCase().indexOf(q);
+      if (i < 0) return esc(text.slice(0, 90));
+      var from = Math.max(0, i - 30);
+      var snip = (from > 0 ? '…' : '') + text.slice(from, i + q.length + 60);
+      var at = snip.toLowerCase().indexOf(q);
+      return esc(snip.slice(0, at)) + '<mark>' + esc(snip.substr(at, q.length)) + '</mark>' + esc(snip.slice(at + q.length));
+    };
+
+    var show = function (q) {
+      if (!rows) { queued = q; load(); return; }
+      if (q.length < 2) {
+        out.hidden = true; out.innerHTML = '';
+        list.hidden = false;
+        status.textContent = '';
+        return;
+      }
+      var hits = [];
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        var inHead = r.h.toLowerCase().indexOf(q) >= 0;
+        var inText = r.t.toLowerCase().indexOf(q) >= 0;
+        if (inHead || inText) hits.push({ r: r, score: inHead ? 0 : 1 });
+      }
+      hits.sort(function (a, b) { return a.score - b.score; });
+      list.hidden = true;
+      out.hidden = false;
+      if (!hits.length) {
+        out.innerHTML = '<li><span class="r__none">No match in this book. The home page searches all three.</span></li>';
+        status.textContent = 'No results';
+        return;
+      }
+      out.innerHTML = hits.slice(0, 20).map(function (x) {
+        return '<li><a href="#' + esc(x.r.u.split('#')[1]) + '">' + esc(x.r.h)
+          + '<span class="r__snip">' + mark(x.r.t, q) + '</span></a></li>';
+      }).join('');
+      status.textContent = hits.length === 1 ? '1 section' : hits.length + ' sections';
+    };
+
+    var load = function () {
+      if (rows || loading) return;
+      loading = true;
+      fetch(src)
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (all) {
+          rows = all.filter(function (x) { return x.b === book; });
+          loading = false;
+          if (queued !== null) { show(queued); queued = null; }
+        })
+        .catch(function () { loading = false; rows = []; });
+    };
+    input.addEventListener('focus', load, { once: true });
+
+    var timer;
+    input.addEventListener('input', function () {
+      clearTimeout(timer);
+      var q = input.value.trim().toLowerCase();
+      timer = setTimeout(function () { show(q); }, 140);
+    });
+    // Escape clears the query and brings the contents back.
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && input.value) { input.value = ''; show(''); }
+    });
+    // Following a result on a phone should close the drawer, like the contents do.
+    out.addEventListener('click', function (e) {
+      if (e.target.closest('a') && toggle && !window.matchMedia('(min-width: 64rem)').matches) {
+        toggle.setAttribute('aria-expanded', 'false');
+        toc.hidden = true;
+      }
+    });
+  })();
 
   // ---------------------------------------------------------- search
   var input = document.getElementById('q');

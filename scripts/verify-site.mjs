@@ -198,10 +198,24 @@ const checks = {
       const levels = [...h.matchAll(/<h([1-4])[\s>]/g)].map(m => Number(m[1]))
       for (let i = 1; i < levels.length; i++) if (levels[i] > levels[i - 1] + 1) errs.push(`${p}: heading jumps from h${levels[i - 1]} to h${levels[i]}`)
       for (const m of h.matchAll(/<(button|a)\b[^>]*>\s*<\/\1>/g)) errs.push(`${p}: empty ${m[1]} with no accessible name`)
-      if (/<input\b/.test(h) && !/<label[^>]*for="q"/.test(h)) errs.push(`${p}: input without a label`)
+      // Every input needs a name a screen reader can announce: a label pointing at
+      // its id, or an aria-label on the control itself.
+      for (const m of h.matchAll(/<input\b[^>]*>/g)) {
+        const id = (m[0].match(/\sid="([^"]+)"/) || [])[1]
+        const labelled = id && new RegExp(`<label[^>]*for="${id}"`).test(h)
+        if (!labelled && !/aria-label(ledby)?=/.test(m[0]))
+          errs.push(`${p}: input ${id ? '#' + id : '(no id)'} has no label`)
+      }
     }
     const css = read(join(OUT, 'assets', 'site.css'))
     if (!/prefers-reduced-motion/.test(css)) errs.push('css never honors prefers-reduced-motion')
+    // IntersectionObserver rejects any rootMargin unit other than px or %, and it
+    // throws on construction, which kills every line of script after it.
+    const js = read(join(OUT, 'assets', 'site.js'))
+    for (const m of js.matchAll(/rootMargin:\s*'([^']*)'/g))
+      for (const part of m[1].split(/\s+/))
+        if (part !== '0' && !/^-?[\d.]+(px|%)$/.test(part))
+          errs.push(`rootMargin "${m[1]}" uses ${part}, which throws and disables the rest of the script`)
     // Killing an outline is only acceptable when :not(:focus-visible) keeps the
     // keyboard ring. Check each rule's own selector rather than the whole file.
     const strips = sheet => [...sheet.matchAll(/([^{}]+)\{([^}]*)\}/g)]
@@ -294,6 +308,16 @@ const checks = {
     if (!/\.table-wrap\s*\{[^}]*overflow-x:\s*auto/.test(css)) errs.push('table wrapper does not scroll')
     for (const m of css.matchAll(/width:\s*(\d{4,})px/g)) errs.push(`css sets a fixed width of ${m[1]}px`)
     if (/100vw/.test(css)) errs.push('css uses 100vw, which overflows when a scrollbar is present')
+    // The book links must stay on one line and scroll, never wrap onto a second
+    // row, which is what the narrow layout used to do.
+    // Strip comments first, or a comment above a rule is captured as part of its selector.
+    const bare = css.replace(/\/\*[\s\S]*?\*\//g, '')
+    const navRule = [...bare.matchAll(/([^{}]+)\{([^}]*)\}/g)].find(m => m[1].trim() === '.topbar__links')
+    if (!navRule) errs.push('no .topbar__links rule found')
+    else {
+      if (!/flex-wrap:\s*nowrap/.test(navRule[2])) errs.push('the book links may wrap onto a second row')
+      if (!/overflow-x:\s*auto/.test(navRule[2])) errs.push('the book links do not scroll when they overflow')
+    }
     if (errs.length) fail(errs)
     console.log('overflow verification passed')
   },
