@@ -112,7 +112,7 @@ const checks = {
       if (ratios < slots) errs.push(`${p}: ${slots - ratios} pending slots reserve no aspect ratio`)
       // The first image is the largest contentful paint and must not be deferred;
       // every later one must be, so a long book does not fetch 30 images at once.
-      const imgs = [...h.matchAll(/<img[^>]*>/g)].map(m => m[0])
+      const imgs = [...h.matchAll(/<img\b[^>]*>/g)].map(m => m[0])
       imgs.forEach((tag, i) => {
         const lazy = /loading="lazy"/.test(tag)
         if (i === 0 && lazy) errs.push(`${p}: the first image is lazy, which delays the largest paint`)
@@ -149,7 +149,7 @@ const checks = {
     const soonCards = (h.match(/class="dl dl--soon"/g) || []).length
     if (soonCards !== soon) errs.push(`${soon} editions have no file but ${soonCards} cards are marked unavailable`)
     for (const m of h.matchAll(/href="downloads\/([^"]+)"([^>]*)>/g)) {
-      if (!/download/.test(m[2])) errs.push(`the link to ${m[1]} has no download attribute`)
+      if (!/\bdownload\b/.test(m[2])) errs.push(`the link to ${m[1]} has no download attribute`)
       if (!existsSync(join(OUT, 'downloads', m[1]))) errs.push(`downloads/${m[1]} is linked but absent`)
     }
     // Every live card must state its real size, so nobody starts a surprise 40 MB fetch.
@@ -185,7 +185,7 @@ const checks = {
         if (!/\swidth="\d+"/.test(m[0]) || !/\sheight="\d+"/.test(m[0])) errs.push(`${p}: an img declares no dimensions, so it can shift layout`)
         // Alt text must describe the image, never fall back to the generation
         // prompt, which describes how to draw it and tells a reader nothing.
-        if (alt && /^(16-bit|Full-page|[a-z-]+ (infographic|screen|banner|cover|scene|plate))/.test(alt[1]))
+        if (alt && /^(16-bit|Full-page|[a-z-]+ (infographic|screen|banner|cover|scene|plate)\b)/.test(alt[1]))
           errs.push(`${p}: alt text "${alt[1].slice(0, 50)}" reads as a prompt fragment, not a description`)
       }
       // Heading levels must not skip on the way down.

@@ -85,7 +85,7 @@ a:hover { color: var(--navy-deep); }
 .hero { border: 4px solid var(--navy); background: var(--navy); color: var(--white); padding: 2.5rem 1.5rem; box-shadow: var(--shadow); }
 .hero__kicker { font-family: var(--ui); color: var(--tan); margin: 0 0 1rem; letter-spacing: .06em; }
 .hero__title { font-family: var(--display); font-size: clamp(1.35rem, 5.2vw, 2.6rem); line-height: 1.5; margin: 0 0 1.25rem; color: var(--white); }
-.hero__sub { max-width: 46ch; margin: 0 0 1.75rem; color: var(--tan); }
+.hero__sub { max-width: 52ch; margin: 0 0 1.75rem; color: var(--tan); }
 .hero__hud { display: grid; gap: .5rem; max-width: 24rem; }
 .bar { display: grid; gap: .3rem; font-family: var(--ui); font-size: .78rem; color: var(--tan); }
 .bar b { font-weight: 400; letter-spacing: .04em; }
@@ -273,7 +273,8 @@ thead th.num { text-align: right; }
 
 /* the set cover beside the hero */
 @media (min-width: 52rem) {
-  .hero { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 2.5rem; align-items: center; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 2.5rem; align-items: center; padding: 2.5rem; }
+  .hero__sub, .hero__hud { max-width: none; }
 }
 .hero__cover { margin: 2rem 0 0; }
 @media (min-width: 52rem) { .hero__cover { margin: 0; } }

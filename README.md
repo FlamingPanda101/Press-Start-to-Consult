@@ -27,7 +27,7 @@ The art is stored as JPEG and served as WebP. `python scripts/optimize-art.py` w
 
 ### The PDF downloads
 
-The home page offers four editions. Drop the files into `docs/downloads/` with these exact names and rebuild; each card turns from "coming soon" into a real link with its true file size:
+The home page offers four editions, built from the designed HTML export by `python scripts/build-pdfs.py <folder-with-the-dc-html>`. That script prints the document with headless Chrome, strips the designer's slot annotations, splits the result into the three per-book editions, and stamps each page with its own number, so every book numbers from its own page 1. Output lands in `docs/downloads/` under these names, and each card then carries the file's true size:
 
 | File | Card |
 |---|---|
